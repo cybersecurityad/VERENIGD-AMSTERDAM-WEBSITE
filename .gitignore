@@ -72,3 +72,9 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+# Ignore Firebase credentials and sensitive files
+server/*.json
+public/forum/keys/*.json
+*.env
+.env*
+config/secrets.*
