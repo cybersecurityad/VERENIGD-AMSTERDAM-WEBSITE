@@ -78,3 +78,7 @@ public/forum/keys/*.json
 *.env
 .env*
 config/secrets.*
+
+# Specific Firebase credential files to ignore
+server/verenigd-nederland-fb-asdk-e8an4-804e988954.json
+public/forum/keys/toursamsterdam-eu-1-firebase-adminsdk-e8an4-68217c7e8f.json
