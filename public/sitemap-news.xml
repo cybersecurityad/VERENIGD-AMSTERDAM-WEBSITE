@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- 1) Fatbikes: één maand in beslag -->
+  <url>
+    <loc>https://verenigdamsterdam.nl/nieuws/fatbikes-in-beslag-1-maand/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Verenigd Amsterdam</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-25T09:00:00+02:00</news:publication_date>
+      <news:title>Onveilig gebruik fatbikes: één maand in beslag nemen</news:title>
+      <news:keywords>fatbikes, verkeersveiligheid, handhaving, Amsterdam</news:keywords>
+    </news:news>
+    <image:image>
+      <image:loc>https://verenigdamsterdam.nl/images/nieuws/fatbikes-in-beslag-1-maand.jpg</image:loc>
+      <image:title>Handhaving op fatbikes in de stad</image:title>
+    </image:image>
+  </url>
+
+  <!-- 2) Woningurgent extra screening -->
+  <url>
+    <loc>https://verenigdamsterdam.nl/nieuws/woningurgent-extra-screening/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Verenigd Amsterdam</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-24T09:00:00+02:00</news:publication_date>
+      <news:title>Woningurgent van buiten de stad: extra screening op eerlijkheid en noodzaak</news:title>
+      <news:keywords>woningurgentie, screening, Amsterdam, wonen</news:keywords>
+    </news:news>
+    <image:image>
+      <image:loc>https://verenigdamsterdam.nl/images/nieuws/woningurgent-extra-screening.jpg</image:loc>
+      <image:title>Screening woningurgentie-aanvragen</image:title>
+    </image:image>
+  </url>
+
+  <!-- 3) Stadstour 2024 -->
+  <url>
+    <loc>https://verenigdamsterdam.nl/nieuws/stadstour-2024/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Verenigd Amsterdam</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-15T09:00:00+01:00</news:publication_date>
+      <news:title>Verenigd Amsterdam Stadstour van start</news:title>
+      <news:keywords>stadstour, campagne, stadsdelen, Amsterdam</news:keywords>
+    </news:news>
+    <image:image>
+      <image:loc>https://verenigdamsterdam.nl/images/nieuws/stadstour-2024.jpg</image:loc>
+      <image:title>Start van de stadstour</image:title>
+    </image:image>
+  </url>
+
+  <!-- 4) Woningbouwplan -->
+  <url>
+    <loc>https://verenigdamsterdam.nl/nieuws/woningbouwplan/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Verenigd Amsterdam</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-14T09:00:00+01:00</news:publication_date>
+      <news:title>Plan voor 50.000 betaalbare woningen</news:title>
+      <news:keywords>wonen, betaalbare woningen, woningbouw, Amsterdam</news:keywords>
+    </news:news>
+    <image:image>
+      <image:loc>https://verenigdamsterdam.nl/images/nieuws/woningbouwplan.jpg</image:loc>
+      <image:title>Betaalbaar woningbouwplan</image:title>
+    </image:image>
+  </url>
+
+  <!-- 5) Groenplan -->
+  <url>
+    <loc>https://verenigdamsterdam.nl/nieuws/groenplan/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Verenigd Amsterdam</news:name>
+        <news:language>nl</news:language>
+      </news:publication>
+      <news:publication_date>2024-12-13T09:00:00+01:00</news:publication_date>
+      <news:title>Meer groen: 10.000 bomen voor Amsterdam</news:title>
+      <news:keywords>groen, bomen, leefomgeving, Amsterdam</news:keywords>
+    </news:news>
+    <image:image>
+      <image:loc>https://verenigdamsterdam.nl/images/nieuws/groenplan.jpg</image:loc>
+      <image:title>Bomen en parken voor Amsterdam</image:title>
+    </image:image>
+  </url>
+
+</urlset>

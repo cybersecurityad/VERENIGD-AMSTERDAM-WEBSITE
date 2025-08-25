@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Verenigd Amsterdam - Advanced Logo Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #005a3c 0%, #e30613 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        .controls-panel {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .control-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .control-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .control-section h3 {
+            color: #005a3c;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .control-section h3::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: #e30613;
+            border-radius: 2px;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        .control-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .control-group input[type="text"],
+        .control-group input[type="number"],
+        .control-group select,
+        .control-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .control-group input:focus,
+        .control-group select:focus,
+        .control-group textarea:focus {
+            outline: none;
+            border-color: #005a3c;
+            box-shadow: 0 0 0 3px rgba(0,90,60,0.1);
+        }
+        
+        .control-group input[type="color"] {
+            width: 100%;
+            height: 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .control-group input[type="color"]:hover {
+            border-color: #005a3c;
+        }
+        
+        .control-group input[type="file"] {
+            display: none;
+        }
+        
+        .file-upload-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: white;
+            border: 2px dashed #005a3c;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #005a3c;
+            font-weight: 600;
+        }
+        
+        .file-upload-btn:hover {
+            background: #f0f9f6;
+            border-style: solid;
+        }
+        
+        .file-upload-btn.has-file {
+            background: #e8f5f0;
+            border-style: solid;
+        }
+        
+        .color-presets {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .preset-btn {
+            width: 100%;
+            aspect-ratio: 1;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .preset-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .preset-btn.active {
+            border-color: #005a3c;
+            box-shadow: 0 0 0 3px rgba(0,90,60,0.2);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .canvas-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .canvas-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .canvas-header h3 {
+            color: #333;
+            font-size: 1.3rem;
+        }
+        
+        .size-selector {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .size-btn {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .size-btn:hover {
+            border-color: #005a3c;
+            color: #005a3c;
+        }
+        
+        .size-btn.active {
+            background: #005a3c;
+            color: white;
+            border-color: #005a3c;
+        }
+        
+        #logoCanvas {
+            border: 2px solid #f0f0f0;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            background: white;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .action-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: #005a3c;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #004530;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,90,60,0.3);
+        }
+        
+        .btn-secondary {
+            background: #e30613;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #c00510;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(227,6,19,0.3);
+        }
+        
+        .btn-outline {
+            background: white;
+            color: #005a3c;
+            border: 2px solid #005a3c;
+        }
+        
+        .btn-outline:hover {
+            background: #f0f9f6;
+            transform: translateY(-2px);
+        }
+        
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .template-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .template-card:hover {
+            border-color: #005a3c;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .template-card.active {
+            background: #e8f5f0;
+            border-color: #005a3c;
+        }
+        
+        .template-preview {
+            width: 100%;
+            height: 80px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .range-container input[type="range"] {
+            flex: 1;
+            height: 6px;
+            border-radius: 3px;
+            background: #e0e0e0;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .range-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #005a3c;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        
+        .range-value {
+            min-width: 50px;
+            text-align: center;
+            font-weight: 600;
+            color: #005a3c;
+            background: #f0f9f6;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #005a3c;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            display: none;
+            animation: slideInUp 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .toast.show {
+            display: block;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls-panel {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .size-selector {
+                flex-wrap: wrap;
+            }
+            
+            .templates-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 Advanced Logo Generator</h1>
+            <p>Maak je eigen gepersonaliseerde logo voor Verenigd Amsterdam</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="controls-panel">
+                <!-- Template Selection -->
+                <div class="control-section">
+                    <h3>Logo Template</h3>
+                    <div class="templates-grid">
+                        <div class="template-card active" onclick="selectTemplate('classic')">
+                            <div class="template-preview">📐</div>
+                            <span>Klassiek</span>
+                        </div>
+                        <div class="template-card" onclick="selectTemplate('modern')">
+                            <div class="template-preview">🎯</div>
+                            <span>Modern</span>
+                        </div>
+                        <div class="template-card" onclick="selectTemplate('minimal')">
+                            <div class="template-preview">⚡</div>
+                            <span>Minimaal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Controls -->
+                <div class="control-section">
+                    <h3>Tekst Instellingen</h3>
+                    <div class="control-group">
+                        <label for="line1Text">Eerste regel tekst:</label>
+                        <input type="text" id="line1Text" value="Verenigd" oninput="updateLogo()">
+                    </div>
+                    <div class="control-group">
+                        <label for="line2Text">Tweede regel tekst:</label>
+                        <input type="text" id="line2Text" value="Amsterdam" oninput="updateLogo()">
+                    </div>
+                    <div class="control-group">
+                        <label for="taglineText">Tagline (optioneel):</label>
+                        <input type="text" id="taglineText" value="Samen vooruit, stad voor iedereen" oninput="updateLogo()">
+                    </div>
+                    <div class="control-group">
+                        <label for="fontSize">Tekstgrootte:</label>
+                        <div class="range-container">
+                            <input type="range" id="fontSize" min="20" max="100" value="72" oninput="updateLogo(); updateRangeValue(this)">
+                            <span class="range-value">72</span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="fontFamily">Lettertype:</label>
+                        <select id="fontFamily" onchange="updateLogo()">
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Verdana">Verdana</option>
+                        </select>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="boldText" checked onchange="updateLogo()">
+                        <label for="boldText">Vetgedrukt</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="italicText" onchange="updateLogo()">
+                        <label for="italicText">Cursief</label>
+                    </div>
+                </div>
+                
+                <!-- Color Controls -->
+                <div class="control-section">
+                    <h3>Kleuren</h3>
+                    <div class="control-group">
+                        <label for="color1">Hoofdkleur (Verenigd):</label>
+                        <input type="color" id="color1" value="#005a3c" oninput="updateLogo()">
+                    </div>
+                    <div class="control-group">
+                        <label for="color2">Tweede kleur (Amster):</label>
+                        <input type="color" id="color2" value="#e30613" oninput="updateLogo()">
+                    </div>
+                    <div class="control-group">
+                        <label for="color3">Derde kleur (dam):</label>
+                        <input type="color" id="color3" value="#000000" oninput="updateLogo()">
+                    </div>
+                    <div class="control-group">
+                        <label for="bgColor">Achtergrondkleur:</label>
+                        <input type="color" id="bgColor" value="#ffffff" oninput="updateLogo()">
+                    </div>
+                    <div class="control-group">
+                        <label>Kleur presets:</label>
+                        <div class="color-presets">
+                            <button class="preset-btn active" style="background: linear-gradient(135deg, #005a3c, #e30613)" onclick="setColorPreset('original')"></button>
+                            <button class="preset-btn" style="background: linear-gradient(135deg, #2196F3, #FF9800)" onclick="setColorPreset('blue')"></button>
+                            <button class="preset-btn" style="background: linear-gradient(135deg, #9C27B0, #E91E63)" onclick="setColorPreset('purple')"></button>
+                            <button class="preset-btn" style="background: linear-gradient(135deg, #4CAF50, #FFC107)" onclick="setColorPreset('green')"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Upload -->
+                <div class="control-section">
+                    <h3>Afbeelding Toevoegen</h3>
+                    <div class="control-group">
+                        <label for="imageUpload" class="file-upload-btn" id="fileUploadLabel">
+                            📷 Klik om afbeelding te uploaden
+                        </label>
+                        <input type="file" id="imageUpload" accept="image/*" onchange="handleImageUpload(event)">
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="showImage" onchange="updateLogo()">
+                        <label for="showImage">Toon afbeelding</label>
+                    </div>
+                    <div class="control-group">
+                        <label for="imageSize">Afbeelding grootte:</label>
+                        <div class="range-container">
+                            <input type="range" id="imageSize" min="50" max="300" value="150" oninput="updateLogo(); updateRangeValue(this)">
+                            <span class="range-value">150</span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="imageOpacity">Transparantie:</label>
+                        <div class="range-container">
+                            <input type="range" id="imageOpacity" min="0" max="100" value="100" oninput="updateLogo(); updateRangeValue(this)">
+                            <span class="range-value">100</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Options -->
+                <div class="control-section">
+                    <h3>Extra Opties</h3>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="showCrosses" checked onchange="updateLogo()">
+                        <label for="showCrosses">Amsterdam kruisen (XXX)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="showBorder" onchange="updateLogo()">
+                        <label for="showBorder">Rand toevoegen</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="showShadow" onchange="updateLogo()">
+                        <label for="showShadow">Schaduw effect</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="roundedCorners" onchange="updateLogo()">
+                        <label for="roundedCorners">Afgeronde hoeken</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="canvas-area">
+                <div class="canvas-container">
+                    <div class="canvas-header">
+                        <h3>Logo Preview</h3>
+                        <div class="size-selector">
+                            <button class="size-btn active" onclick="setCanvasSize(800, 400, this)">Large</button>
+                            <button class="size-btn" onclick="setCanvasSize(400, 200, this)">Medium</button>
+                            <button class="size-btn" onclick="setCanvasSize(200, 200, this)">Square</button>
+                            <button class="size-btn" onclick="setCanvasSize(180, 180, this)">Icon</button>
+                        </div>
+                    </div>
+                    <canvas id="logoCanvas" width="800" height="400"></canvas>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="downloadLogo('png')">
+                        📥 Download PNG
+                    </button>
+                    <button class="btn btn-secondary" onclick="downloadLogo('jpg')">
+                        📥 Download JPG
+                    </button>
+                    <button class="btn btn-outline" onclick="downloadLogo('svg')">
+                        📥 Download SVG
+                    </button>
+                    <button class="btn btn-outline" onclick="copyToClipboard()">
+                        📋 Kopieer
+                    </button>
+                    <button class="btn btn-outline" onclick="resetLogo()">
+                        🔄 Reset
+                    </button>
+                    <button class="btn btn-primary" onclick="generateAllSizes()">
+                        📦 Genereer Alle Formaten
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="toast" id="toast"></div>
+
+    <script>
+        let uploadedImage = null;
+        let currentTemplate = 'classic';
+        let canvas = document.getElementById('logoCanvas');
+        let ctx = canvas.getContext('2d');
+
+        // Initialize
+        window.onload = function() {
+            updateLogo();
+        };
+
+        function updateLogo() {
+            const line1 = document.getElementById('line1Text').value;
+            const line2 = document.getElementById('line2Text').value;
+            const tagline = document.getElementById('taglineText').value;
+            const fontSize = parseInt(document.getElementById('fontSize').value);
+            const fontFamily = document.getElementById('fontFamily').value;
+            const bold = document.getElementById('boldText').checked;
+            const italic = document.getElementById('italicText').checked;
+            const color1 = document.getElementById('color1').value;
+            const color2 = document.getElementById('color2').value;
+            const color3 = document.getElementById('color3').value;
+            const bgColor = document.getElementById('bgColor').value;
+            const showCrosses = document.getElementById('showCrosses').checked;
+            const showBorder = document.getElementById('showBorder').checked;
+            const showShadow = document.getElementById('showShadow').checked;
+            const roundedCorners = document.getElementById('roundedCorners').checked;
+            const showImage = document.getElementById('showImage').checked;
+            const imageSize = parseInt(document.getElementById('imageSize').value);
+            const imageOpacity = parseInt(document.getElementById('imageOpacity').value) / 100;
+
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Background
+            if (roundedCorners) {
+                roundedRect(ctx, 0, 0, canvas.width, canvas.height, 20);
+                ctx.fillStyle = bgColor;
+                ctx.fill();
+            } else {
+                ctx.fillStyle = bgColor;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
+            // Shadow effect
+            if (showShadow) {
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+                ctx.shadowBlur = 10;
+                ctx.shadowOffsetX = 5;
+                ctx.shadowOffsetY = 5;
+            } else {
+                ctx.shadowColor = 'transparent';
+                ctx.shadowBlur = 0;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+            }
+
+            // Draw based on template
+            switch(currentTemplate) {
+                case 'classic':
+                    drawClassicTemplate(line1, line2, tagline, fontSize, fontFamily, bold, italic, color1, color2, color3, showCrosses);
+                    break;
+                case 'modern':
+                    drawModernTemplate(line1, line2, tagline, fontSize, fontFamily, bold, italic, color1, color2, color3, showCrosses);
+                    break;
+                case 'minimal':
+                    drawMinimalTemplate(line1, line2, tagline, fontSize, fontFamily, bold, italic, color1, color2, color3, showCrosses);
+                    break;
+            }
+
+            // Draw uploaded image
+            if (showImage && uploadedImage) {
+                ctx.globalAlpha = imageOpacity;
+                const imgX = (canvas.width - imageSize) / 2;
+                const imgY = 20;
+                ctx.drawImage(uploadedImage, imgX, imgY, imageSize, imageSize);
+                ctx.globalAlpha = 1;
+            }
+
+            // Border
+            if (showBorder) {
+                ctx.strokeStyle = color1;
+                ctx.lineWidth = 4;
+                if (roundedCorners) {
+                    roundedRect(ctx, 2, 2, canvas.width - 4, canvas.height - 4, 18);
+                    ctx.stroke();
+                } else {
+                    ctx.strokeRect(2, 2, canvas.width - 4, canvas.height - 4);
+                }
+            }
+        }
+
+        function drawClassicTemplate(line1, line2, tagline, fontSize, fontFamily, bold, italic, color1, color2, color3, showCrosses) {
+            const centerX = canvas.width / 2;
+            let currentY = canvas.height / 2 - 50;
+
+            // Font style
+            let fontStyle = '';
+            if (italic) fontStyle += 'italic ';
+            if (bold) fontStyle += 'bold ';
+            fontStyle += fontSize + 'px ' + fontFamily;
+
+            // Draw crosses if enabled
+            if (showCrosses) {
+                drawCrosses(centerX, currentY - fontSize - 20, 12, [color3, color2, color1]);
+                currentY += 30;
+            }
+
+            // First line
+            ctx.font = fontStyle;
+            ctx.fillStyle = color1;
+            ctx.textAlign = 'center';
+            ctx.fillText(line1, centerX, currentY);
+
+            // Second line with split colors
+            currentY += fontSize + 10;
+            const line2Parts = splitAmsterdam(line2);
+            
+            ctx.font = fontStyle;
+            const totalWidth = ctx.measureText(line2).width;
+            const startX = centerX - totalWidth / 2;
+            
+            // Draw "Amster" part
+            ctx.fillStyle = color2;
+            ctx.textAlign = 'left';
+            ctx.fillText(line2Parts.amster, startX, currentY);
+            
+            // Draw "dam" part
+            const amsterWidth = ctx.measureText(line2Parts.amster).width;
+            ctx.fillStyle = color3;
+            ctx.fillText(line2Parts.dam, startX + amsterWidth, currentY);
+
+            // Tagline
+            if (tagline) {
+                currentY += fontSize / 2 + 20;
+                ctx.font = `${fontSize / 3}px ${fontFamily}`;
+                ctx.fillStyle = '#666';
+                ctx.textAlign = 'center';
+                ctx.fillText(tagline, centerX, currentY);
+            }
+        }
+
+        function drawModernTemplate(line1, line2, tagline, fontSize, fontFamily, bold, italic, color1, color2, color3, showCrosses) {
+            const centerX = canvas.width / 2;
+            let currentY = canvas.height / 3;
+
+            // Modern geometric background
+            ctx.fillStyle = color1 + '20';
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(canvas.width, 0);
+            ctx.lineTo(canvas.width, canvas.height / 3);
+            ctx.lineTo(0, canvas.height / 2);
+            ctx.closePath();
+            ctx.fill();
+
+            // Font style
+            let fontStyle = '';
+            if (italic) fontStyle += 'italic ';
+            if (bold) fontStyle += '900 ';
+            fontStyle += fontSize + 'px ' + fontFamily;
+
+            // Text with modern styling
+            ctx.font = fontStyle;
+            ctx.textAlign = 'center';
+            
+            // First line with outline
+            ctx.strokeStyle = color1;
+            ctx.lineWidth = 2;
+            ctx.strokeText(line1, centerX, currentY);
+            ctx.fillStyle = color1;
+            ctx.fillText(line1, centerX, currentY);
+
+            // Second line
+            currentY += fontSize + 20;
+            const line2Parts = splitAmsterdam(line2);
+            const totalWidth = ctx.measureText(line2).width;
+            const startX = centerX - totalWidth / 2;
+            
+            ctx.textAlign = 'left';
+            ctx.fillStyle = color2;
+            ctx.fillText(line2Parts.amster, startX, currentY);
+            
+            const amsterWidth = ctx.measureText(line2Parts.amster).width;
+            ctx.fillStyle = color3;
+            ctx.fillText(line2Parts.dam, startX + amsterWidth, currentY);
+
+            // Modern crosses design
+            if (showCrosses) {
+                drawModernCrosses(centerX, currentY + 40, 8, [color1, color2, color3]);
+            }
+
+            // Tagline with modern styling
+            if (tagline) {
+                currentY += fontSize / 2 + 50;
+                ctx.font = `300 ${fontSize / 3}px ${fontFamily}`;
+                ctx.fillStyle = '#333';
+                ctx.textAlign = 'center';
+                ctx.fillText(tagline.toUpperCase(), centerX, currentY);
+            }
+        }
+
+        function drawMinimalTemplate(line1, line2, tagline, fontSize, fontFamily, bold, italic, color1, color2, color3, showCrosses) {
+            const centerX = canvas.width / 2;
+            let currentY = canvas.height / 2;
+
+            // Minimal style - smaller, cleaner
+            const minimalSize = fontSize * 0.8;
+            let fontStyle = '';
+            if (italic) fontStyle += 'italic ';
+            fontStyle += '300 ' + minimalSize + 'px ' + fontFamily;
+
+            ctx.font = fontStyle;
+            ctx.textAlign = 'center';
+
+            // Single line with vertical bar
+            ctx.fillStyle = color1;
+            ctx.fillText(line1, centerX - 10, currentY);
+            
+            // Vertical separator
+            ctx.strokeStyle = color2;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(centerX, currentY - minimalSize / 2);
+            ctx.lineTo(centerX, currentY + minimalSize / 2);
+            ctx.stroke();
+            
+            // Second part
+            ctx.fillStyle = color3;
+            ctx.fillText(line2, centerX + 10, currentY);
+
+            // Minimal crosses
+            if (showCrosses) {
+                drawMinimalCrosses(centerX, currentY + 40, 5, color1);
+            }
+        }
+
+        function splitAmsterdam(text) {
+            const lowerText = text.toLowerCase();
+            if (lowerText.includes('amsterdam')) {
+                const index = lowerText.indexOf('amsterdam');
+                return {
+                    amster: text.substring(index, index + 6),
+                    dam: text.substring(index + 6, index + 9)
+                };
+            }
+            // Default split for any text
+            const splitPoint = Math.ceil(text.length * 0.65);
+            return {
+                amster: text.substring(0, splitPoint),
+                dam: text.substring(splitPoint)
+            };
+        }
+
+        function drawCrosses(x, y, size, colors) {
+            const spacing = size * 3;
+            for (let i = 0; i < 3; i++) {
+                const crossX = x - spacing + (i * spacing);
+                drawCross(crossX, y, size, colors[i], 3);
+            }
+        }
+
+        function drawModernCrosses(x, y, size, colors) {
+            const spacing = size * 4;
+            for (let i = 0; i < 3; i++) {
+                const crossX = x - spacing + (i * spacing);
+                // Modern cross with circle background
+                ctx.fillStyle = colors[i] + '20';
+                ctx.beginPath();
+                ctx.arc(crossX, y, size * 1.5, 0, Math.PI * 2);
+                ctx.fill();
+                drawCross(crossX, y, size, colors[i], 2);
+            }
+        }
+
+        function drawMinimalCrosses(x, y, size, color) {
+            const spacing = size * 2;
+            for (let i = 0; i < 3; i++) {
+                const crossX = x - spacing + (i * spacing);
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 1;
+                ctx.globalAlpha = 0.5;
+                drawCross(crossX, y, size, color, 1);
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        function drawCross(x, y, size, color, lineWidth) {
+            ctx.strokeStyle = color;
+            ctx.lineWidth = lineWidth;
+            ctx.lineCap = 'round';
+            
+            const half = size / 2;
+            ctx.beginPath();
+            ctx.moveTo(x - half, y - half);
+            ctx.lineTo(x + half, y + half);
+            ctx.moveTo(x + half, y - half);
+            ctx.lineTo(x - half, y + half);
+            ctx.stroke();
+        }
+
+        function roundedRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        uploadedImage = img;
+                        document.getElementById('fileUploadLabel').textContent = '✅ ' + file.name;
+                        document.getElementById('fileUploadLabel').classList.add('has-file');
+                        document.getElementById('showImage').checked = true;
+                        updateLogo();
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function selectTemplate(template) {
+            currentTemplate = template;
+            document.querySelectorAll('.template-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            event.target.closest('.template-card').classList.add('active');
+            updateLogo();
+        }
+
+        function setColorPreset(preset) {
+            document.querySelectorAll('.preset-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            const presets = {
+                original: ['#005a3c', '#e30613', '#000000', '#ffffff'],
+                blue: ['#2196F3', '#FF9800', '#212121', '#ffffff'],
+                purple: ['#9C27B0', '#E91E63', '#311B92', '#ffffff'],
+                green: ['#4CAF50', '#FFC107', '#1B5E20', '#ffffff']
+            };
+
+            const colors = presets[preset];
+            document.getElementById('color1').value = colors[0];
+            document.getElementById('color2').value = colors[1];
+            document.getElementById('color3').value = colors[2];
+            document.getElementById('bgColor').value = colors[3];
+            updateLogo();
+        }
+
+        function setCanvasSize(width, height, button) {
+            canvas.width = width;
+            canvas.height = height;
+            
+            document.querySelectorAll('.size-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+            
+            updateLogo();
+            showToast(`Canvas aangepast naar ${width}x${height}px`);
+        }
+
+        function updateRangeValue(input) {
+            input.nextElementSibling.textContent = input.value;
+        }
+
+        function downloadLogo(format) {
+            const filename = `logo-${Date.now()}.${format}`;
+            
+            if (format === 'svg') {
+                downloadSVG(filename);
+            } else {
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    showToast(`Logo gedownload als ${filename}`);
+                }, format === 'jpg' ? 'image/jpeg' : 'image/png');
+            }
+        }
+
+        function downloadSVG(filename) {
+            // Create SVG version
+            const svg = createSVGVersion();
+            const blob = new Blob([svg], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast(`SVG logo gedownload als ${filename}`);
+        }
+
+        function createSVGVersion() {
+            const line1 = document.getElementById('line1Text').value;
+            const line2 = document.getElementById('line2Text').value;
+            const tagline = document.getElementById('taglineText').value;
+            const fontSize = document.getElementById('fontSize').value;
+            const color1 = document.getElementById('color1').value;
+            const color2 = document.getElementById('color2').value;
+            const color3 = document.getElementById('color3').value;
+            const bgColor = document.getElementById('bgColor').value;
+
+            const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${canvas.width}" height="${canvas.height}" viewBox="0 0 ${canvas.width} ${canvas.height}">
+    <rect width="${canvas.width}" height="${canvas.height}" fill="${bgColor}"/>
+    <text x="${canvas.width/2}" y="${canvas.height/2 - 30}" font-family="Montserrat" font-size="${fontSize}" font-weight="bold" text-anchor="middle" fill="${color1}">${line1}</text>
+    <text x="${canvas.width/2}" y="${canvas.height/2 + 40}" font-family="Montserrat" font-size="${fontSize}" font-weight="bold" text-anchor="middle">
+        <tspan fill="${color2}">Amster</tspan><tspan fill="${color3}">dam</tspan>
+    </text>
+    ${tagline ? `<text x="${canvas.width/2}" y="${canvas.height/2 + 80}" font-family="Montserrat" font-size="${fontSize/3}" text-anchor="middle" fill="#666">${tagline}</text>` : ''}
+</svg>`;
+            return svg;
+        }
+
+        function copyToClipboard() {
+            canvas.toBlob(function(blob) {
+                const item = new ClipboardItem({ 'image/png': blob });
+                navigator.clipboard.write([item]).then(() => {
+                    showToast('Logo gekopieerd naar klembord!');
+                }).catch(err => {
+                    showToast('Kopiëren mislukt. Probeer opnieuw.');
+                });
+            });
+        }
+
+        function resetLogo() {
+            document.getElementById('line1Text').value = 'Verenigd';
+            document.getElementById('line2Text').value = 'Amsterdam';
+            document.getElementById('taglineText').value = 'Samen vooruit, stad voor iedereen';
+            document.getElementById('fontSize').value = 72;
+            document.getElementById('fontFamily').value = 'Montserrat';
+            document.getElementById('boldText').checked = true;
+            document.getElementById('italicText').checked = false;
+            document.getElementById('color1').value = '#005a3c';
+            document.getElementById('color2').value = '#e30613';
+            document.getElementById('color3').value = '#000000';
+            document.getElementById('bgColor').value = '#ffffff';
+            document.getElementById('showCrosses').checked = true;
+            document.getElementById('showBorder').checked = false;
+            document.getElementById('showShadow').checked = false;
+            document.getElementById('roundedCorners').checked = false;
+            document.getElementById('showImage').checked = false;
+            
+            uploadedImage = null;
+            document.getElementById('fileUploadLabel').textContent = '📷 Klik om afbeelding te uploaden';
+            document.getElementById('fileUploadLabel').classList.remove('has-file');
+            
+            currentTemplate = 'classic';
+            document.querySelectorAll('.template-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            document.querySelector('.template-card').classList.add('active');
+            
+            updateLogo();
+            showToast('Logo gereset naar standaard instellingen');
+        }
+
+        function generateAllSizes() {
+            const sizes = [
+                { width: 800, height: 400, name: 'large' },
+                { width: 400, height: 200, name: 'medium' },
+                { width: 200, height: 200, name: 'square' },
+                { width: 180, height: 180, name: 'icon' },
+                { width: 96, height: 96, name: 'favicon' },
+                { width: 512, height: 512, name: 'app' }
+            ];
+
+            const originalWidth = canvas.width;
+            const originalHeight = canvas.height;
+
+            sizes.forEach((size, index) => {
+                setTimeout(() => {
+                    canvas.width = size.width;
+                    canvas.height = size.height;
+                    updateLogo();
+                    
+                    canvas.toBlob(function(blob) {
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `logo-${size.name}-${size.width}x${size.height}.png`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(url);
+                    });
+
+                    if (index === sizes.length - 1) {
+                        canvas.width = originalWidth;
+                        canvas.height = originalHeight;
+                        updateLogo();
+                        showToast('Alle formaten gegenereerd en gedownload!');
+                    }
+                }, index * 500);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

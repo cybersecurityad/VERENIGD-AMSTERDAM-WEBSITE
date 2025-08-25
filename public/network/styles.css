@@ -1,0 +1,254 @@
+/* Network Page Specific Styles */
+
+/* Police-themed variables */
+:root {
+    --police-blue: #00008b;
+    --police-red: #f60707;
+    --police-light-blue: #1a56a7;
+    --police-dark-blue: #002d6b;
+    --police-gray: #6c757d;
+}
+
+/* Emergency pulse animation */
+@keyframes emergency-pulse {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 4px 12px rgba(246, 7, 7, 0.3);
+    }
+    50% { 
+        transform: scale(1.02); 
+        box-shadow: 0 6px 16px rgba(246, 7, 7, 0.5);
+    }
+    100% { 
+        transform: scale(1); 
+        box-shadow: 0 4px 12px rgba(246, 7, 7, 0.3);
+    }
+}
+
+.emergency-pulse {
+    animation: emergency-pulse 2s infinite;
+}
+
+/* Incident card animations */
+.incident-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.incident-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Priority indicators */
+.incident-priority-high {
+    border-left: 4px solid var(--police-red);
+    background: linear-gradient(135deg, rgba(246, 7, 7, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.incident-priority-medium {
+    border-left: 4px solid #ffc107;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.incident-priority-low {
+    border-left: 4px solid #28a745;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* Icon animations */
+.incident-icon {
+    transition: all 0.3s ease;
+}
+
+.incident-card:hover .incident-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Tag cloud hover effects */
+.tag-cloud .badge {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tag-cloud .badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline improvements */
+.activity-timeline {
+    position: relative;
+}
+
+.timeline-item {
+    transition: all 0.3s ease;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-left: -0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item:hover {
+    background-color: rgba(0, 8, 139, 0.05);
+    transform: translateX(5px);
+}
+
+.timeline-item::before {
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.2);
+    background-color: var(--police-red);
+}
+
+/* Loading states */
+.loading-incidents {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading-incidents::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 3px solid var(--police-blue);
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Real-time indicator */
+.realtime-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #28a745;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    animation: pulse-realtime 2s infinite;
+}
+
+@keyframes pulse-realtime {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .incident-card:hover {
+        transform: none;
+    }
+    
+    .timeline-item:hover {
+        transform: none;
+    }
+    
+    .emergency-card {
+        text-align: center;
+    }
+    
+    .emergency-card .row > div {
+        margin-bottom: 1rem;
+    }
+    
+    .crime-map-container {
+        height: 250px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .incident-priority-high {
+        background: linear-gradient(135deg, rgba(246, 7, 7, 0.1) 0%, rgba(45, 45, 45, 1) 100%);
+    }
+    
+    .incident-priority-medium {
+        background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(45, 45, 45, 1) 100%);
+    }
+    
+    .incident-priority-low {
+        background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(45, 45, 45, 1) 100%);
+    }
+    
+    .timeline-item:hover {
+        background-color: rgba(0, 8, 139, 0.1);
+    }
+}
+
+/* Print styles */
+@media print {
+    .emergency-pulse {
+        animation: none;
+    }
+    
+    .incident-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .emergency-card {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Accessibility improvements */
+.incident-card:focus {
+    outline: 3px solid var(--police-blue);
+    outline-offset: 2px;
+}
+
+.tag-cloud .badge:focus {
+    outline: 2px solid var(--police-blue);
+    outline-offset: 1px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .incident-card {
+        border: 2px solid var(--police-blue);
+    }
+    
+    .emergency-card {
+        border: 3px solid white;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .emergency-pulse,
+    .realtime-indicator,
+    .incident-card,
+    .timeline-item,
+    .tag-cloud .badge {
+        animation: none;
+        transition: none;
+    }
+    
+    .incident-card:hover,
+    .timeline-item:hover {
+        transform: none;
+    }
+}

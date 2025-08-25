@@ -1,0 +1,58 @@
+{
+    "name": "verenigd-amsterdam-forum",
+    "version": "1.0.0",
+    "description": "Verenigd Amsterdam Network - Political forum for Amsterdam citizens to share ideas, discuss local politics and collaborate on building a better city",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx serve .",
+        "server": "node server/app.js",
+        "dev": "npx live-server .",
+        "dev-server": "nodemon server/app.js",
+        "build": "npm run minify-css && npm run minify-js",
+        "minify-css": "npx cleancss-cli css/main.css -o css/main.min.css",
+        "minify-js": "npx terser js/main.js -o js/main.min.js -c -m",
+        "test": "echo \"No tests specified\" && exit 0",
+        "lint": "npx eslint js/main.js",
+        "validate": "npx html-validate index.html"
+    },
+    "keywords": [
+        "verenigd-amsterdam",
+        "political-forum",
+        "amsterdam",
+        "community",
+        "politics",
+        "civic-engagement",
+        "local-government"
+    ],
+    "author": "Verenigd Amsterdam",
+    "license": "MIT",
+    "homepage": "https://verenigdamsterdam.nl/netwerk",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/verenigd-amsterdam/network-forum.git"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "firebase-admin": "^12.0.0"
+    },
+    "devDependencies": {
+        "clean-css-cli": "^5.6.2",
+        "eslint": "^8.57.0",
+        "html-validate": "^8.7.4",
+        "live-server": "^1.2.2",
+        "nodemon": "^3.0.2",
+        "serve": "^14.2.1",
+        "terser": "^5.26.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead",
+        "not ie <= 11"
+    ],
+    "engines": {
+        "node": ">=16.0.0",
+        "npm": ">=8.0.0"
+    }
+}

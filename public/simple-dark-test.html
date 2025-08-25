@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dark Mode Test</title>
+    <style>
+        /* Simple test styles */
+        :root {
+            --bg-primary: #ffffff;
+            --text-primary: #000000;
+        }
+        
+        :root[data-theme="dark"] {
+            --bg-primary: #111827;
+            --text-primary: #ffffff;
+        }
+        
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .debug-info {
+            background: rgba(128, 128, 128, 0.2);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Dark Mode Test</h1>
+    <p>Click the toggle button to test dark mode switching.</p>
+    
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span class="theme-toggle-icon">🌙</span>
+        <span class="theme-toggle-text">Dark</span>
+    </button>
+    
+    <div class="debug-info">
+        <h3>Debug Info:</h3>
+        <p>data-theme: <span id="data-theme">none</span></p>
+        <p>Body background: <span id="body-bg">-</span></p>
+        <p>Body color: <span id="body-color">-</span></p>
+        <p>CSS variables:</p>
+        <ul>
+            <li>--bg-primary: <span id="bg-primary">-</span></li>
+            <li>--text-primary: <span id="text-primary">-</span></li>
+        </ul>
+    </div>
+    
+    <script>
+        function updateDebugInfo() {
+            document.getElementById('data-theme').textContent = 
+                document.documentElement.getAttribute('data-theme') || 'none';
+            document.getElementById('body-bg').textContent = 
+                getComputedStyle(document.body).backgroundColor;
+            document.getElementById('body-color').textContent = 
+                getComputedStyle(document.body).color;
+            document.getElementById('bg-primary').textContent = 
+                getComputedStyle(document.documentElement).getPropertyValue('--bg-primary');
+            document.getElementById('text-primary').textContent = 
+                getComputedStyle(document.documentElement).getPropertyValue('--text-primary');
+        }
+        
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? null : 'dark';
+            
+            if (newTheme) {
+                document.documentElement.setAttribute('data-theme', newTheme);
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+            
+            // Update button text
+            const icon = document.querySelector('.theme-toggle-icon');
+            const text = document.querySelector('.theme-toggle-text');
+            
+            if (newTheme === 'dark') {
+                icon.textContent = '☀️';
+                text.textContent = 'Light';
+            } else {
+                icon.textContent = '🌙';
+                text.textContent = 'Dark';
+            }
+            
+            console.log('Theme toggled to:', newTheme || 'light');
+            updateDebugInfo();
+        }
+        
+        // Initial update
+        updateDebugInfo();
+        
+        // Auto-update every second
+        setInterval(updateDebugInfo, 1000);
+    </script>
+</body>
+</html>

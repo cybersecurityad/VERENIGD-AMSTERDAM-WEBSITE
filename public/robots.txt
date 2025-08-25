@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://verenigdamsterdam.nl/sitemap.xml
+Sitemap: https://verenigdamsterdam.nl/sitemap-news.xml

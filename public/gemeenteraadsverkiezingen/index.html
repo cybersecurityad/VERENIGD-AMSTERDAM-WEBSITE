@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Gemeenteraadsverkiezingen Amsterdam 2026 - Verenigd Amsterdam</title>
+    <meta name="title" content="Gemeenteraadsverkiezingen Amsterdam 2026 - Verenigd Amsterdam">
+    <meta name="description" content="Gemeenteraadsverkiezingen Amsterdam 2026. Verenigd Amsterdam - Solidair, Sociaal, Sterk! Lees ons verkiezingsprogramma en doe mee aan het debat.">
+    <meta name="keywords" content="Gemeenteraadsverkiezingen Amsterdam 2026, Verenigd Amsterdam, verkiezingen, lokale politiek, amsterdam">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#003366">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/gemeenteraadsverkiezingen/">
+    <meta property="og:title" content="Gemeenteraadsverkiezingen Amsterdam 2026 - Verenigd Amsterdam">
+    <meta property="og:description" content="Verenigd Amsterdam - Solidair, Sociaal, Sterk! Voor de Gemeenteraadsverkiezingen Amsterdam 2026">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/verkiezingsprogramma-og.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/gemeenteraadsverkiezingen/">
+    <meta name="twitter:title" content="Gemeenteraadsverkiezingen Amsterdam 2026 - Verenigd Amsterdam">
+    <meta name="twitter:description" content="Verenigd Amsterdam - Solidair, Sociaal, Sterk! Voor de Gemeenteraadsverkiezingen Amsterdam 2026">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/verkiezingsprogramma-og.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/gemeenteraadsverkiezingen/">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="/gemeenteraadsverkiezingen/css/election-forum.css" rel="stylesheet">
+    
+    <style>
+        .election-hero {
+            background: linear-gradient(135deg, var(--election-blue) 0%, var(--election-blue-light) 100%);
+            color: var(--election-white);
+            padding: var(--space-16) var(--space-6);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .election-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--election-red);
+            color: var(--election-white);
+            padding: var(--space-2) var(--space-4);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: var(--font-semibold);
+            margin-bottom: var(--space-4);
+            animation: pulse 2s infinite;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+            margin: var(--space-16) 0;
+        }
+        
+        .feature-card {
+            background: var(--election-white);
+            padding: var(--space-8);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-light);
+            transition: var(--transition-base);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--election-blue) 0%, var(--election-blue-light) 100%);
+            color: var(--election-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto var(--space-6) auto;
+        }
+        
+        .cta-section {
+            background: var(--bg-accent);
+            padding: var(--space-16) var(--space-6);
+            text-align: center;
+            border-radius: var(--radius-2xl);
+            margin: var(--space-16) 0;
+        }
+        
+        .stats-banner {
+            background: linear-gradient(135deg, var(--election-red) 0%, var(--election-red-light) 100%);
+            color: var(--election-white);
+            padding: var(--space-8) var(--space-6);
+            border-radius: var(--radius-xl);
+            margin: var(--space-12) 0;
+        }
+        
+        .countdown-large {
+            font-size: 4rem;
+            font-weight: var(--font-extrabold);
+            line-height: 1;
+            margin: var(--space-4) 0;
+        }
+        
+        @media (max-width: 768px) {
+            .countdown-large {
+                font-size: 2.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Spring naar hoofdinhoud</a>
+
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        <div class="alert-content">
+            <i class="fas fa-vote-yea alert-icon" aria-hidden="true"></i>
+            <span><strong>Verkiezingen 2026:</strong> Registratie kiezersregistratie opent 1 januari 2026 • Zorg dat je geregistreerd staat!</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="https://verenigdamsterdam.nl" class="nav-brand">
+                <img src="../images/verenigd-amsterdam-politiek-2025-logo_small.png" alt="Verenigd Amsterdam logo" width="40" height="40">
+                <span>Verenigd Amsterdam</span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="https://verenigdamsterdam.nl" class="nav-link">
+                    <i class="fas fa-home" aria-hidden="true"></i> Home
+                </a></li>
+                <li><a href="https://verenigdamsterdam.nl/verkiezingsprogramma" class="nav-link">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i> Programma
+                </a></li>
+                <li><a href="#" class="nav-link active">
+                    <i class="fas fa-vote-yea" aria-hidden="true"></i> Verkiezingen 2026
+                </a></li>
+                <li><a href="https://verenigdamsterdam.nl/nieuws" class="nav-link">
+                    <i class="fas fa-newspaper" aria-hidden="true"></i> Nieuws
+                </a></li>
+                <li><a href="forum/" class="nav-link">
+                    <i class="fas fa-comments" aria-hidden="true"></i> Forum
+                </a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="https://verenigdamsterdam.nl/doe-mee" class="btn btn-primary">
+                    <i class="fas fa-handshake" aria-hidden="true"></i>
+                    Word lid
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="election-hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                    18 maart 2026
+                </div>
+                <h1 style="font-size: 3.5rem; margin-bottom: var(--space-6);">
+                    Gemeenteraadsverkiezingen<br>Amsterdam 2026
+                </h1>
+                <p style="font-size: 1.5rem; margin-bottom: var(--space-8); opacity: 0.9;">
+                    Verenigd Amsterdam - <strong>Solidair, Sociaal, Sterk!</strong><br>
+                    Jouw stem voor een Amsterdam waar iedereen meetelt
+                </p>
+                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://verenigdamsterdam.nl/verkiezingsprogramma" class="btn btn-white btn-lg">
+                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        Verkiezingsprogramma
+                    </a>
+                    <a href="forum/" class="btn btn-alert btn-lg">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Join het debat
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="container">
+            <div class="stats-banner">
+                <h2 style="font-size: 2rem; margin-bottom: var(--space-4);">
+                    <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+                    Verkiezingsaftelling
+                </h2>
+                <div class="countdown-large" id="election-countdown">189 dagen</div>
+                <p style="font-size: 1.25rem; margin: 0;">
+                    tot de Gemeenteraadsverkiezingen Amsterdam 2026
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="container">
+            <div style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 style="font-size: 2.5rem; margin-bottom: var(--space-4);">
+                    Maak kennis met de verkiezingen
+                </h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                    Alles wat je moet weten over de Gemeenteraadsverkiezingen Amsterdam 2026 en hoe Verenigd Amsterdam het verschil gaat maken.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vote-yea" aria-hidden="true"></i>
+                    </div>
+                    <h3 style="margin-bottom: var(--space-3);">Verkiezingsprogramma</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-4);">
+                        Ontdek ons complete programma voor Amsterdam: van betaalbare woningen tot groene initiatieven.
+                    </p>
+                    <a href="https://verenigdamsterdam.nl/verkiezingsprogramma" class="btn btn-outline">
+                        Lees programma
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                    </div>
+                    <h3 style="margin-bottom: var(--space-3);">Verkiezingsforum</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-4);">
+                        Discussieer over de verkiezingen, stel vragen aan kandidaten en deel jouw mening.
+                    </p>
+                    <a href="forum/" class="btn btn-primary">
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        Naar het forum
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                    </div>
+                    <h3 style="margin-bottom: var(--space-3);">Ontmoet de kandidaten</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-4);">
+                        Leer onze kandidaten kennen en ontdek wie jouw buurt gaat vertegenwoordigen.
+                    </p>
+                    <a href="#kandidaten" class="btn btn-outline">
+                        Kandidatenlijst
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                    </div>
+                    <h3 style="margin-bottom: var(--space-3);">Verkiezingsagenda</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-4);">
+                        Kom naar onze debatten, bijeenkomsten en campagne-evenementen in jouw buurt.
+                    </p>
+                    <a href="#agenda" class="btn btn-outline">
+                        Bekijk agenda
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    </div>
+                    <h3 style="margin-bottom: var(--space-3);">Verkiezingsinformatie</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-4);">
+                        Praktische informatie over stemmen, stembureaus en verkiezingsprocedures.
+                    </p>
+                    <a href="#info" class="btn btn-outline">
+                        Meer info
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake" aria-hidden="true"></i>
+                    </div>
+                    <h3 style="margin-bottom: var(--space-3);">Doe mee</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-4);">
+                        Word lid van Verenigd Amsterdam en help mee aan een betere toekomst voor onze stad.
+                    </p>
+                    <a href="https://verenigdamsterdam.nl/doe-mee" class="btn btn-primary">
+                        Word lid
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="container">
+            <div class="cta-section">
+                <h2 style="font-size: 2.5rem; margin-bottom: var(--space-4);">
+                    Jouw stem telt!
+                </h2>
+                <p style="font-size: 1.25rem; margin-bottom: var(--space-8); color: var(--text-secondary);">
+                    Ga naar ons verkiezingsforum en discussieer mee over de toekomst van Amsterdam.
+                    Jouw mening maakt het verschil.
+                </p>
+                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                    <a href="forum/" class="btn btn-primary btn-lg">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Ga naar het forum
+                    </a>
+                    <a href="https://verenigdamsterdam.nl/doe-mee" class="btn btn-outline btn-lg">
+                        <i class="fas fa-user-plus" aria-hidden="true"></i>
+                        Word lid van VA
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Verkiezingen 2026</h3>
+                <ul class="footer-links">
+                    <li><a href="https://verenigdamsterdam.nl/verkiezingsprogramma">Verkiezingsprogramma</a></li>
+                    <li><a href="forum/">Verkiezingsforum</a></li>
+                    <li><a href="#kandidaten">Kandidatenlijst</a></li>
+                    <li><a href="#agenda">Verkiezingsagenda</a></li>
+                    <li><a href="#info">Stemmen informatie</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Verenigd Amsterdam</h3>
+                <ul class="footer-links">
+                    <li><a href="https://verenigdamsterdam.nl">Home</a></li>
+                    <li><a href="https://verenigdamsterdam.nl/standpunten">Standpunten</a></li>
+                    <li><a href="https://verenigdamsterdam.nl/nieuws">Nieuws</a></li>
+                    <li><a href="https://verenigdamsterdam.nl/doe-mee">Doe mee</a></li>
+                    <li><a href="https://verenigdamsterdam.nl/contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>Sint Olofsteeg 4C</li>
+                    <li>1012 AK Amsterdam</li>
+                    <li><a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></li>
+                    <li><a href="tel:+31649319157">06-49319157</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Volg ons</h3>
+                <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+                    <a href="https://facebook.com/verenigdamsterdam"><i class="fab fa-facebook" style="font-size: 1.5rem;"></i></a>
+                    <a href="https://twitter.com/VerenigdAdam"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a>
+                    <a href="https://instagram.com/verenigdamsterdam"><i class="fab fa-instagram" style="font-size: 1.5rem;"></i></a>
+                </div>
+                <p style="color: var(--gray-300); font-size: 0.875rem;">
+                    Solidair, Sociaal, Sterk!<br>
+                    Voor een Amsterdam waar iedereen meetelt.
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Election countdown
+        function updateElectionCountdown() {
+            const electionDate = new Date('2026-03-18T08:00:00');
+            const now = new Date();
+            const timeDiff = electionDate - now;
+            
+            if (timeDiff > 0) {
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const countdownElement = document.getElementById('election-countdown');
+                if (countdownElement) {
+                    countdownElement.textContent = `${days} dagen`;
+                }
+            }
+        }
+        
+        updateElectionCountdown();
+        setInterval(updateElectionCountdown, 24 * 60 * 60 * 1000); // Update daily
+    </script>
+    
+    <!-- Election Forum JavaScript -->
+    <script src="/gemeenteraadsverkiezingen/js/election-forum.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ============================================
+    // TEMPORARY RULES FOR INITIAL SETUP
+    // ============================================
+    
+    // Allow public read for news articles
+    match /news/{article} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+    // Allow public read for events
+    match /events/{event} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+    // Allow public read for campaign info
+    match /campaigns/{campaign} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+    // Newsletter subscriptions (write-only for public)
+    match /newsletter/{subscription} {
+      allow read: if false;
+      allow create: if true;
+      allow update, delete: if false;
+    }
+    
+    // Contact form submissions (write-only for public)
+    match /contact/{submission} {
+      allow read: if false;
+      allow create: if true;
+      allow update, delete: if false;
+    }
+    
+    // ============================================
+    // AUTHENTICATED AREAS (for future use)
+    // ============================================
+    
+    // User profiles (when auth is implemented)
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // ============================================
+    // DEFAULT DENY
+    // ============================================
+    
+    // Deny all other access
+    match /{document=**} {
+      allow read: if false;
+      allow write: if false;
+    }
+  }
+}

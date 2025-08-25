@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Site Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Main Site Dark Mode Test</h1>
+    <p>Testing with the actual site CSS and JS.</p>
+    
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-toggle-icon">🌙</span>
+        <span class="theme-toggle-text">Dark</span>
+    </button>
+    
+    <div style="padding: 20px; margin: 20px; background: var(--bg-secondary); border: 1px solid var(--border-color);">
+        <h2>Test Section</h2>
+        <p>This should change when dark mode is toggled.</p>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // Force clear localStorage for testing
+        localStorage.removeItem('theme');
+        
+        // Test function to manually toggle
+        window.manualToggle = function() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const newTheme = current === 'dark' ? null : 'dark';
+            
+            if (newTheme) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                console.log('Manually set to dark mode');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                console.log('Manually set to light mode');
+            }
+            
+            console.log('data-theme:', document.documentElement.getAttribute('data-theme'));
+            console.log('Body bg:', getComputedStyle(document.body).backgroundColor);
+            console.log('--bg-primary:', getComputedStyle(document.documentElement).getPropertyValue('--bg-primary'));
+        };
+        
+        // Monitor theme toggle button clicks
+        setTimeout(() => {
+            const button = document.querySelector('.theme-toggle');
+            if (button) {
+                console.log('Theme toggle button found');
+                button.addEventListener('click', () => {
+                    console.log('Button clicked!');
+                    setTimeout(() => {
+                        console.log('After click - data-theme:', document.documentElement.getAttribute('data-theme'));
+                        console.log('After click - body bg:', getComputedStyle(document.body).backgroundColor);
+                    }, 100);
+                });
+            } else {
+                console.error('Theme toggle button not found!');
+            }
+        }, 500);
+        
+        console.log('Test loaded. Try clicking the button or call manualToggle()');
+    </script>
+</body>
+</html>

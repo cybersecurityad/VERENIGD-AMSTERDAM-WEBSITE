@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Theme Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .debug-info {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .test-button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Theme Toggle Debug</h1>
+    
+    <div class="debug-info">
+        <h3>Current State:</h3>
+        <p>data-theme attribute: <span id="theme-attr">-</span></p>
+        <p>localStorage theme: <span id="local-storage">-</span></p>
+        <p>Body background: <span id="body-bg">-</span></p>
+        <p>Body color: <span id="body-color">-</span></p>
+    </div>
+    
+    <button class="test-button" onclick="setLightMode()">Force Light Mode</button>
+    <button class="test-button" onclick="setDarkMode()">Force Dark Mode</button>
+    <button class="test-button" onclick="clearStorage()">Clear Storage</button>
+    <button class="test-button" onclick="updateDebugInfo()">Refresh Info</button>
+    
+    <script>
+        function updateDebugInfo() {
+            document.getElementById('theme-attr').textContent = 
+                document.documentElement.getAttribute('data-theme') || 'none';
+            document.getElementById('local-storage').textContent = 
+                localStorage.getItem('theme') || 'none';
+            document.getElementById('body-bg').textContent = 
+                getComputedStyle(document.body).backgroundColor;
+            document.getElementById('body-color').textContent = 
+                getComputedStyle(document.body).color;
+        }
+        
+        function setLightMode() {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            updateDebugInfo();
+        }
+        
+        function setDarkMode() {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            updateDebugInfo();
+        }
+        
+        function clearStorage() {
+            localStorage.removeItem('theme');
+            document.documentElement.removeAttribute('data-theme');
+            updateDebugInfo();
+        }
+        
+        // Update on load
+        window.onload = updateDebugInfo;
+        
+        // Update every second to monitor changes
+        setInterval(updateDebugInfo, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section style="padding: 20px;">
+            <h1>Dark Mode Toggle Test</h1>
+            <p>This page should start in light mode and allow switching to dark mode.</p>
+            
+            <div class="test-section" style="padding: 20px; margin: 20px 0; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color);">
+                <h2>Test Section</h2>
+                <p>Background: var(--bg-secondary)</p>
+                <p>Text: var(--text-primary)</p>
+                <p>Border: var(--border-color)</p>
+            </div>
+
+            <div class="theme-card" style="padding: 15px; margin: 10px 0; background: var(--bg-secondary); border-radius: 8px;">
+                <h3>Theme Card Test</h3>
+                <p>This should change colors when toggling theme.</p>
+            </div>
+
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-icon">🌙</span>
+                <span class="theme-toggle-text">Dark</span>
+            </button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // Debug script
+        console.log('=== Theme Toggle Debug ===');
+        
+        function logThemeState() {
+            console.log('Theme attribute:', document.documentElement.getAttribute('data-theme'));
+            console.log('localStorage theme:', localStorage.getItem('theme'));
+            console.log('Body background:', getComputedStyle(document.body).backgroundColor);
+            console.log('Body color:', getComputedStyle(document.body).color);
+            console.log('CSS variables:');
+            console.log('  --bg-primary:', getComputedStyle(document.documentElement).getPropertyValue('--bg-primary'));
+            console.log('  --text-primary:', getComputedStyle(document.documentElement).getPropertyValue('--text-primary'));
+            console.log('---');
+        }
+        
+        // Log initial state
+        setTimeout(logThemeState, 100);
+        
+        // Monitor theme toggle clicks
+        document.querySelector('.theme-toggle').addEventListener('click', function() {
+            console.log('Theme toggle clicked!');
+            setTimeout(logThemeState, 100);
+        });
+        
+        // Test manual theme setting
+        window.testDarkMode = function() {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            console.log('Manually set dark mode');
+            logThemeState();
+        };
+        
+        window.testLightMode = function() {
+            document.documentElement.removeAttribute('data-theme');
+            console.log('Manually set light mode');
+            logThemeState();
+        };
+        
+        console.log('Test functions available: testDarkMode(), testLightMode()');
+    </script>
+</body>
+</html>

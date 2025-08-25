@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Mode Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Light Mode Test</h1>
+    <p>This page should start in light mode (white background, black text).</p>
+    
+    <div style="padding: 20px; background: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--border-color);">
+        <h2>CSS Variables Test</h2>
+        <p>Background: var(--bg-primary)</p>
+        <p>Text: var(--text-primary)</p>
+        <p>Border: var(--border-color)</p>
+    </div>
+
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-toggle-icon">🌙</span>
+        <span class="theme-toggle-text">Dark</span>
+    </button>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // Clear localStorage to start fresh
+        localStorage.removeItem('theme');
+        
+        // Reload the theme initialization
+        setTimeout(() => {
+            console.log('Current theme on load:', localStorage.getItem('theme'));
+            console.log('data-theme attribute:', document.documentElement.getAttribute('data-theme'));
+            console.log('Body background:', getComputedStyle(document.body).backgroundColor);
+        }, 100);
+    </script>
+</body>
+</html>

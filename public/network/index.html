@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+
+        <!-- Preconnects -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        <!-- Critical font preload -->
+        <link
+            rel="preload"
+            href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2"
+            type="font/woff2"
+            as="font"
+            crossorigin
+        />
+
+        <!-- Stylesheets -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Critical Resources -->
+        <link
+            rel="preload"
+            as="image"
+            href="https://verenigdamsterdam.nl/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+            fetchpriority="high"
+            type="image/png"
+        />
+
+        <!-- Primary Meta Tags -->
+        <title>
+            Verenigd Amsterdam Netwerk - Solidair, Sociaal, Sterk! - Politieke Netwerk Platform
+        </title>
+        <meta
+            name="title"
+            content="Verenigd Amsterdam Netwerk - Solidair, Sociaal, Sterk! - Politieke Netwerk Platform"
+        />
+
+        <meta
+            name="description"
+            content="Verenigd Amsterdam Netwerk - Solidair, Sociaal, Sterk! Sluit je aan bij het politieke netwerk van Amsterdam. Deel politieberichten, discussieer over veiligheid en werk samen aan een veilige stad."
+        />
+        <meta
+            name="robots"
+            content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
+        <meta name="language" content="Dutch" />
+        <meta name="author" content="Verenigd Amsterdam" />
+        <meta name="publisher" content="Verenigd Amsterdam" />
+        <meta name="copyright" content="Verenigd Amsterdam 2025" />
+        <meta name="rating" content="general" />
+        <meta name="distribution" content="global" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="expires" content="never" />
+        <meta name="theme-color" content="#00008b" />
+
+        <!-- Geo Tags -->
+        <meta name="geo.region" content="NL-NH" />
+        <meta name="geo.placename" content="Amsterdam" />
+        <meta name="geo.position" content="52.3676;4.9041" />
+        <meta name="ICBM" content="52.3676, 4.9041" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://verenigdamsterdam.nl/network/" />
+        <meta
+            property="og:title"
+            content="Verenigd Amsterdam Netwerk - Solidair, Sociaal, Sterk!"
+        />
+        <meta
+            property="og:description"
+            content="Politiek netwerk platform voor veiligheid in Amsterdam. Deel politieberichten en werk samen aan een veiligere stad."
+        />
+        <meta
+            property="og:image"
+            content="https://verenigdamsterdam.nl/images/og-default.jpg"
+        />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:url"
+            content="https://verenigdamsterdam.nl/network/"
+        />
+        <meta
+            name="twitter:title"
+            content="Verenigd Amsterdam Netwerk - Solidair, Sociaal, Sterk!"
+        />
+        <meta
+            name="twitter:description"
+            content="Politiek netwerk platform voor veiligheid in Amsterdam. Deel politieberichten en werk samen aan een veiligere stad."
+        />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://verenigdamsterdam.nl/network/" />
+
+        <!-- Favicons -->
+        <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+
+        <!-- External Dependencies -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet"
+            crossorigin="anonymous"
+        />
+
+        <!-- Main Site Styles -->
+        <link href="../styles.css" rel="stylesheet" />
+        <link href="../forum/css/main.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+
+        <!-- Network Specific Styles -->
+        <style>
+            :root {
+                --police-blue: #00008b;
+                --police-red: #f60707;
+                --police-light-blue: #1a56a7;
+                --police-dark-blue: #002d6b;
+            }
+
+            .bg-police-blue {
+                background-color: var(--police-blue) !important;
+            }
+
+            .text-police-blue {
+                color: var(--police-blue) !important;
+            }
+
+            .btn-police-blue {
+                background-color: var(--police-blue);
+                border-color: var(--police-blue);
+                color: white;
+            }
+
+            .btn-police-blue:hover {
+                background-color: var(--police-light-blue);
+                border-color: var(--police-light-blue);
+                color: white;
+            }
+
+            .btn-outline-police-blue {
+                border-color: var(--police-blue);
+                color: var(--police-blue);
+            }
+
+            .btn-outline-police-blue:hover {
+                background-color: var(--police-blue);
+                border-color: var(--police-blue);
+                color: white;
+            }
+
+            .police-hero {
+                background: linear-gradient(135deg, var(--police-blue) 0%, var(--police-light-blue) 100%);
+            }
+
+            .news-flash {
+                background-color: var(--police-red) !important;
+            }
+
+            .incident-card {
+                border-left: 4px solid var(--police-blue);
+                transition: all 0.3s ease;
+            }
+
+            .incident-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .incident-priority-high {
+                border-left-color: var(--police-red);
+            }
+
+            .incident-priority-medium {
+                border-left-color: #ffc107;
+            }
+
+            .incident-priority-low {
+                border-left-color: #28a745;
+            }
+
+            .crime-map-container {
+                height: 400px;
+                background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+                border: 2px dashed #dee2e6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+            }
+
+            .emergency-card {
+                background: linear-gradient(135deg, var(--police-red) 0%, #dc3545 100%);
+                color: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(246, 7, 7, 0.3);
+            }
+
+            .emergency-card:hover {
+                transform: scale(1.02);
+                box-shadow: 0 6px 16px rgba(246, 7, 7, 0.4);
+            }
+
+            .tag-cloud .badge {
+                margin: 0.25rem;
+                transition: all 0.3s ease;
+            }
+
+            .tag-cloud .badge:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+            .activity-timeline {
+                border-left: 3px solid var(--police-blue);
+                padding-left: 1.5rem;
+                margin-left: 1rem;
+            }
+
+            .activity-timeline .timeline-item {
+                position: relative;
+                padding-bottom: 1.5rem;
+            }
+
+            .activity-timeline .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -1.75rem;
+                top: 0.5rem;
+                width: 12px;
+                height: 12px;
+                background-color: var(--police-blue);
+                border-radius: 50%;
+                border: 3px solid white;
+                box-shadow: 0 0 0 3px var(--police-blue);
+            }
+
+            @keyframes pulse-emergency {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+
+            .emergency-pulse {
+                animation: pulse-emergency 1s infinite;
+            }
+        </style>
+
+        <!-- Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-0B4ZR31YFS"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('consent', 'default', {
+                ad_storage: 'granted',
+                analytics_storage: 'granted',
+                functionality_storage: 'granted',
+                personalization_storage: 'granted',
+                security_storage: 'granted',
+            });
+            gtag('js', new Date());
+            gtag('config', 'G-0B4ZR31YFS', {
+                anonymize_ip: true,
+                cookie_flags: 'SameSite=None;Secure',
+            });
+        </script>
+    </head>
+    <body class="bg-light">
+        <!-- Skip to main content for accessibility -->
+        <a
+            href="#main-content"
+            class="sr-only sr-only-focusable btn btn-primary"
+        >
+            Spring naar hoofdinhoud
+        </a>
+
+        <!-- Header Navigation -->
+        <header class="site-header" role="banner">
+            <nav
+                class="navbar navbar-expand-lg navbar-dark bg-police-blue fixed-top"
+                aria-label="Hoofdnavigatie"
+            >
+                <div class="container">
+                    <a
+                        class="navbar-brand d-flex align-items-center"
+                        href="https://verenigdamsterdam.nl"
+                        aria-label="Verenigd Amsterdam - Terug naar hoofdpagina"
+                    >
+                        <img
+                            src="https://verenigdamsterdam.nl/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+                            alt="Verenigd Amsterdam logo"
+                            width="40"
+                            height="40"
+                            class="me-2"
+                        />
+                        <span class="fw-bold">Verenigd Amsterdam</span>
+                    </a>
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#main-nav"
+                        aria-controls="main-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigatie"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="https://verenigdamsterdam.nl"
+                                    aria-label="Ga naar de hoofdpagina"
+                                >
+                                    <i
+                                        class="fas fa-home me-1"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="https://verenigdamsterdam.nl/verkiezingsprogramma"
+                                    aria-label="Bekijk ons verkiezingsprogramma"
+                                >
+                                    <i
+                                        class="fas fa-file-alt me-1"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Programma
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    href="#"
+                                    aria-current="page"
+                                    aria-label="Huidige pagina: Veiligheidsnetwerk"
+                                >
+                                    <i
+                                        class="fas fa-shield-alt me-1"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Veiligheidsnetwerk
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="../forum/"
+                                    aria-label="Ga naar het forum"
+                                >
+                                    <i
+                                        class="fas fa-users me-1"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Forum
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="https://verenigdamsterdam.nl/nieuws"
+                                    aria-label="Lees het laatste nieuws"
+                                >
+                                    <i
+                                        class="fas fa-newspaper me-1"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Nieuws
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="https://verenigdamsterdam.nl/contact"
+                                    aria-label="Neem contact met ons op"
+                                >
+                                    <i
+                                        class="fas fa-envelope me-1"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="navbar-nav">
+                            <div
+                                class="connection-status online me-3 small"
+                                title="Verbindingsstatus"
+                            >
+                                <i
+                                    class="fas fa-wifi me-1"
+                                    aria-hidden="true"
+                                ></i>
+                                <span>Live</span>
+                            </div>
+                            <button
+                                class="btn btn-outline-light me-2"
+                                onclick="showReportModal()"
+                                aria-label="Melding doen"
+                            >
+                                <i
+                                    class="fas fa-exclamation-triangle me-1"
+                                    aria-hidden="true"
+                                ></i>
+                                Melding
+                            </button>
+                            <button
+                                class="btn btn-light"
+                                onclick="showEmergencyInfo()"
+                                aria-label="Noodgevallen informatie"
+                            >
+                                <i
+                                    class="fas fa-phone me-1"
+                                    aria-hidden="true"
+                                ></i>
+                                Nood
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content" role="main">
+            <!-- Hero Banner -->
+            <section
+                class="police-hero text-white py-5"
+                aria-labelledby="hero-title"
+            >
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-shield-alt fa-3x me-3"></i>
+                                <h1
+                                    id="hero-title"
+                                    class="display-4 fw-bold mb-0"
+                                >
+                                    Veiligheidsnetwerk Amsterdam
+                                </h1>
+                            </div>
+                            <p class="h5 mb-3 text-white-75">
+                                Verenigd Amsterdam - Solidair, Sociaal, Sterk!
+                            </p>
+                            <div class="lead mb-4">
+                                <p class="mb-3">
+                                    <strong>100 extra wijkagenten voor Amsterdam.</strong>
+                                    Samen werken we aan een veiligere stad waar iedereen zich thuis voelt.
+                                </p>
+                                <p class="mb-3">
+                                    Met dit platform delen we actuele veiligheidsinformatie, politieberichten 
+                                    en kunnen Amsterdammers direct contact leggen met onze politieke vertegenwoordigers 
+                                    over veiligheidsprojecten in hun buurt.
+                                </p>
+                                <p class="mb-3">
+                                    <strong>Geen criminelen die de dienst uitmaken, maar burgers die samen 
+                                    staan voor een veilige stad.</strong>
+                                </p>
+                            </div>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <button
+                                    class="btn btn-light btn-lg"
+                                    onclick="scrollToIncidents()"
+                                    aria-label="Bekijk recente incidenten"
+                                >
+                                    <i
+                                        class="fas fa-list me-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Recente incidenten
+                                </button>
+                                <button
+                                    class="btn btn-outline-light btn-lg"
+                                    onclick="showCrimeMap()"
+                                    aria-label="Bekijk misdaadkaart"
+                                >
+                                    <i
+                                        class="fas fa-map-marked-alt me-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Misdaadkaart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <div class="position-relative">
+                                <i class="fas fa-city fa-10x text-white-50"></i>
+                                <div class="position-absolute top-50 start-50 translate-middle">
+                                    <i class="fas fa-shield-alt fa-6x text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Breaking News Flash -->
+            <section
+                class="news-flash bg-police-red text-white py-2"
+                aria-labelledby="news-title"
+                role="region"
+            >
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <h2 id="news-title" class="h6 mb-0 fw-bold">
+                                <i
+                                    class="fas fa-bullhorn me-2"
+                                    aria-hidden="true"
+                                ></i>
+                                Live Updates
+                            </h2>
+                        </div>
+                        <div class="col">
+                            <div
+                                class="news-ticker"
+                                role="marquee"
+                                aria-live="polite"
+                            >
+                                <span class="news-item">
+                                    <strong>LIVE:</strong>
+                                    Veiligheidsnetwerk Amsterdam nu actief - Direct contact met wijkagenten •
+                                </span>
+                                <span class="news-item">
+                                    Extra politietoezicht in centrum Amsterdam na meldingen overlast •
+                                </span>
+                                <span class="news-item">
+                                    Verenigd Amsterdam: 100 extra wijkagenten voor alle stadsdelen •
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emergency Numbers Section -->
+            <section class="bg-light py-3" aria-labelledby="emergency-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="emergency-card p-4 mb-4 emergency-pulse">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-phone-alt fa-3x"></i>
+                                    </div>
+                                    <div class="col">
+                                        <h3 id="emergency-title" class="h5 mb-2">
+                                            Noodnummers Amsterdam
+                                        </h3>
+                                        <div class="row text-center">
+                                            <div class="col-md-3">
+                                                <div class="h4 mb-1">
+                                                    <a href="tel:112" class="text-white text-decoration-none">
+                                                        <i class="fas fa-ambulance me-2"></i>112
+                                                    </a>
+                                                </div>
+                                                <small>Spoed</small>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="h4 mb-1">
+                                                    <a href="tel:0900-8844" class="text-white text-decoration-none">
+                                                        <i class="fas fa-shield-alt me-2"></i>0900-8844
+                                                    </a>
+                                                </div>
+                                                <small>Politie</small>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="h4 mb-1">
+                                                    <a href="tel:0800-2000" class="text-white text-decoration-none">
+                                                        <i class="fas fa-heart me-2"></i>0800-2000
+                                                    </a>
+                                                </div>
+                                                <small>Slachtofferhulp</small>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="h4 mb-1">
+                                                    <a href="tel:+31649319157" class="text-white text-decoration-none">
+                                                        <i class="fas fa-user-tie me-2"></i>06-49319157
+                                                    </a>
+                                                </div>
+                                                <small>VA Veiligheid</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Content Container -->
+            <div class="container my-5">
+                <div class="row">
+                    <!-- Main Content Area -->
+                    <div class="col-lg-8" id="incidents-section">
+                        <!-- Recent Police Reports -->
+                        <div class="bg-white rounded mb-4 p-4 shadow-sm">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div>
+                                    <h2 class="h3 mb-1 text-police-blue">
+                                        <i class="fas fa-clipboard-list me-2"></i>
+                                        Recente Politieberichten
+                                    </h2>
+                                    <p class="text-muted mb-0">
+                                        Live updates van politie en veiligheidsdiensten
+                                    </p>
+                                </div>
+                                <button
+                                    class="btn btn-police-blue"
+                                    onclick="refreshIncidents()"
+                                    aria-label="Ververs berichten"
+                                >
+                                    <i class="fas fa-sync-alt me-2"></i>
+                                    Ververs
+                                </button>
+                            </div>
+
+                            <!-- Incident Cards -->
+                            <div class="incidents-list">
+                                <!-- High Priority Incident -->
+                                <div class="incident-card card mb-3 incident-priority-high">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="incident-icon bg-danger text-white rounded-circle p-3">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <h5 class="card-title mb-1">Inbraak Centrum Amsterdam</h5>
+                                                    <span class="badge bg-danger">Prioriteit: Hoog</span>
+                                                </div>
+                                                <p class="card-text text-muted">
+                                                    Inbraak gemeld in winkelgebied Kalverstraat. Politie ter plaatse. 
+                                                    Getuigen gevraagd zich te melden.
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                                        Centrum - Kalverstraat
+                                                    </small>
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-clock me-1"></i>
+                                                        15 minuten geleden
+                                                    </small>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <button class="btn btn-sm btn-outline-police-blue me-2">
+                                                        <i class="fas fa-info-circle me-1"></i>
+                                                        Meer info
+                                                    </button>
+                                                    <button class="btn btn-sm btn-outline-secondary">
+                                                        <i class="fas fa-share me-1"></i>
+                                                        Delen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Medium Priority Incident -->
+                                <div class="incident-card card mb-3 incident-priority-medium">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="incident-icon bg-warning text-white rounded-circle p-3">
+                                                    <i class="fas fa-car-crash"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <h5 class="card-title mb-1">Verkeersongeval Ringweg A10</h5>
+                                                    <span class="badge bg-warning">Prioriteit: Gemiddeld</span>
+                                                </div>
+                                                <p class="card-text text-muted">
+                                                    Kop-staartbotsing op A10 richting Zaandam. Linkerrijstrook afgesloten. 
+                                                    Vertraging verwacht.
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                                        A10 Noord - Km 3.2
+                                                    </small>
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-clock me-1"></i>
+                                                        45 minuten geleden
+                                                    </small>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <button class="btn btn-sm btn-outline-police-blue me-2">
+                                                        <i class="fas fa-info-circle me-1"></i>
+                                                        Meer info
+                                                    </button>
+                                                    <button class="btn btn-sm btn-outline-secondary">
+                                                        <i class="fas fa-share me-1"></i>
+                                                        Delen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Low Priority Incident -->
+                                <div class="incident-card card mb-3 incident-priority-low">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <div class="incident-icon bg-success text-white rounded-circle p-3">
+                                                    <i class="fas fa-bicycle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <h5 class="card-title mb-1">Fietsdiefstal Vondelpark</h5>
+                                                    <span class="badge bg-success">Prioriteit: Laag</span>
+                                                </div>
+                                                <p class="card-text text-muted">
+                                                    Meerdere meldingen van fietsdiefstal in Vondelpark gebied. 
+                                                    Extra surveillance ingezet.
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                                        Oud-Zuid - Vondelpark
+                                                    </small>
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-clock me-1"></i>
+                                                        2 uur geleden
+                                                    </small>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <button class="btn btn-sm btn-outline-police-blue me-2">
+                                                        <i class="fas fa-info-circle me-1"></i>
+                                                        Meer info
+                                                    </button>
+                                                    <button class="btn btn-sm btn-outline-secondary">
+                                                        <i class="fas fa-share me-1"></i>
+                                                        Delen
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Load More Button -->
+                            <div class="text-center mt-4">
+                                <button class="btn btn-outline-police-blue">
+                                    <i class="fas fa-plus-circle me-2"></i>
+                                    Meer berichten laden
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Crime Map Section -->
+                        <div class="bg-white rounded mb-4 p-4 shadow-sm" id="crime-map-section">
+                            <h2 class="h3 mb-3 text-police-blue">
+                                <i class="fas fa-map-marked-alt me-2"></i>
+                                Misdaadkaart Amsterdam
+                            </h2>
+                            <div class="crime-map-container">
+                                <div class="text-center text-muted">
+                                    <i class="fas fa-map fa-4x mb-3"></i>
+                                    <h4>Interactieve Misdaadkaart</h4>
+                                    <p>Bekijk misdaadincidenten op de kaart van Amsterdam</p>
+                                    <button class="btn btn-police-blue">
+                                        <i class="fas fa-external-link-alt me-2"></i>
+                                        Volledige kaart bekijken
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <!-- Search Widget -->
+                        <div class="bg-white rounded mb-4 p-4 shadow-sm">
+                            <h3 class="h5 mb-3 text-police-blue">
+                                <i class="fas fa-search me-2"></i>
+                                Zoeken in Politieberichten
+                            </h3>
+                            <form>
+                                <div class="input-group mb-3">
+                                    <input
+                                        type="search"
+                                        class="form-control"
+                                        placeholder="Zoek naar incidenten..."
+                                        aria-label="Zoekterm invoeren"
+                                    />
+                                    <button
+                                        class="btn btn-police-blue"
+                                        type="submit"
+                                        aria-label="Zoeken"
+                                    >
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <select class="form-select form-select-sm">
+                                            <option>Alle stadsdelen</option>
+                                            <option>Centrum</option>
+                                            <option>Noord</option>
+                                            <option>Oost</option>
+                                            <option>Zuid</option>
+                                            <option>West</option>
+                                            <option>Nieuw-West</option>
+                                            <option>Zuidoost</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <select class="form-select form-select-sm">
+                                            <option>Alle categorieën</option>
+                                            <option>Inbraak</option>
+                                            <option>Diefstal</option>
+                                            <option>Verkeer</option>
+                                            <option>Overlast</option>
+                                            <option>Geweld</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Popular Tags -->
+                        <div class="bg-white rounded mb-4 p-4 shadow-sm">
+                            <h3 class="h5 mb-3 text-police-blue">
+                                <i class="fas fa-tags me-2"></i>
+                                Populaire Tags
+                            </h3>
+                            <div class="tag-cloud">
+                                <span class="badge bg-police-blue">Amsterdam <span class="badge bg-light text-dark">24</span></span>
+                                <span class="badge bg-secondary">Inbraak <span class="badge bg-light text-dark">18</span></span>
+                                <span class="badge bg-warning text-dark">Drugshandel <span class="badge bg-light text-dark">15</span></span>
+                                <span class="badge bg-danger">Autodiefstal <span class="badge bg-light text-dark">12</span></span>
+                                <span class="badge bg-success">Aanhouding <span class="badge bg-light text-dark">11</span></span>
+                                <span class="badge bg-info">Rotterdam <span class="badge bg-light text-dark">10</span></span>
+                                <span class="badge bg-dark">Vermissing <span class="badge bg-light text-dark">9</span></span>
+                                <span class="badge bg-primary">Geweld <span class="badge bg-light text-dark">8</span></span>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="bg-white rounded mb-4 p-4 shadow-sm">
+                            <h3 class="h5 mb-3 text-police-blue">
+                                <i class="fas fa-bolt me-2"></i>
+                                Quick Actions
+                            </h3>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-police-blue">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    Incident melden
+                                </button>
+                                <button class="btn btn-outline-police-blue">
+                                    <i class="fas fa-question-circle me-2"></i>
+                                    Vraag stellen
+                                </button>
+                                <button class="btn btn-outline-police-blue">
+                                    <i class="fas fa-eye me-2"></i>
+                                    Getuige info
+                                </button>
+                                <button class="btn btn-outline-police-blue">
+                                    <i class="fas fa-phone me-2"></i>
+                                    Contact wijkagent
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="bg-white rounded mb-4 p-4 shadow-sm">
+                            <h3 class="h5 mb-3 text-police-blue">
+                                <i class="fas fa-clock me-2"></i>
+                                Recente Activiteit
+                            </h3>
+                            <div class="activity-timeline">
+                                <div class="timeline-item">
+                                    <h6 class="mb-1">Verdachte aangehouden</h6>
+                                    <p class="small text-muted mb-1">
+                                        Politie houdt verdachte aan in verband met winkeldiefstallen centrum.
+                                    </p>
+                                    <small class="text-muted">10 minuten geleden</small>
+                                </div>
+                                <div class="timeline-item">
+                                    <h6 class="mb-1">Extra surveillance</h6>
+                                    <p class="small text-muted mb-1">
+                                        Verhoogde politie-inzet in Vondelpark naar aanleiding van meldingen.
+                                    </p>
+                                    <small class="text-muted">1 uur geleden</small>
+                                </div>
+                                <div class="timeline-item">
+                                    <h6 class="mb-1">Verkeer hersteld</h6>
+                                    <p class="small text-muted mb-1">
+                                        A10 volledig vrij na afhandeling verkeersongeval.
+                                    </p>
+                                    <small class="text-muted">2 uur geleden</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact VA Veiligheid -->
+                        <div class="bg-white rounded mb-4 p-4 shadow-sm">
+                            <h3 class="h5 mb-3 text-police-blue">
+                                <i class="fas fa-shield-alt me-2"></i>
+                                Verenigd Amsterdam Veiligheid
+                            </h3>
+                            <p class="small text-muted mb-3">
+                                Direct contact met onze politieke vertegenwoordigers over veiligheid in jouw buurt.
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="tel:+31649319157" class="btn btn-police-blue">
+                                    <i class="fas fa-phone me-2"></i>
+                                    06-49319157
+                                </a>
+                                <a href="mailto:veiligheid@verenigdamsterdam.nl" class="btn btn-outline-police-blue">
+                                    <i class="fas fa-envelope me-2"></i>
+                                    E-mail VA Team
+                                </a>
+                                <a href="https://wa.me/31649319157" class="btn btn-outline-success">
+                                    <i class="fab fa-whatsapp me-2"></i>
+                                    WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer bg-dark text-light py-5" role="contentinfo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img
+                                src="https://verenigdamsterdam.nl/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+                                alt="Verenigd Amsterdam logo"
+                                width="40"
+                                height="40"
+                                class="me-2"
+                            />
+                            <span class="h5 mb-0">Verenigd Amsterdam</span>
+                        </div>
+                        <p class="text-light-secondary">
+                            Solidair, Sociaal, Sterk! Een veilige stad voor iedereen.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://facebook.com/verenigdamsterdam" class="text-light me-3" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/VerenigdAdam" class="text-light me-3" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/verenigdamsterdam" class="text-light me-3" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com/company/verenigdamsterdam" class="text-light" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h5 class="text-white mb-3">Navigatie</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="https://verenigdamsterdam.nl" class="text-light-secondary">Home</a></li>
+                            <li><a href="https://verenigdamsterdam.nl/verkiezingsprogramma" class="text-light-secondary">Programma</a></li>
+                            <li><a href="https://verenigdamsterdam.nl/standpunten" class="text-light-secondary">Standpunten</a></li>
+                            <li><a href="https://verenigdamsterdam.nl/nieuws" class="text-light-secondary">Nieuws</a></li>
+                            <li><a href="https://verenigdamsterdam.nl/contact" class="text-light-secondary">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h5 class="text-white mb-3">Veiligheid</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="#" class="text-light-secondary">Misdaadkaart</a></li>
+                            <li><a href="#" class="text-light-secondary">Wijkagenten</a></li>
+                            <li><a href="#" class="text-light-secondary">Melding doen</a></li>
+                            <li><a href="#" class="text-light-secondary">Veiligheidstips</a></li>
+                            <li><a href="tel:112" class="text-light-secondary">Noodgevallen</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h5 class="text-white mb-3">Contact</h5>
+                        <div class="text-light-secondary">
+                            <p class="mb-2">
+                                <i class="fas fa-map-marker-alt me-2"></i>
+                                Sint Olofsteeg 4C<br>
+                                <span class="ms-4">1012 AK Amsterdam</span>
+                            </p>
+                            <p class="mb-2">
+                                <i class="fas fa-phone me-2"></i>
+                                <a href="tel:+31649319157" class="text-light-secondary">06-49319157</a>
+                            </p>
+                            <p class="mb-2">
+                                <i class="fas fa-envelope me-2"></i>
+                                <a href="mailto:info@verenigdamsterdam.nl" class="text-light-secondary">info@verenigdamsterdam.nl</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4 border-secondary">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="text-light-secondary mb-0">
+                            © 2025 Verenigd Amsterdam. Alle rechten voorbehouden.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links">
+                            <a href="https://verenigdamsterdam.nl/privacy" class="text-light-secondary me-3">Privacy</a>
+                            <a href="https://verenigdamsterdam.nl/voorwaarden" class="text-light-secondary me-3">Voorwaarden</a>
+                            <a href="https://verenigdamsterdam.nl/toegankelijkheid" class="text-light-secondary">Toegankelijkheid</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JavaScript -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Network JavaScript -->
+        <script src="script.js"></script>
+
+        <!-- Custom JavaScript -->
+        <script>
+            // Smooth scrolling functions
+            function scrollToIncidents() {
+                document.getElementById('incidents-section').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            function showCrimeMap() {
+                document.getElementById('crime-map-section').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            // Refresh incidents with loading state
+            function refreshIncidents() {
+                const button = event.target.closest('button');
+                const icon = button.querySelector('i');
+                
+                button.disabled = true;
+                icon.classList.add('fa-spin');
+                
+                // Simulate API call
+                setTimeout(() => {
+                    button.disabled = false;
+                    icon.classList.remove('fa-spin');
+                    
+                    // Show success message
+                    showNotification('Berichten bijgewerkt', 'success');
+                }, 2000);
+            }
+
+            // Show notification
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `alert alert-${type === 'success' ? 'success' : 'info'} alert-dismissible fade show position-fixed`;
+                notification.style.cssText = 'top: 100px; right: 20px; z-index: 9999; min-width: 300px;';
+                notification.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                // Auto-remove after 3 seconds
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 3000);
+            }
+
+            // Show report modal
+            function showReportModal() {
+                alert('Melding functionaliteit wordt geladen...\n\nBel 112 voor spoedeisende gevallen\nBel 0900-8844 voor niet-spoedeisende politiezaken');
+            }
+
+            // Show emergency info
+            function showEmergencyInfo() {
+                alert('Noodgevallen:\n\n🚨 112 - Spoed (ambulance, brandweer, politie)\n🚔 0900-8844 - Politie (niet-spoedeisend)\n💜 0800-2000 - Slachtofferhulp\n📞 06-49319157 - Verenigd Amsterdam Veiligheid');
+            }
+
+            // Real-time updates simulation
+            function simulateRealTimeUpdates() {
+                const newsItems = [
+                    "Live incident update: Verkeersopstopping opgelost op A10",
+                    "Politie patrol versterkt in Vondelpark gebied",
+                    "Verdachte aangehouden na winkeldiefstallen centrum",
+                    "Extra surveillance tijdens avondspits",
+                    "Wijkagent beschikbaar voor vragen Jordaan"
+                ];
+
+                setInterval(() => {
+                    const randomItem = newsItems[Math.floor(Math.random() * newsItems.length)];
+                    console.log('Real-time update:', randomItem);
+                    
+                    // Update connection status indicator
+                    const status = document.querySelector('.connection-status');
+                    if (status) {
+                        status.classList.add('online');
+                        status.classList.remove('offline');
+                    }
+                }, 30000); // Every 30 seconds
+            }
+
+            // Initialize when page loads
+            document.addEventListener('DOMContentLoaded', function() {
+                // Start real-time updates simulation
+                simulateRealTimeUpdates();
+                
+                // Add click handlers for incident cards
+                document.querySelectorAll('.incident-card').forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        if (!e.target.closest('button')) {
+                            this.style.transform = 'scale(1.02)';
+                            setTimeout(() => {
+                                this.style.transform = '';
+                            }, 200);
+                        }
+                    });
+                });
+
+                // Add hover effects for tags
+                document.querySelectorAll('.tag-cloud .badge').forEach(badge => {
+                    badge.addEventListener('click', function() {
+                        const tag = this.textContent.split(' ')[0];
+                        alert(`Zoeken naar: ${tag}`);
+                    });
+                });
+
+                // Initialize tooltips if needed
+                if (typeof bootstrap !== 'undefined') {
+                    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                    tooltipTriggerList.map(function (tooltipTriggerEl) {
+                        return new bootstrap.Tooltip(tooltipTriggerEl);
+                    });
+                }
+
+                console.log('Verenigd Amsterdam Veiligheidsnetwerk geladen');
+            });
+
+            // Service worker registration for offline functionality
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            }
+        </script>
+    </body>
+</html>

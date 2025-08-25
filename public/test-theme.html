@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Theme Test Page</h1>
+    <p>This page should start in light mode and allow switching to dark mode.</p>
+    
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-toggle-icon">🌙</span>
+        <span class="theme-toggle-text">Dark</span>
+    </button>
+    
+    <div style="padding: 20px; margin: 20px; background: var(--bg-secondary); color: var(--text-primary);">
+        <h2>Test Section</h2>
+        <p>Background: var(--bg-secondary)</p>
+        <p>Text: var(--text-primary)</p>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // Additional debug script
+        console.log('Theme test loaded');
+        console.log('Current data-theme:', document.documentElement.getAttribute('data-theme'));
+        console.log('Computed styles:', getComputedStyle(document.body).backgroundColor);
+        
+        // Add click listener to test
+        document.querySelector('.theme-toggle').addEventListener('click', function() {
+            setTimeout(() => {
+                console.log('After toggle - data-theme:', document.documentElement.getAttribute('data-theme'));
+                console.log('After toggle - bg color:', getComputedStyle(document.body).backgroundColor);
+            }, 100);
+        });
+    </script>
+</body>
+</html>

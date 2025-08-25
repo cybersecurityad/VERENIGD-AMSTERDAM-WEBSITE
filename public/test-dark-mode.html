@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>Dark Mode Test</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li>
+                        <button class="theme-toggle nav-theme-toggle" aria-label="Toggle dark mode">
+                            <span class="theme-toggle-icon">🌙</span>
+                            <span class="theme-toggle-text">Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Test Dark Mode Here</h1>
+                <p>Click the dark mode button to test if it's working.</p>
+                <p>If working, the background should turn dark and text should turn light.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // Additional debug for testing
+        console.log('Page loaded, testing dark mode...');
+        
+        function testDarkMode() {
+            const toggle = document.querySelector('.theme-toggle');
+            const html = document.documentElement;
+            
+            console.log('Theme toggle found:', !!toggle);
+            console.log('Current data-theme:', html.getAttribute('data-theme'));
+            console.log('localStorage theme:', localStorage.getItem('theme'));
+            
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    setTimeout(() => {
+                        console.log('After click - data-theme:', html.getAttribute('data-theme'));
+                        console.log('After click - localStorage:', localStorage.getItem('theme'));
+                    }, 100);
+                });
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', testDarkMode);
+    </script>
+</body>
+</html>
