@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Verkiezingsprogramma Amsterdam Centrum | Verenigd Amsterdam</title>
+    <meta name="title" content="Verkiezingsprogramma Amsterdam Centrum | Verenigd Amsterdam">
+    <meta name="description" content="Het verkiezingsprogramma van Verenigd Amsterdam voor het centrum van Amsterdam. Onze plannen voor betaalbaar wonen, groen, mobiliteit en leefbaarheid in de binnenstad.">
+    <meta name="keywords" content="verkiezingsprogramma, Amsterdam Centrum, binnenstad, wonen, toerisme, mobiliteit, leefbaarheid">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2025">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="kiezers, bewoners centrum">
+    <meta name="coverage" content="Amsterdam Centrum">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam Centrum">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Verkiezingsprogramma Amsterdam Centrum">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Verkiezingsprogramma, Amsterdam Centrum">
+    <meta name="DC.description" content="Verkiezingsprogramma van Verenigd Amsterdam specifiek voor Amsterdam Centrum.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2025-08-26">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam Centrum, Netherlands">
+    <meta name="DC.rights" content="Copyright 2025 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/verkiezingsprogramma/centrum/">
+    <meta property="og:title" content="Verkiezingsprogramma Amsterdam Centrum | Verenigd Amsterdam">
+    <meta property="og:description" content="Het verkiezingsprogramma van Verenigd Amsterdam voor Amsterdam Centrum. Onze plannen voor een leefbare en duurzame binnenstad.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/og-centrum.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/og-centrum.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verenigd Amsterdam - Verkiezingsprogramma Centrum">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/verkiezingsprogramma/centrum/">
+    <meta name="twitter:title" content="Verkiezingsprogramma Amsterdam Centrum | Verenigd Amsterdam">
+    <meta name="twitter:description" content="Het verkiezingsprogramma van Verenigd Amsterdam voor Amsterdam Centrum.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/og-centrum.jpg">
+    <meta name="twitter:site" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/verkiezingsprogramma/centrum/">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/verkiezingsprogramma/centrum/">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/verkiezingsprogramma/centrum/">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://verenigdamsterdam.nl/verkiezingsprogramma/centrum/#page",
+      "name": "Verkiezingsprogramma Amsterdam Centrum",
+      "description": "Verkiezingsprogramma van Verenigd Amsterdam specifiek voor Amsterdam Centrum.",
+      "url": "https://verenigdamsterdam.nl/verkiezingsprogramma/centrum/",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "about": {
+        "@type": "Place",
+        "name": "Amsterdam Centrum",
+        "description": "Het centrum van Amsterdam"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://verenigdamsterdam.nl"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Verkiezingsprogramma",
+          "item": "https://verenigdamsterdam.nl/verkiezingsprogramma/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Centrum",
+          "item": "https://verenigdamsterdam.nl/verkiezingsprogramma/centrum/"
+        }]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hoofdnavigatie">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <a href="/" title="Verenigd Amsterdam - Solidair, Sociaal, Sterk">
+              <img
+                src="/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+                alt="Verenigd Amsterdam logo - Politieke partij Amsterdam - Sociaal Veilig Groen"
+                title="Verenigd Amsterdam - Gemeenteraadsverkiezingen 2026"
+                class="logo-img"
+                width="200" height="60"
+                decoding="async" fetchpriority="high">
+            </a>
+          </div>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <!-- Main political pages -->
+            <li><a href="/verkiezingsprogramma/" class="active">Politiek</a></li>
+            <li><a href="/standpunten/">Standpunten</a></li>
+            
+            <!-- 2026 Elections Section -->
+            <li class="nav-dropdown">
+              <a href="/gemeenteraadsverkiezingen/" class="nav-dropdown-toggle">Verkiezingen 2026 ▼</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="/gemeenteraadsverkiezingen/">Verkiezingen 2026</a></li>
+                <li><a href="/gemeenteraadsverkiezingen/forum/">Forum</a></li>
+              </ul>
+            </li>
+
+            <!-- Community & Engagement -->
+            <li><a href="/nieuws/">Nieuws</a></li>
+            <li><a href="/forum/">Forum</a></li>
+            <li><a href="/network/">Veiligheids Netwerk</a></li>
+            
+            <!-- App & Digital Platform -->
+            <li><a href="/app/">Actie App</a></li>
+            
+            <!-- About & Contact -->
+            <li><a href="/over-ons/">Over Ons</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            
+            <!-- CTA Button -->
+            <li><a href="/doe-mee/" class="btn-lid">Word Lid</a></li>
+            
+            <!-- Theme Toggle Button -->
+            <li>
+              <button class="theme-toggle nav-theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-icon">🌙</span>
+                <span class="theme-toggle-text">Dark</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Verkiezingsprogramma Amsterdam Centrum</h1>
+                <p class="hero-subtitle">Een leefbare en duurzame binnenstad voor iedereen</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="/">Home</a> > <a href="/verkiezingsprogramma/">Verkiezingsprogramma</a> > <span>Centrum</span>
+                </div>
+
+                <div class="centrum-intro">
+                    <p>Het centrum van Amsterdam is het kloppende hart van onze stad. Het is waar geschiedenis en moderniteit samenkomen, waar cultuur en commercie elkaar ontmoeten, en waar bewoners, toeristen en werknemers samen de stedelijke dynamiek vormen. Verenigd Amsterdam heeft een specifieke visie voor een centrum dat leefbaar, toegankelijk en duurzaam is.</p>
+                </div>
+
+                <div class="programma-sections">
+                    <div class="programma-section">
+                        <h2>🏠 Wonen in het Centrum</h2>
+                        
+                        <h3>Betaalbaar wonen behouden</h3>
+                        <ul>
+                            <li><strong>Anti-gentrificatie:</strong> Bescherming tegen verdrijving van bewoners door huurverhogingen</li>
+                            <li><strong>Sociale huurwoningen:</strong> Behoud en uitbreiding van betaalbare woningen in de binnenstad</li>
+                            <li><strong>Studentenhuisvesting:</strong> Meer reguliere studentenwoningen, minder kamerverhuur</li>
+                            <li><strong>Airbnb-beperking:</strong> Strenge handhaving van de 30-dagen regel</li>
+                            <li><strong>Woningsplitsing:</strong> Regulering van het splitsen van woningen in kleine eenheden</li>
+                        </ul>
+
+                        <h3>Leefbaarheid verbeteren</h3>
+                        <ul>
+                            <li>Meer groene binnentuin en rustige plekken voor bewoners</li>
+                            <li>Geluidsisolatie programma voor woningen aan drukke straten</li>
+                            <li>Betere afvalvoorzieningen en schoonmaak</li>
+                            <li>Wijkcentra en ontmoetingsplekken voor alle leeftijden</li>
+                        </ul>
+                    </div>
+
+                    <div class="programma-section">
+                        <h2>🚲 Mobiliteit & Verkeer</h2>
+                        
+                        <h3>Fiets- en voetgangersvriendelijk</h3>
+                        <ul>
+                            <li><strong>Autovrije zones:</strong> Uitbreiding van autovrije gebieden in de binnenstad</li>
+                            <li><strong>Fietsinfrastructuur:</strong> Bredere fietspaden en meer fietsenstallingen</li>
+                            <li><strong>Wandelroutes:</strong> Veilige en aantrekkelijke voetgangersroutes</li>
+                            <li><strong>Toegankelijkheid:</strong> Betere toegang voor mensen met een beperking</li>
+                            <li><strong>Laadinfrastructuur:</strong> Meer oplaadpunten voor e-bikes en e-scooters</li>
+                        </ul>
+
+                        <h3>Openbaar vervoer</h3>
+                        <ul>
+                            <li>Frequent tramverkeer naar alle kanten van de stad</li>
+                            <li>Betere verbindingen met de randgemeenten</li>
+                            <li>Toegankelijke haltes voor rolstoelgebruikers</li>
+                            <li>Echte real-time informatie bij alle haltes</li>
+                        </ul>
+                    </div>
+
+                    <div class="programma-section">
+                        <h2>🌿 Groen & Klimaat</h2>
+                        
+                        <h3>Meer groen in de binnenstad</h3>
+                        <ul>
+                            <li><strong>Groene daken:</strong> Stimulering van daktuinen en groene gevels</li>
+                            <li><strong>Straatbomen:</strong> Meer bomen in elke straat waar mogelijk</li>
+                            <li><strong>Groene pleinen:</strong> Herinrichting van geplaveide pleinen met groen</li>
+                            <li><strong>Verticaal groen:</strong> Groene muren en gevelbeplanting</li>
+                            <li><strong>Biodiversiteit:</strong> Insectenvriendelijke beplanting en nestkastjes</li>
+                        </ul>
+
+                        <h3>Klimaatadaptatie</h3>
+                        <ul>
+                            <li>Waterpleinen en groene infrastructuur tegen wateroverlast</li>
+                            <li>Schaduwplekken en verkoeling tijdens hittegolven</li>
+                            <li>Duurzame energievoorziening voor alle gebouwen</li>
+                            <li>Circulaire afvalverwerking en hergebruik</li>
+                        </ul>
+                    </div>
+
+                    <div class="programma-section">
+                        <h2>🎭 Cultuur & Toerisme</h2>
+                        
+                        <h3>Balans tussen cultuur en leefbaarheid</h3>
+                        <ul>
+                            <li><strong>Toerismeregulering:</strong> Spreiding van toeristen over de hele stad</li>
+                            <li><strong>Lokale cultuur:</strong> Steun voor Amsterdamse kunstenaars en culturele initiatieven</li>
+                            <li><strong>Betaalbare cultuur:</strong> Toegankelijke prijzen voor bewoners</li>
+                            <li><strong>Nachtleven:</strong> Balans tussen uitgaansleven en nachtrust</li>
+                            <li><strong>Evenementen:</strong> Meer kleinschalige, lokale evenementen</li>
+                        </ul>
+
+                        <h3>Erfgoedbescherming</h3>
+                        <ul>
+                            <li>Behoud van historische panden en grachten</li>
+                            <li>Duurzame restauratie met moderne technieken</li>
+                            <li>Bescherming tegen commerciële vervuiling</li>
+                            <li>Educatie over Amsterdamse geschiedenis</li>
+                        </ul>
+                    </div>
+
+                    <div class="programma-section">
+                        <h2>🛍️ Economie & Ondernemerschap</h2>
+                        
+                        <h3>Lokale economie stimuleren</h3>
+                        <ul>
+                            <li><strong>Lokale ondernemers:</strong> Voorrang voor Amsterdamse ondernemers bij panden</li>
+                            <li><strong>Diversiteit in winkels:</strong> Beperking van franchise en keten-winkels</li>
+                            <li><strong>Markten:</strong> Ondersteuning van lokale markten en ambachtslieden</li>
+                            <li><strong>Horeca-regulering:</strong> Kwaliteit boven kwantiteit in het horecaaanbod</li>
+                            <li><strong>Werkgelegenheid:</strong> Banen voor Amsterdammers in het centrum</li>
+                        </ul>
+
+                        <h3>Duurzame bedrijfsvoering</h3>
+                        <ul>
+                            <li>Stimulering van circulaire bedrijfsmodellen</li>
+                            <li>Vermindering van verpakkingsafval</li>
+                            <li>Lokale leveranciers en korte ketens</li>
+                            <li>Groene energie voor alle bedrijven</li>
+                        </ul>
+                    </div>
+
+                    <div class="programma-section">
+                        <h2>🏥 Voorzieningen & Diensten</h2>
+                        
+                        <h3>Zorg en welzijn</h3>
+                        <ul>
+                            <li><strong>Wijkgezondheidscentrum:</strong> Toegankelijke zorg in het centrum</li>
+                            <li><strong>Apotheek:</strong> Behoud van voldoende apotheken</li>
+                            <li><strong>Mentale gezondheid:</strong> Ondersteuning voor stress en drukte</li>
+                            <li><strong>Ouderenzorg:</strong> Faciliteiten voor oudere bewoners</li>
+                            <li><strong>Daklozenopvang:</strong> Humane en duurzame oplossingen</li>
+                        </ul>
+
+                        <h3>Onderwijs en kinderen</h3>
+                        <ul>
+                            <li>Voldoende basisscholen voor gezinnen in het centrum</li>
+                            <li>Veilige speelplaatsen en speelstraten</li>
+                            <li>Kinderopvang en naschoolse activiteiten</li>
+                            <li>Bibliotheek en leesruimtes voor alle leeftijden</li>
+                        </ul>
+                    </div>
+
+                    <div class="programma-section">
+                        <h2>⚖️ Veiligheid & Leefbaarheid</h2>
+                        
+                        <h3>Sociale veiligheid</h3>
+                        <ul>
+                            <li><strong>Wijkagenten:</strong> Zichtbare en aanspreekbare politie</li>
+                            <li><strong>Handhaving:</strong> Effectieve handhaving van regels en vergunningen</li>
+                            <li><strong>Buurtpreventie:</strong> Samenwerking tussen bewoners en autoriteiten</li>
+                            <li><strong>Verlichting:</strong> Goede straatverlichting in alle stegen en pleinen</li>
+                            <li><strong>Camerabewaking:</strong> Privacy-vriendelijke beveiliging op strategische plekken</li>
+                        </ul>
+
+                        <h3>Overlastbestrijding</h3>
+                        <ul>
+                            <li>Aanpak van geluidsoverlast en vervuiling</li>
+                            <li>Regulering van rondvaartboten en party-fietsen</li>
+                            <li>Bestrijding van drugshandel en criminaliteit</li>
+                            <li>Begeleiding bij verslavingsproblematiek</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="implementatie">
+                    <h2>📊 Implementatie & Financiering</h2>
+                    
+                    <h3>Concrete maatregelen voor 2026-2030</h3>
+                    <div class="timeline-measures">
+                        <div class="measure-year">
+                            <h4>2026</h4>
+                            <ul>
+                                <li>Start uitbreiding autovrije zones</li>
+                                <li>Lancering groen-dakenprogramma</li>
+                                <li>Verscherping Airbnb-handhaving</li>
+                            </ul>
+                        </div>
+                        <div class="measure-year">
+                            <h4>2027</h4>
+                            <ul>
+                                <li>Opening eerste wijkgezondheidscentrum</li>
+                                <li>Realisatie 500 extra fietsenstallingen</li>
+                                <li>Start renovatie historische panden</li>
+                            </ul>
+                        </div>
+                        <div class="measure-year">
+                            <h4>2028</h4>
+                            <ul>
+                                <li>Voltooiing eerste groene plein</li>
+                                <li>Implementatie nieuwe toerisme-spreiding</li>
+                                <li>Opening lokaal ondernemerscentrum</li>
+                            </ul>
+                        </div>
+                        <div class="measure-year">
+                            <h4>2029-2030</h4>
+                            <ul>
+                                <li>Evaluatie en uitbreiding succesvolle projecten</li>
+                                <li>Klimaatneutrale binnenstad gerealiseerd</li>
+                                <li>Nieuwe fase woningbouwprogramma</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Financiering</h3>
+                    <ul>
+                        <li><strong>Toeristenbelasting:</strong> Herinvestering in leefbaarheid en infrastructuur</li>
+                        <li><strong>Parkeerbelasting:</strong> Financiering van openbaar vervoer en fietsinfrastructuur</li>
+                        <li><strong>EU-subsidies:</strong> Maximaal gebruik van Europese klimaat- en stadsontwikkelingsfondsen</li>
+                        <li><strong>Private partners:</strong> Publiek-private samenwerking voor duurzame projecten</li>
+                        <li><strong>Groene obligaties:</strong> Leningen voor klimaat- en duurzaamheidsprojecten</li>
+                    </ul>
+                </div>
+
+                <div class="call-to-action">
+                    <h2>Samen maken we het centrum beter</h2>
+                    <p>Dit programma is tot stand gekomen in samenspraak met bewoners, ondernemers en bezoekers van het centrum. Wilt u meedenken over de toekomst van onze binnenstad?</p>
+                    <div class="cta-buttons">
+                        <a href="/doe-mee/" class="cta-button primary">Word lid en denk mee</a>
+                        <a href="/contact/" class="cta-button secondary">Deel uw ideeën</a>
+                        <a href="/verkiezingsprogramma/" class="cta-button secondary">Volledig programma</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/" class="active">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

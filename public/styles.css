@@ -1622,33 +1622,18 @@ body {
     justify-content: center;
 }
 
-        /* Critical font-face declarations for immediate use */
+        /* Critical font-face declarations for immediate use - Fixed URLs */
         @font-face {
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 400;
             font-display: swap;
-            src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+            src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
         
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 600;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89Y.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-        
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WxhyyTh89Y.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
+
+
         
         /* Critical CSS variables and resets */
         :root {
@@ -3737,36 +3722,7 @@ html.fonts-loaded body {
 body {
     transition: font-family 0.1s ease-in-out;
 }
-/* In your styles.css */
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Montserrat Regular'),
-         url('/fonts/montserrat-v26-latin-regular.woff2') format('woff2'),
-         url('/fonts/montserrat-v26-latin-regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local('Montserrat SemiBold'),
-         url('/fonts/montserrat-v26-latin-600.woff2') format('woff2'),
-         url('/fonts/montserrat-v26-latin-600.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local('Montserrat Bold'),
-         url('/fonts/montserrat-v26-latin-700.woff2') format('woff2'),
-         url('/fonts/montserrat-v26-latin-700.woff') format('woff');
-}
+/* Font-face declarations removed - using Google Fonts CSS instead */
 
 
 

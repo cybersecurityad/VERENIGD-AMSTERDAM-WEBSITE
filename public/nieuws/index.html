@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <!-- EARLY DOMAIN REDIRECT (Firebase -> primair domein) -->
-  <script>
-    (function() {
-      var h = location.hostname;
-      if (h === 'toursamsterdam-eu-1.web.app' || h === 'toursamsterdam-eu-1.firebaseapp.com') {
-        location.replace('https://verenigdamsterdam.nl' + location.pathname + location.search + location.hash);
-      }
-    })();
-  </script>
-
-  <!-- Performance Hints -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="preload" as="style" href="/styles.css" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" as="image" href="/images/nieuws-og.jpg" fetchpriority="high" type="image/jpeg">
@@ -186,18 +183,64 @@
 <body>
   <a class="sr-only" href="#main">Direct naar inhoud</a>
 
-  <!-- Navigatie (verkort; vervang desgewenst door je volledige nav) -->
-  <nav class="navbar" role="navigation" aria-label="Hoofdnavigatie">
-    <div class="container nav-content">
-      <a class="logo" href="/" title="Verenigd Amsterdam">
-        <img src="/images/verenigd-amsterdam-politiek-2025-logo_small.png" alt="Verenigd Amsterdam logo" width="200" height="60" decoding="async" fetchpriority="high">
-      </a>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="/verkiezingsprogramma/">Programma</a></li>
-        <li><a href="/standpunten/">Standpunten</a></li>
-        <li><a href="/nieuws/" aria-current="page">Nieuws</a></li>
-        <li><a href="/doe-mee/" class="btn-lid">Word Lid</a></li>
-      </ul>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hoofdnavigatie">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="/" title="Verenigd Amsterdam - Solidair, Sociaal, Sterk">
+            <img
+              src="/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+              alt="Verenigd Amsterdam logo - Politieke partij Amsterdam - Sociaal Veilig Groen"
+              title="Verenigd Amsterdam - Gemeenteraadsverkiezingen 2026"
+              class="logo-img"
+              width="200" height="60"
+              decoding="async" fetchpriority="high">
+          </a>
+        </div>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <!-- Main political pages -->
+          <li><a href="/verkiezingsprogramma/">Politiek</a></li>
+          <li><a href="/standpunten/">Standpunten</a></li>
+          
+          <!-- 2026 Elections Section -->
+          <li class="nav-dropdown">
+            <a href="/gemeenteraadsverkiezingen/" class="nav-dropdown-toggle">Verkiezingen 2026 ▼</a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/gemeenteraadsverkiezingen/">Verkiezingen 2026</a></li>
+              <li><a href="/gemeenteraadsverkiezingen/forum/">Forum</a></li>
+            </ul>
+          </li>
+
+          <!-- Community & Engagement -->
+          <li><a href="/nieuws/" aria-current="page" class="active">Nieuws</a></li>
+          <li><a href="/forum/">Forum</a></li>
+          <li><a href="/network/">Veiligheids Netwerk</a></li>
+          
+          <!-- App & Digital Platform -->
+          <li><a href="/app/">Actie App</a></li>
+          
+          <!-- About & Contact -->
+          <li><a href="/over-ons/">Over Ons</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          
+          <!-- CTA Button -->
+          <li><a href="/doe-mee/" class="btn-lid">Word Lid</a></li>
+          
+          <!-- Theme Toggle Button -->
+          <li>
+            <button class="theme-toggle nav-theme-toggle" aria-label="Toggle dark mode">
+              <span class="theme-toggle-icon">🌙</span>
+              <span class="theme-toggle-text">Dark</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 

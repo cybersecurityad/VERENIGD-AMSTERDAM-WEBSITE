@@ -1,135 +1,468 @@
 <!DOCTYPE html>
-<html lang="nl" itemscope itemtype="https://schema.org/WebPage">
+<html lang="nl" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Standpunten — Verenigd Amsterdam</title>
-  <meta name="description" content="De kernstandpunten van Verenigd Amsterdam: Wonen, Economie & Werk, Veiligheid, Meer Groen, Democratie, Cultuur & Sport. Snel en duidelijk per onderwerp." />
-  <link rel="canonical" href="https://verenigdamsterdam.nl/standpunten/" />
-  <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/standpunten/" />
-  <link rel="alternate" hreflang="en" href="https://verenigdamsterdam.nl/en/policies/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
 
-  <!-- OG/Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Standpunten — Verenigd Amsterdam" />
-  <meta property="og:description" content="Overzicht van de zes kernstandpunten met korte samenvattingen en links naar het volledige programma." />
-  <meta property="og:url" content="https://verenigdamsterdam.nl/standpunten/" />
-  <meta property="og:image" content="https://verenigdamsterdam.nl/images/standpunten-hero.webp" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
 
-  <link rel="preload" href="/styles.css" as="style" />
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="manifest" href="/manifest.json" />
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Breadcrumbs -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://verenigdamsterdam.nl/"},
-      {"@type":"ListItem","position":2,"name":"Standpunten","item":"https://verenigdamsterdam.nl/standpunten/"}
-    ]
-  }
-  </script>
+    <!-- Primary Meta Tags -->
+    <title>Standpunten | Verenigd Amsterdam</title>
+    <meta name="title" content="Standpunten | Verenigd Amsterdam">
+    <meta name="description" content="Ontdek de politieke standpunten van Verenigd Amsterdam over wonen, klimaat, economie, zorg, onderwijs en meer. Voor een solidair, sociaal, sterk en groen Amsterdam.">
+    <meta name="keywords" content="standpunten, politiek, Amsterdam, wonen, klimaat, economie, zorg, onderwijs, verkeer, cultuur">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2025">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="burgers, inwoners, kiezers">
+    <meta name="coverage" content="Amsterdam">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Standpunten">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Politieke standpunten, Beleid">
+    <meta name="DC.description" content="Politieke standpunten van Verenigd Amsterdam over alle belangrijke onderwerpen.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2025-08-26">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2025 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/standpunten/">
+    <meta property="og:title" content="Standpunten | Verenigd Amsterdam">
+    <meta property="og:description" content="Ontdek de politieke standpunten van Verenigd Amsterdam voor een solidair, sociaal, sterk en groen Amsterdam.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/og-standpunten.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/og-standpunten.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verenigd Amsterdam - Standpunten">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/standpunten/">
+    <meta name="twitter:title" content="Standpunten | Verenigd Amsterdam">
+    <meta name="twitter:description" content="Ontdek de politieke standpunten van Verenigd Amsterdam.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/og-standpunten.jpg">
+    <meta name="twitter:site" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/standpunten/">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/standpunten/">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/standpunten/">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://verenigdamsterdam.nl/standpunten/#page",
+      "name": "Standpunten",
+      "description": "Politieke standpunten van Verenigd Amsterdam over alle belangrijke onderwerpen.",
+      "url": "https://verenigdamsterdam.nl/standpunten/",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Politieke standpunten",
+        "description": "Beleid en standpunten over lokale politiek"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://verenigdamsterdam.nl"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Standpunten",
+          "item": "https://verenigdamsterdam.nl/standpunten/"
+        }]
+      }
+    }
+    </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Direct naar inhoud</a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hoofdnavigatie">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <a href="/" title="Verenigd Amsterdam - Solidair, Sociaal, Sterk">
+              <img
+                src="/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+                alt="Verenigd Amsterdam logo - Politieke partij Amsterdam - Sociaal Veilig Groen"
+                title="Verenigd Amsterdam - Gemeenteraadsverkiezingen 2026"
+                class="logo-img"
+                width="200" height="60"
+                decoding="async" fetchpriority="high">
+            </a>
+          </div>
 
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/">Verenigd Amsterdam</a>
-      <nav aria-label="Hoofdmenu">
-        <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/verkiezingsprogramma/">Programma</a></li>
-          <li aria-current="page"><a href="/standpunten/">Standpunten</a></li>
-          <li><a href="/#app">VA App</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+          </button>
 
-  <main id="main" class="container">
-    <header class="page-hero">
-      <h1>Onze Standpunten</h1>
-      <p class="lead-text">Kort, concreet en klikbaar naar de volledige onderbouwing in het Verkiezingsprogramma 2026.</p>
-    </header>
+          <ul class="nav-menu" id="navMenu">
+            <!-- Main political pages -->
+            <li><a href="/verkiezingsprogramma/">Politiek</a></li>
+            <li><a href="/standpunten/" class="active">Standpunten</a></li>
+            
+            <!-- 2026 Elections Section -->
+            <li class="nav-dropdown">
+              <a href="/gemeenteraadsverkiezingen/" class="nav-dropdown-toggle">Verkiezingen 2026 ▼</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="/gemeenteraadsverkiezingen/">Verkiezingen 2026</a></li>
+                <li><a href="/gemeenteraadsverkiezingen/forum/">Forum</a></li>
+              </ul>
+            </li>
 
-    <section class="grid grid-2" aria-label="Overzicht van standpunten" itemscope itemtype="https://schema.org/ItemList">
-      <meta itemprop="numberOfItems" content="6" />
-      <article class="card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <meta itemprop="position" content="1" />
-        <h2 itemprop="name">Wonen</h2>
-        <p>50.000 betaalbare woningen. Voorrang voor Amsterdammers. Anti-speculatie.</p>
-        <a class="btn" href="/verkiezingsprogramma/#wonen" itemprop="url">Lees toelichting</a>
-      </article>
+            <!-- Community & Engagement -->
+            <li><a href="/nieuws/">Nieuws</a></li>
+            <li><a href="/forum/">Forum</a></li>
+            <li><a href="/network/">Veiligheids Netwerk</a></li>
+            
+            <!-- App & Digital Platform -->
+            <li><a href="/app/">Actie App</a></li>
+            
+            <!-- About & Contact -->
+            <li><a href="/over-ons/">Over Ons</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            
+            <!-- CTA Button -->
+            <li><a href="/doe-mee/" class="btn-lid">Word Lid</a></li>
+            
+            <!-- Theme Toggle Button -->
+            <li>
+              <button class="theme-toggle nav-theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-icon">🌙</span>
+                <span class="theme-toggle-text">Dark</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-      <article class="card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <meta itemprop="position" content="2" />
-        <h2 itemprop="name">Economie & Werk</h2>
-        <p>Steun voor lokale ondernemers. Baan-integratie bij uitkering. Meer leerwerkplekken.</p>
-        <a class="btn" href="/verkiezingsprogramma/#economie" itemprop="url">Lees toelichting</a>
-      </article>
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Onze Standpunten</h1>
+                <p class="hero-subtitle">Voor een solidair, sociaal, sterk en groen Amsterdam</p>
+            </div>
+        </section>
 
-      <article class="card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <meta itemprop="position" content="3" />
-        <h2 itemprop="name">Veiligheid</h2>
-        <p>100 extra wijkagenten. Aanpak ondermijning. Geen gebruiksbussen.</p>
-        <a class="btn" href="/verkiezingsprogramma/#veiligheid" itemprop="url">Lees toelichting</a>
-      </article>
+        <section class="content-section">
+            <div class="container">
+                <div class="standpunten-intro">
+                    <p>Verenigd Amsterdam staat voor een Amsterdam waar iedereen zich thuis voelt. Onze standpunten zijn gebaseerd op vier pijlers: solidariteit, sociale rechtvaardigheid, sterke gemeenschappen en duurzaamheid. Hieronder vindt u onze belangrijkste standpunten per thema.</p>
+                </div>
 
-      <article class="card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <meta itemprop="position" content="4" />
-        <h2 itemprop="name">Meer Groen</h2>
-        <p>10.000 nieuwe bomen. 50 hectare extra groen. Groene corridors en schone mobiliteit.</p>
-        <a class="btn" href="/verkiezingsprogramma/#groen" itemprop="url">Lees toelichting</a>
-      </article>
+                <div class="standpunten-overview">
+                    <div class="standpunt-category">
+                        <div class="category-header">
+                            <div class="category-icon">🏠</div>
+                            <h2>Wonen</h2>
+                        </div>
+                        <div class="category-content">
+                            <h3>Betaalbaar wonen voor iedereen</h3>
+                            <ul>
+                                <li><strong>Meer sociale woningbouw:</strong> 50% van alle nieuwe woningen moet betaalbaar zijn</li>
+                                <li><strong>Huurregulering:</strong> Striktere controle op huurprijzen in de vrije sector</li>
+                                <li><strong>Anti-speculatie:</strong> Verbod op leegstand en opkoopbescherming voor bewoners</li>
+                                <li><strong>Startersbeleid:</strong> Speciale programma's voor jonge Amsterdammers</li>
+                                <li><strong>Urgentieregeling:</strong> Snellere toewijzing voor mensen in nood</li>
+                            </ul>
+                            <p class="standpunt-detail">Wonen is een mensenrecht, geen handelswaar. Wij zorgen ervoor dat Amsterdam betaalbaar blijft voor alle inwoners.</p>
+                        </div>
+                    </div>
 
-      <article class="card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <meta itemprop="position" content="5" />
-        <h2 itemprop="name">Democratie</h2>
-        <p>Wijkraden met budget. Directe invloed via de VA App. Transparante besluitvorming.</p>
-        <a class="btn" href="/verkiezingsprogramma/#democratie" itemprop="url">Lees toelichting</a>
-      </article>
+                    <div class="standpunt-category">
+                        <div class="category-header">
+                            <div class="category-icon">🌱</div>
+                            <h2>Klimaat & Milieu</h2>
+                        </div>
+                        <div class="category-content">
+                            <h3>Amsterdam klimaatneutraal in 2030</h3>
+                            <ul>
+                                <li><strong>Groene energie:</strong> 100% duurzame energie voor alle stadsdiensten</li>
+                                <li><strong>Autovrije binnenstad:</strong> Prioriteit voor voetgangers, fietsers en OV</li>
+                                <li><strong>Groen in elke wijk:</strong> Meer parken, bomen en groene daken</li>
+                                <li><strong>Circulaire economie:</strong> Afvalreductie en hergebruik stimuleren</li>
+                                <li><strong>Duurzaam bouwen:</strong> Alleen energieneutrale nieuwbouw</li>
+                            </ul>
+                            <p class="standpunt-detail">De klimaatcrisis vraagt om urgente actie. Amsterdam moet vooroplopen in de groene transitie.</p>
+                        </div>
+                    </div>
 
-      <article class="card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <meta itemprop="position" content="6" />
-        <h2 itemprop="name">Cultuur & Sport</h2>
-        <p>Gratis sportscholen. Betaalbare cultuur. Sportvoorzieningen in elke wijk.</p>
-        <a class="btn" href="/verkiezingsprogramma/#cultuur" itemprop="url">Lees toelichting</a>
-      </article>
-    </section>
+                    <div class="standpunt-category">
+                        <div class="category-header">
+                            <div class="category-icon">💼</div>
+                            <h2>Economie & Werk</h2>
+                        </div>
+                        <div class="category-content">
+                            <h3>Eerlijke economie voor iedereen</h3>
+                            <ul>
+                                <li><strong>Lokale economie:</strong> Steun voor kleine ondernemers en lokale initiatieven</li>
+                                <li><strong>Faire arbeidsvoorwaarden:</strong> Levend loon voor alle stadswerknemers</li>
+                                <li><strong>Toerisme reguleren:</strong> Balans tussen economie en leefbaarheid</li>
+                                <li><strong>Innovatie stimuleren:</strong> Amsterdam als duurzame tech-hub</li>
+                                <li><strong>Werkgelegenheid:</strong> Banen in de zorg, onderwijs en groene sectoren</li>
+                            </ul>
+                            <p class="standpunt-detail">Een sterke economie die werkt voor alle Amsterdammers, niet alleen voor multinationals.</p>
+                        </div>
+                    </div>
 
-    <section class="cta">
-      <a class="btn-primary" href="/verkiezingsprogramma/">Bekijk het volledige programma</a>
-    </section>
-  </main>
+                    <div class="standpunt-category">
+                        <div class="category-header">
+                            <div class="category-icon">🚲</div>
+                            <h2>Mobiliteit & Verkeer</h2>
+                        </div>
+                        <div class="category-content">
+                            <h3>Duurzame en toegankelijke mobiliteit</h3>
+                            <ul>
+                                <li><strong>Fietsstad:</strong> Uitbreiding fietsinfrastructuur en veiligheid</li>
+                                <li><strong>Openbaar vervoer:</strong> Betaalbaar en frequent OV voor iedereen</li>
+                                <li><strong>Autovrije zones:</strong> Meer ruimte voor mensen in plaats van auto's</li>
+                                <li><strong>Elektrisch vervoer:</strong> Stimulering van e-bikes, e-auto's en deelauto's</li>
+                                <li><strong>Toegankelijkheid:</strong> Barrièrevrij vervoer voor mensen met beperkingen</li>
+                            </ul>
+                            <p class="standpunt-detail">Amsterdam moet de beste fietsstad ter wereld blijven en tegelijk toegankelijk zijn voor iedereen.</p>
+                        </div>
+                    </div>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Verenigd Amsterdam</p>
-  </footer>
+                    <div class="standpunt-category">
+                        <div class="category-header">
+                            <div class="category-icon">🏥</div>
+                            <h2>Zorg & Welzijn</h2>
+                        </div>
+                        <div class="category-content">
+                            <h3>Zorg dichtbij en toegankelijk</h3>
+                            <ul>
+                                <li><strong>Wijkgezondheidscentra:</strong> Zorg dichtbij in elke buurt</li>
+                                <li><strong>Mentale gezondheid:</strong> Meer steun voor psychische problemen</li>
+                                <li><strong>Ouderenzorg:</strong> Langer thuis wonen met goede ondersteuning</li>
+                                <li><strong>Jeugdzorg:</strong> Preventie en vroege signalering</li>
+                                <li><strong>Daklozenopvang:</strong> Permanent onderdak en begeleiding</li>
+                            </ul>
+                            <p class="standpunt-detail">Goede zorg is een recht voor iedereen, ongeacht inkomen of achtergrond.</p>
+                        </div>
+                    </div>
 
-  <!-- JSON-LD: compacte lijst van standpunten -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Standpunten Verenigd Amsterdam",
-    "url":"https://verenigdamsterdam.nl/standpunten/",
-    "inLanguage":"nl-NL",
-    "numberOfItems":6,
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"item":{"@type":"Thing","name":"Wonen","url":"https://verenigdamsterdam.nl/verkiezingsprogramma/#wonen"}},
-      {"@type":"ListItem","position":2,"item":{"@type":"Thing","name":"Economie & Werk","url":"https://verenigdamsterdam.nl/verkiezingsprogramma/#economie"}},
-      {"@type":"ListItem","position":3,"item":{"@type":"Thing","name":"Veiligheid","url":"https://verenigdamsterdam.nl/verkiezingsprogramma/#veiligheid"}},
-      {"@type":"ListItem","position":4,"item":{"@type":"Thing","name":"Meer Groen","url":"https://verenigdamsterdam.nl/verkiezingsprogramma/#groen"}},
-      {"@type":"ListItem","position":5,"item":{"@type":"Thing","name":"Democratie","url":"https://verenigdamsterdam.nl/verkiezingsprogramma/#democratie"}},
-      {"@type":"ListItem","position":6,"item":{"@type":"Thing","name":"Cultuur & Sport","url":"https://verenigdamsterdam.nl/verkiezingsprogramma/#cultuur"}}
-    ]
-  }
-  </script>
+                    <div class="standpunt-category">
+                        <div class="category-header">
+                            <div class="category-icon">📚</div>
+                            <h2>Onderwijs</h2>
+                        </div>
+                        <div class="category-content">
+                            <h3>Kwaliteitsonderwijs voor alle kinderen</h3>
+                            <ul>
+                                <li><strong>Kleinere klassen:</strong> Meer aandacht voor elk kind</li>
+                                <li><strong>Lerarentekort:</strong> Betere arbeidsvoorwaarden en salaris voor docenten</li>
+                                <li><strong>Schoolgebouwen:</strong> Moderne, duurzame en veilige scholen</li>
+                                <li><strong>Gelijke kansen:</strong> Extra ondersteuning voor kansarme kinderen</li>
+                                <li><strong>Levenslang leren:</strong> Volwasseneneducatie en omscholing</li>
+                            </ul>
+                            <p class="standpunt-detail">Elk kind verdient de beste start in het leven, ongeacht de wijk waar het opgroeit.</p>
+                        </div>
+                    </div>
+
+                    <div class="standpunt-category">
+                        <div class="category-header">
+                            <div class="category-icon">🎨</div>
+                            <h2>Cultuur & Sport</h2>
+                        </div>
+                        <div class="category-content">
+                            <h3>Cultuur en sport voor iedereen toegankelijk</h3>
+                            <ul>
+                                <li><strong>Betaalbare cultuur:</strong> Lage drempel voor musea, theater en evenementen</li>
+                                <li><strong>Lokale kunstenaars:</strong> Steun voor Amsterdamse creatieven</li>
+                                <li><strong>Cultuurhuizen:</strong> Ontmoetingsplekken in elke wijk</li>
+                                <li><strong>Sport voor allen:</strong> Gratis sportfaciliteiten voor kinderen</li>
+                                <li><strong>Festivals:</strong> Balans tussen cultuur en overlast</li>
+                            </ul>
+                            <p class="standpunt-detail">Cultuur en sport verrijken het leven en verbinden mensen. Dit moet voor iedereen weggelegd zijn.</p>
+                        </div>
+                    </div>
+
+                    <div class="standpunt-category">
+                        <div class="category-header">
+                            <div class="category-icon">⚖️</div>
+                            <h2>Veiligheid & Rechtvaardigheid</h2>
+                        </div>
+                        <div class="category-content">
+                            <h3>Veilig en rechtvaardig voor iedereen</h3>
+                            <ul>
+                                <li><strong>Buurtpreventie:</strong> Samenwerking tussen bewoners en politie</li>
+                                <li><strong>Discriminatie bestrijden:</strong> Zero tolerance voor racisme en uitsluiting</li>
+                                <li><strong>Rechtsbijstand:</strong> Toegankelijke juridische hulp</li>
+                                <li><strong>Restorative justice:</strong> Herstelgerichte aanpak van criminaliteit</li>
+                                <li><strong>Cyberveiligheid:</strong> Bescherming tegen online criminaliteit</li>
+                            </ul>
+                            <p class="standpunt-detail">Echte veiligheid ontstaat door rechtvaardigheid en gelijke behandeling van alle inwoners.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="call-to-action">
+                    <h2>Doe mee aan de discussie</h2>
+                    <p>Wat vind jij van onze standpunten? Heb je aanvullingen of andere ideeën? We horen graag van je!</p>
+                    <div class="cta-buttons">
+                        <a href="/forum/" class="cta-button primary">Discussieer mee op ons Forum</a>
+                        <a href="/contact/" class="cta-button secondary">Stuur ons je mening</a>
+                        <a href="/verkiezingsprogramma/" class="cta-button secondary">Lees ons volledige programma</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/" class="active">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
 </body>
 </html>

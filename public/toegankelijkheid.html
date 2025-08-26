@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Toegankelijkheid - Verenigd Amsterdam Website</title>
+    <meta name="title" content="Toegankelijkheid - Verenigd Amsterdam Website">
+    <meta name="description" content="Toegankelijkheidsinformatie van de Verenigd Amsterdam website. Wij streven naar een toegankelijke website voor alle gebruikers, inclusief mensen met een beperking.">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2024">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="alle gebruikers, mensen met beperking, screenreader gebruikers">
+    <meta name="coverage" content="Nederland">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Toegankelijkheid - Verenigd Amsterdam">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Toegankelijkheid, WCAG, Website, Inclusiviteit">
+    <meta name="DC.description" content="Toegankelijkheidsinformatie van de Verenigd Amsterdam website. Wij streven naar een toegankelijke website voor alle gebruikers.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2024-12-15">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://verenigdamsterdam.nl/toegankelijkheid">
+    <meta name="DC.source" content="https://verenigdamsterdam.nl/toegankelijkheid">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2024 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/toegankelijkheid">
+    <meta property="og:title" content="Toegankelijkheid - Verenigd Amsterdam">
+    <meta property="og:description" content="Toegankelijkheidsinformatie van de Verenigd Amsterdam website. Wij streven naar een toegankelijke website voor alle gebruikers.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/toegankelijkheid-og.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/toegankelijkheid-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Toegankelijkheid Verenigd Amsterdam Website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/toegankelijkheid">
+    <meta name="twitter:title" content="Toegankelijkheid - Verenigd Amsterdam">
+    <meta name="twitter:description" content="Toegankelijkheidsinformatie van de Verenigd Amsterdam website. Wij streven naar een toegankelijke website voor alle gebruikers.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/toegankelijkheid-og.jpg">
+    <meta name="twitter:image:alt" content="Toegankelijkheid Verenigd Amsterdam Website">
+    <meta name="twitter:site" content="@VerenigdAdam">
+    <meta name="twitter:creator" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/toegankelijkheid">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/toegankelijkheid">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/toegankelijkheid">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1, notranslate">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data - Accessibility Statement -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://verenigdamsterdam.nl/toegankelijkheid#page",
+      "name": "Toegankelijkheidsverklaring",
+      "description": "Toegankelijkheidsinformatie van de Verenigd Amsterdam website volgens WCAG 2.1 richtlijnen.",
+      "url": "https://verenigdamsterdam.nl/toegankelijkheid",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Website Toegankelijkheid",
+        "description": "Informatie over de toegankelijkheidsmaatregelen van deze website"
+      },
+      "accessibilityFeature": [
+        "alternativeText",
+        "captions",
+        "highContrast",
+        "largePrint",
+        "resizeText",
+        "structuralNavigation"
+      ],
+      "accessibilityControl": [
+        "fullKeyboardControl",
+        "fullMouseControl",
+        "fullTouchControl"
+      ],
+      "accessibilityHazard": "none"
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Spring naar hoofdinhoud</a>
+    
+    <nav class="navbar" role="navigation" aria-label="Hoofdnavigatie">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="/images/verenigd-amsterdam-politiek-2025-logo_small.png" alt="Verenigd Amsterdam Logo" width="40" height="40">
+                    <span>Verenigd Amsterdam</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/standpunten/" class="nav-link">Standpunten</a>
+                <a href="/verkiezingsprogramma/" class="nav-link">Programma</a>
+                <a href="/nieuws/" class="nav-link">Nieuws</a>
+                <a href="/evenementen/" class="nav-link">Evenementen</a>
+                <a href="/doe-mee/" class="nav-link">Doe Mee</a>
+                <a href="/forum/" class="nav-link">Forum</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Wissel tussen lichte en donkere modus">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <h1>Toegankelijkheidsverklaring</h1>
+                <p class="hero-subtitle">Wij streven naar een website die voor iedereen toegankelijk is</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <h2>Onze inzet voor toegankelijkheid</h2>
+                        <p>Verenigd Amsterdam is toegewijd aan het maken van onze website toegankelijk voor alle gebruikers, ongeacht hun mogelijkheden of beperkingen. Wij geloven dat toegang tot informatie en digitale diensten een fundamenteel recht is.</p>
+                        
+                        <h3>Conformiteitsstatus</h3>
+                        <p>Deze website streeft naar conformiteit met de <strong>Web Content Accessibility Guidelines (WCAG) 2.1 niveau AA</strong>. Deze richtlijnen helpen ons ervoor te zorgen dat onze website toegankelijk is voor mensen met verschillende soorten beperkingen.</p>
+
+                        <h3>Toegankelijkheidsfeatures</h3>
+                        <h4>Navigatie en structuur</h4>
+                        <ul>
+                            <li>Logische koppenstructuur (H1-H6) voor screenreaders</li>
+                            <li>Skip-links om direct naar hoofdinhoud te gaan</li>
+                            <li>Consistente navigatie door de hele website</li>
+                            <li>Breadcrumb navigatie waar relevant</li>
+                            <li>Duidelijke focus indicatoren voor toetsenbordnavigatie</li>
+                        </ul>
+
+                        <h4>Visuele toegankelijkheid</h4>
+                        <ul>
+                            <li>Hoog contrast tussen tekst en achtergrond</li>
+                            <li>Tekst kan worden vergroot tot 200% zonder horizontaal scrollen</li>
+                            <li>Donkere modus beschikbaar voor gevoelige ogen</li>
+                            <li>Geen gebruik van kleur alleen om informatie over te brengen</li>
+                            <li>Alt-tekst voor alle informatieve afbeeldingen</li>
+                        </ul>
+
+                        <h4>Toetsenbord toegankelijkheid</h4>
+                        <ul>
+                            <li>Alle functionaliteit is beschikbaar via het toetsenbord</li>
+                            <li>Logische tab-volgorde door de pagina</li>
+                            <li>Geen toetsenbordvallen</li>
+                            <li>Shortcuts: Tab (volgende), Shift+Tab (vorige), Enter/Spatie (activeren)</li>
+                        </ul>
+
+                        <h4>Screenreader ondersteuning</h4>
+                        <ul>
+                            <li>Semantische HTML markup</li>
+                            <li>ARIA labels en beschrijvingen waar nodig</li>
+                            <li>Landmark rollen voor paginastructuur</li>
+                            <li>Getest met NVDA, JAWS en VoiceOver</li>
+                        </ul>
+
+                        <h3>Bekende beperkingen</h3>
+                        <p>Ondanks onze inspanningen zijn er enkele gebieden waar we nog aan verbetering werken:</p>
+                        <ul>
+                            <li>Sommige PDF-documenten zijn mogelijk niet volledig toegankelijk</li>
+                            <li>Externe video's hebben mogelijk geen ondertitels</li>
+                            <li>Complexe grafieken kunnen aanvullende beschrijvingen gebruiken</li>
+                        </ul>
+
+                        <h3>Feedback en contact</h3>
+                        <p>Uw feedback helpt ons onze website te verbeteren. Als u toegankelijkheidsproblemen ondervindt of suggesties heeft, neem dan contact met ons op:</p>
+                        
+                        <div class="contact-info">
+                            <h4>Toegankelijkheidscontact</h4>
+                            <p><strong>Email:</strong> <a href="mailto:toegankelijkheid@verenigdamsterdam.nl">toegankelijkheid@verenigdamsterdam.nl</a></p>
+                            <p><strong>Telefoon:</strong> <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                            <p><strong>Post:</strong><br>
+                            Verenigd Amsterdam<br>
+                            T.a.v. Toegankelijkheid<br>
+                            Sint Olofsteeg 4<br>
+                            1012 AK Amsterdam</p>
+                        </div>
+
+                        <h3>Hulpmiddelen en browser instellingen</h3>
+                        <h4>Browserinstellingen</h4>
+                        <ul>
+                            <li><strong>Tekst vergroten:</strong> Ctrl/Cmd + Plus (+) om in te zoomen</li>
+                            <li><strong>Tekst verkleinen:</strong> Ctrl/Cmd + Min (-) om uit te zoomen</li>
+                            <li><strong>Standaard grootte:</strong> Ctrl/Cmd + 0</li>
+                            <li><strong>Alleen toetsenbord:</strong> Tab om te navigeren, Enter om te selecteren</li>
+                        </ul>
+
+                        <h4>Screenreaders</h4>
+                        <ul>
+                            <li><strong>Windows:</strong> NVDA (gratis), JAWS</li>
+                            <li><strong>Mac:</strong> VoiceOver (ingebouwd)</li>
+                            <li><strong>Linux:</strong> Orca</li>
+                            <li><strong>Mobiel:</strong> TalkBack (Android), VoiceOver (iOS)</li>
+                        </ul>
+
+                        <h3>Toekomstplannen</h3>
+                        <p>Wij blijven werken aan het verbeteren van de toegankelijkheid van onze website. Onze roadmap omvat:</p>
+                        <ul>
+                            <li>Regelmatige toegankelijkheidstests met echte gebruikers</li>
+                            <li>Implementatie van ARIA 1.1 best practices</li>
+                            <li>Verbetering van multimedia toegankelijkheid</li>
+                            <li>Training van onze content creators in toegankelijke content</li>
+                        </ul>
+
+                        <h3>Datum en herziening</h3>
+                        <p><strong>Laatste update:</strong> 15 december 2024</p>
+                        <p><strong>Volgende herziening:</strong> Maart 2025</p>
+                        <p>Deze toegankelijkheidsverklaring wordt regelmatig bijgewerkt om wijzigingen in onze website en feedback van gebruikers te reflecteren.</p>
+                    </div>
+
+                    <aside class="sidebar" role="complementary" aria-label="Gerelateerde informatie">
+                        <div class="sidebar-widget">
+                            <h4>Snelle toegankelijkheidstips</h4>
+                            <ul>
+                                <li>Gebruik Tab om door links te navigeren</li>
+                                <li>Druk op spatie om te scrollen</li>
+                                <li>Gebruik pijltjestoetsen in menu's</li>
+                                <li>Druk op Escape om menu's te sluiten</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Externe hulpmiddelen</h4>
+                            <ul>
+                                <li><a href="https://www.nvaccess.org/" target="_blank" rel="noopener">NVDA Screenreader</a></li>
+                                <li><a href="https://accessibility.nl/" target="_blank" rel="noopener">Accessibility.nl</a></li>
+                                <li><a href="https://www.accessibility.com/" target="_blank" rel="noopener">Accessibility.com</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Browser extensies</h4>
+                            <ul>
+                                <li>High Contrast voor Chrome</li>
+                                <li>Dark Reader voor donkere modus</li>
+                                <li>Mercury Reader voor schone tekst</li>
+                                <li>Read Aloud voor tekst-naar-spraak</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener" aria-label="Bezoek onze Facebook pagina">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener" aria-label="Volg ons op Twitter">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener" aria-label="Bekijk onze Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid" aria-current="page">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

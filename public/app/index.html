@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Verenigd Amsterdam App - Mobiele Applicatie voor Betrokken Burgers</title>
+    <meta name="title" content="Verenigd Amsterdam App - Mobiele Applicatie voor Betrokken Burgers">
+    <meta name="description" content="Download de Verenigd Amsterdam app en blijf op de hoogte van lokale politiek, evenementen en mogelijkheden om je stem te laten horen in Amsterdam.">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2024">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="inwoners Amsterdam, politiek geïnteresseerden, app gebruikers">
+    <meta name="coverage" content="Amsterdam">
+    <meta name="revisit-after" content="3 days">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Verenigd Amsterdam App - Mobiele Applicatie">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="App, Mobiele applicatie, Politiek, Amsterdam, Burgerparticipatie">
+    <meta name="DC.description" content="Download de Verenigd Amsterdam app en blijf op de hoogte van lokale politiek, evenementen en mogelijkheden om je stem te laten horen in Amsterdam.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2024-12-15">
+    <meta name="DC.type" content="SoftwareApplication">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://verenigdamsterdam.nl/app/">
+    <meta name="DC.source" content="https://verenigdamsterdam.nl/app/">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2024 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/app/">
+    <meta property="og:title" content="Verenigd Amsterdam App - Mobiele Applicatie">
+    <meta property="og:description" content="Download de Verenigd Amsterdam app en blijf op de hoogte van lokale politiek, evenementen en mogelijkheden om je stem te laten horen in Amsterdam.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/app-og.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/app-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verenigd Amsterdam App - Download nu">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/app/">
+    <meta name="twitter:title" content="Verenigd Amsterdam App - Mobiele Applicatie">
+    <meta name="twitter:description" content="Download de Verenigd Amsterdam app en blijf op de hoogte van lokale politiek, evenementen en mogelijkheden om je stem te laten horen in Amsterdam.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/app-og.jpg">
+    <meta name="twitter:image:alt" content="Verenigd Amsterdam App - Download nu">
+    <meta name="twitter:site" content="@VerenigdAdam">
+    <meta name="twitter:creator" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/app/">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/app/">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/app/">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- News Feeds -->
+    <link rel="alternate" type="application/rss+xml" title="Nieuws RSS" href="/nieuws/feed.xml">
+    <link rel="alternate" type="application/feed+json" title="Nieuws JSON Feed" href="/nieuws/feed.json">
+
+    <!-- Content Classification -->
+    <meta name="news_keywords" content="app, mobiele applicatie, Amsterdam, politiek, burgerparticipatie">
+    <meta name="article:section" content="Technology">
+    <meta name="article:tag" content="App, Mobiel, Politiek, Amsterdam">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1, notranslate">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data - Software Application -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://verenigdamsterdam.nl/app/#app",
+      "name": "Verenigd Amsterdam App",
+      "description": "De officiële mobiele app van Verenigd Amsterdam voor betrokken burgers. Blijf op de hoogte van lokale politiek, evenementen en participatiemogelijkheden.",
+      "operatingSystem": ["Android", "iOS"],
+      "applicationCategory": "GovernmentApplication",
+      "downloadUrl": "https://verenigdamsterdam.nl/app/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "PoliticalParty",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "publisher": {
+        "@type": "PoliticalParty",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "150"
+      },
+      "featureList": [
+        "Nieuws en updates",
+        "Evenementen overzicht",
+        "Participatie mogelijkheden",
+        "Direct contact met vertegenwoordigers",
+        "Push notificaties",
+        "Offline toegang"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hoofdnavigatie">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <a href="/" title="Verenigd Amsterdam - Solidair, Sociaal, Sterk">
+              <img
+                src="/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+                alt="Verenigd Amsterdam logo - Politieke partij Amsterdam - Sociaal Veilig Groen"
+                title="Verenigd Amsterdam - Gemeenteraadsverkiezingen 2026"
+                class="logo-img"
+                width="200" height="60"
+                decoding="async" fetchpriority="high">
+            </a>
+          </div>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <!-- Main political pages -->
+            <li><a href="/verkiezingsprogramma/">Politiek</a></li>
+            <li><a href="/standpunten/">Standpunten</a></li>
+            
+            <!-- 2026 Elections Section -->
+            <li class="nav-dropdown">
+              <a href="/gemeenteraadsverkiezingen/" class="nav-dropdown-toggle">Verkiezingen 2026 ▼</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="/gemeenteraadsverkiezingen/">Verkiezingen 2026</a></li>
+                <li><a href="/gemeenteraadsverkiezingen/forum/">Forum</a></li>
+              </ul>
+            </li>
+
+            <!-- Community & Engagement -->
+            <li><a href="/nieuws/">Nieuws</a></li>
+            <li><a href="/forum/">Forum</a></li>
+            <li><a href="/network/">Veiligheids Netwerk</a></li>
+            
+            <!-- App & Digital Platform -->
+            <li><a href="/app/" class="active">Actie App</a></li>
+            
+            <!-- About & Contact -->
+            <li><a href="/over-ons/">Over Ons</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            
+            <!-- CTA Button -->
+            <li><a href="/doe-mee/" class="btn-lid">Word Lid</a></li>
+            
+            <!-- Theme Toggle Button -->
+            <li>
+              <button class="theme-toggle nav-theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-icon">🌙</span>
+                <span class="theme-toggle-text">Dark</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Verenigd Amsterdam App</h1>
+                <p class="hero-subtitle">Politiek in je broekzak - Blijf betrokken bij jouw Amsterdam</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <h2>De App voor Betrokken Amsterdammers</h2>
+                        <p>Download de Verenigd Amsterdam app en houd je vinger aan de pols van de lokale politiek. Onze app biedt je directe toegang tot nieuws, evenementen en de mogelijkheid om je stem te laten horen.</p>
+                        
+                        <h3>Functionaliteiten</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h4>📰 Nieuws & Updates</h4>
+                                <p>Blijf op de hoogte van het laatste politieke nieuws en onze standpunten over actuele onderwerpen.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>📅 Evenementen</h4>
+                                <p>Ontdek aankomende bijeenkomsten, stadstours en participatieve evenementen in jouw buurt.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>🗳️ Participatie</h4>
+                                <p>Deel je mening, stem op voorstellen en neem deel aan digitale peilingen over lokale kwesties.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>💬 Direct Contact</h4>
+                                <p>Stel vragen aan onze vertegenwoordigers en krijg persoonlijke antwoorden op jouw zorgen.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>🔔 Push Notificaties</h4>
+                                <p>Ontvang belangrijke updates over besluitvorming die jouw buurt direct beïnvloedt.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>📱 Offline Toegang</h4>
+                                <p>Lees artikelen en bekijk ons verkiezingsprogramma ook zonder internetverbinding.</p>
+                            </div>
+                        </div>
+
+                        <h3>Download Nu</h3>
+                        <p>De Verenigd Amsterdam app is binnenkort beschikbaar voor zowel Android als iOS apparaten.</p>
+                        
+                        <div class="download-section">
+                            <div class="download-buttons">
+                                <a href="#" class="download-btn android-btn" onclick="alert('Binnenkort beschikbaar!')">
+                                    <span>📱</span>
+                                    <div>
+                                        <small>Download voor</small>
+                                        <strong>Android</strong>
+                                    </div>
+                                </a>
+                                <a href="#" class="download-btn ios-btn" onclick="alert('Binnenkort beschikbaar!')">
+                                    <span>🍎</span>
+                                    <div>
+                                        <small>Download voor</small>
+                                        <strong>iOS</strong>
+                                    </div>
+                                </a>
+                            </div>
+                            <p class="download-info"><em>Verwachte release: Q2 2025</em></p>
+                        </div>
+
+                        <h3>Progressive Web App</h3>
+                        <p>Kan niet wachten? Voeg onze website toe aan je startscherm voor een app-achtige ervaring:</p>
+                        <ol>
+                            <li>Open verenigdamsterdam.nl in je mobiele browser</li>
+                            <li>Tik op het 'Delen' icoon (iOS) of menu (Android)</li>
+                            <li>Selecteer 'Voeg toe aan startscherm'</li>
+                            <li>Bevestig en geniet van snelle toegang!</li>
+                        </ol>
+                    </div>
+
+                    <aside class="sidebar">
+                        <div class="sidebar-widget">
+                            <h4>App Nieuws</h4>
+                            <div class="news-item">
+                                <h5>Beta Testing Start</h5>
+                                <p>Wil je als eerste onze app testen? Meld je aan voor de beta versie.</p>
+                                <a href="mailto:app@verenigdamsterdam.nl?subject=Beta Testing">Aanmelden</a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Feedback & Suggesties</h4>
+                            <p>Heb je ideeën voor onze app? Laat het ons weten!</p>
+                            <p><strong>Email:</strong> <a href="mailto:app@verenigdamsterdam.nl">app@verenigdamsterdam.nl</a></p>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Technische Vereisten</h4>
+                            <ul>
+                                <li><strong>Android:</strong> 6.0 of hoger</li>
+                                <li><strong>iOS:</strong> 12.0 of hoger</li>
+                                <li><strong>Opslag:</strong> 50MB</li>
+                                <li><strong>Internet:</strong> Voor updates</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

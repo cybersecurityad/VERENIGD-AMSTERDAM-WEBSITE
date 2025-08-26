@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Over Ons | Verenigd Amsterdam</title>
+    <meta name="title" content="Over Ons | Verenigd Amsterdam">
+    <meta name="description" content="Leer meer over Verenigd Amsterdam: onze missie, visie, geschiedenis en het team dat zich inzet voor een solidair, sociaal, sterk en groen Amsterdam.">
+    <meta name="keywords" content="over ons, Verenigd Amsterdam, politiek, missie, visie, team, geschiedenis, Amsterdam">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2025">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="burgers, inwoners">
+    <meta name="coverage" content="Amsterdam">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Over Ons">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Politieke organisatie, Missie, Visie">
+    <meta name="DC.description" content="Informatie over Verenigd Amsterdam, onze missie, visie en het team.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2025-08-26">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2025 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/over-ons/">
+    <meta property="og:title" content="Over Ons | Verenigd Amsterdam">
+    <meta property="og:description" content="Leer meer over Verenigd Amsterdam: onze missie, visie, geschiedenis en het team dat zich inzet voor een solidair Amsterdam.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/og-over-ons.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/og-over-ons.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verenigd Amsterdam - Over Ons">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/over-ons/">
+    <meta name="twitter:title" content="Over Ons | Verenigd Amsterdam">
+    <meta name="twitter:description" content="Leer meer over Verenigd Amsterdam: onze missie, visie en het team.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/og-over-ons.jpg">
+    <meta name="twitter:site" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/over-ons/">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/over-ons/">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/over-ons/">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "@id": "https://verenigdamsterdam.nl/over-ons/#page",
+      "name": "Over Ons",
+      "description": "Informatie over Verenigd Amsterdam, onze missie, visie en het team.",
+      "url": "https://verenigdamsterdam.nl/over-ons/",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "Verenigd Amsterdam",
+        "description": "Politieke vereniging voor een solidair, sociaal, sterk en groen Amsterdam.",
+        "url": "https://verenigdamsterdam.nl",
+        "foundingDate": "2024",
+        "slogan": "Solidair, Sociaal, Sterk en Groen!"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://verenigdamsterdam.nl"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Over Ons",
+          "item": "https://verenigdamsterdam.nl/over-ons/"
+        }]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hoofdnavigatie">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <a href="/" title="Verenigd Amsterdam - Solidair, Sociaal, Sterk">
+              <img
+                src="/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+                alt="Verenigd Amsterdam logo - Politieke partij Amsterdam - Sociaal Veilig Groen"
+                title="Verenigd Amsterdam - Gemeenteraadsverkiezingen 2026"
+                class="logo-img"
+                width="200" height="60"
+                decoding="async" fetchpriority="high">
+            </a>
+          </div>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <!-- Main political pages -->
+            <li><a href="/verkiezingsprogramma/">Politiek</a></li>
+            <li><a href="/standpunten/">Standpunten</a></li>
+            
+            <!-- 2026 Elections Section -->
+            <li class="nav-dropdown">
+              <a href="/gemeenteraadsverkiezingen/" class="nav-dropdown-toggle">Verkiezingen 2026 ▼</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="/gemeenteraadsverkiezingen/">Verkiezingen 2026</a></li>
+                <li><a href="/gemeenteraadsverkiezingen/forum/">Forum</a></li>
+              </ul>
+            </li>
+
+            <!-- Community & Engagement -->
+            <li><a href="/nieuws/">Nieuws</a></li>
+            <li><a href="/forum/">Forum</a></li>
+            <li><a href="/network/">Veiligheids Netwerk</a></li>
+            
+            <!-- App & Digital Platform -->
+            <li><a href="/app/">Actie App</a></li>
+            
+            <!-- About & Contact -->
+            <li><a href="/over-ons/" class="active">Over Ons</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            
+            <!-- CTA Button -->
+            <li><a href="/doe-mee/" class="btn-lid">Word Lid</a></li>
+            
+            <!-- Theme Toggle Button -->
+            <li>
+              <button class="theme-toggle nav-theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-icon">🌙</span>
+                <span class="theme-toggle-text">Dark</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Over Ons</h1>
+                <p class="hero-subtitle">Solidair, Sociaal, Sterk en Groen!</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="about-intro">
+                    <h2>Wie zijn wij?</h2>
+                    <p class="intro-text">Verenigd Amsterdam is een politieke vereniging die zich inzet voor een eerlijke, duurzame en inclusieve stad. Wij geloven in een Amsterdam waar iedereen zich thuis voelt en waar solidariteit, sociale rechtvaardigheid en milieubewustzijn centraal staan.</p>
+                </div>
+
+                <div class="mission-vision">
+                    <div class="mission-vision-grid">
+                        <div class="mission-card">
+                            <div class="card-icon">🎯</div>
+                            <h3>Onze Missie</h3>
+                            <p>Wij werken aan een Amsterdam dat solidair, sociaal, sterk en groen is. Een stad waar alle inwoners gelijke kansen krijgen en waar de leefomgeving voor iedereen wordt verbeterd.</p>
+                        </div>
+
+                        <div class="vision-card">
+                            <div class="card-icon">🔮</div>
+                            <h3>Onze Visie</h3>
+                            <p>Amsterdam als voorbeeldstad voor Europa: een plek waar innovatie en traditie samenkomen, waar diversiteit wordt gevierd en waar duurzaamheid leidend is in alle beslissingen.</p>
+                        </div>
+
+                        <div class="values-card">
+                            <div class="card-icon">⚖️</div>
+                            <h3>Onze Waarden</h3>
+                            <ul>
+                                <li><strong>Solidariteit:</strong> We staan voor elkaar op</li>
+                                <li><strong>Rechtvaardigheid:</strong> Eerlijke kansen voor iedereen</li>
+                                <li><strong>Duurzaamheid:</strong> Een groene toekomst</li>
+                                <li><strong>Inclusiviteit:</strong> Niemand wordt buitengesloten</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-section">
+                    <h2>Onze Geschiedenis</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">
+                                <h4>Oprichting Verenigd Amsterdam</h4>
+                                <p>Een groep betrokken Amsterdammers komt samen met de ambitie om de stad te veranderen. Verenigd Amsterdam wordt officieel opgericht.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h4>Groei en Ontwikkeling</h4>
+                                <p>Het lidmaatschap groeit snel. We organiseren onze eerste grote evenementen en lanceren belangrijke campagnes voor sociale woningbouw en klimaatactie.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026</div>
+                            <div class="timeline-content">
+                                <h4>Gemeenteraadsverkiezingen</h4>
+                                <p>We nemen voor het eerst deel aan de gemeenteraadsverkiezingen met een ambitieus programma voor een betere stad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="our-approach">
+                    <h2>Onze Aanpak</h2>
+                    <div class="approach-grid">
+                        <div class="approach-item">
+                            <h3>🏛️ Transparante Politiek</h3>
+                            <p>Wij geloven in open en transparante besluitvorming. Alle stemgedrag en standpunten zijn publiek toegankelijk.</p>
+                        </div>
+
+                        <div class="approach-item">
+                            <h3>👥 Participatie</h3>
+                            <p>Inwoners moeten meedenken en meebeslissen. We organiseren regelmatig buurtbijeenkomsten en open forums.</p>
+                        </div>
+
+                        <div class="approach-item">
+                            <h3>📊 Evidence-Based</h3>
+                            <p>Onze voorstellen zijn gebaseerd op onderzoek, data en wetenschappelijke inzichten.</p>
+                        </div>
+
+                        <div class="approach-item">
+                            <h3>🤝 Samenwerking</h3>
+                            <p>We zoeken actief de samenwerking met andere partijen en organisaties voor het bereiken van onze doelen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-section">
+                    <h2>Ons Team</h2>
+                    <p>Verenigd Amsterdam bestaat uit een diverse groep mensen met verschillende achtergronden, expertise en ervaringen. Wat ons bindt is de passie voor Amsterdam en de overtuiging dat we samen meer kunnen bereiken.</p>
+                    
+                    <div class="team-categories">
+                        <div class="team-category">
+                            <h3>Bestuur</h3>
+                            <p>Ons bestuur bestaat uit ervaren professionals uit verschillende sectoren die hun expertise inzetten voor een betere stad.</p>
+                        </div>
+
+                        <div class="team-category">
+                            <h3>Kandidaten</h3>
+                            <p>Onze kandidaten voor de gemeenteraad vertegenwoordigen alle wijken van Amsterdam en brengen hun lokale kennis mee.</p>
+                        </div>
+
+                        <div class="team-category">
+                            <h3>Vrijwilligers</h3>
+                            <p>Honderden vrijwilligers helpen mee met campagnes, evenementen en het verspreiden van onze boodschap.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="join-us">
+                    <h2>Doe Mee!</h2>
+                    <p>Wil je ook bijdragen aan een betere toekomst voor Amsterdam? Er zijn veel manieren om je bij ons aan te sluiten:</p>
+                    
+                    <div class="join-options">
+                        <div class="join-option">
+                            <h4>Word Lid</h4>
+                            <p>Als lid kun je meestemmen over ons beleid en krijg je toegang tot exclusieve evenementen.</p>
+                            <a href="/doe-mee/" class="cta-button secondary">Lid Worden</a>
+                        </div>
+
+                        <div class="join-option">
+                            <h4>Vrijwilliger</h4>
+                            <p>Help mee met campagnes, evenementen of andere activiteiten die bijdragen aan onze doelen.</p>
+                            <a href="/doe-mee/" class="cta-button secondary">Vrijwilliger Worden</a>
+                        </div>
+
+                        <div class="join-option">
+                            <h4>Doneer</h4>
+                            <p>Steun ons financieel zodat we onze campagnes en activiteiten kunnen voortzetten.</p>
+                            <a href="/doe-mee/" class="cta-button secondary">Doneren</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <h2>Vragen?</h2>
+                    <p>Heb je vragen over wie we zijn of wat we doen? Neem gerust contact met ons op!</p>
+                    <a href="/contact/" class="cta-button primary">Contact Opnemen</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Privacybeleid - Verenigd Amsterdam | Bescherming Persoonsgegevens</title>
+    <meta name="title" content="Privacybeleid - Verenigd Amsterdam | Bescherming Persoonsgegevens">
+    <meta name="description" content="Lees ons privacybeleid en ontdek hoe Verenigd Amsterdam uw persoonsgegevens verzamelt, gebruikt en beschermt volgens de AVG/GDPR wetgeving.">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2024">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="websitegebruikers, bezoekers">
+    <meta name="coverage" content="Nederland">
+    <meta name="revisit-after" content="30 days">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Privacybeleid - Verenigd Amsterdam">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Privacybeleid, AVG, GDPR, Persoonsgegevens">
+    <meta name="DC.description" content="Privacybeleid van Verenigd Amsterdam conform AVG/GDPR wetgeving voor bescherming van persoonsgegevens.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2024-12-15">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://verenigdamsterdam.nl/privacy">
+    <meta name="DC.source" content="https://verenigdamsterdam.nl/privacy">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2024 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/privacy">
+    <meta property="og:title" content="Privacybeleid - Verenigd Amsterdam">
+    <meta property="og:description" content="Lees ons privacybeleid en ontdek hoe Verenigd Amsterdam uw persoonsgegevens verzamelt, gebruikt en beschermt volgens de AVG/GDPR wetgeving.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/privacy-og.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/privacy-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Privacybeleid Verenigd Amsterdam">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/privacy">
+    <meta name="twitter:title" content="Privacybeleid - Verenigd Amsterdam">
+    <meta name="twitter:description" content="Lees ons privacybeleid conform AVG/GDPR wetgeving voor bescherming van persoonsgegevens.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/privacy-og.jpg">
+    <meta name="twitter:site" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/privacy">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/privacy">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/privacy">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1, notranslate">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data - Privacy Policy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://verenigdamsterdam.nl/privacy#page",
+      "name": "Privacybeleid",
+      "description": "Privacybeleid van Verenigd Amsterdam conform AVG/GDPR wetgeving voor bescherming van persoonsgegevens.",
+      "url": "https://verenigdamsterdam.nl/privacy",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Privacy en Gegevensbescherming",
+        "description": "Informatie over hoe persoonsgegevens worden verzameld, gebruikt en beschermd"
+      },
+      "datePublished": "2024-12-15",
+      "dateModified": "2024-12-15"
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="/images/verenigd-amsterdam-politiek-2025-logo_small.png" alt="Verenigd Amsterdam Logo" width="40" height="40">
+                    <span>Verenigd Amsterdam</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/standpunten/" class="nav-link">Standpunten</a>
+                <a href="/verkiezingsprogramma/" class="nav-link">Programma</a>
+                <a href="/nieuws/" class="nav-link">Nieuws</a>
+                <a href="/evenementen/" class="nav-link">Evenementen</a>
+                <a href="/doe-mee/" class="nav-link">Doe Mee</a>
+                <a href="/forum/" class="nav-link">Forum</a>
+                <div class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    🌙
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Privacybeleid</h1>
+                <p class="hero-subtitle">Hoe wij uw persoonsgegevens beschermen en gebruiken</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <h2>1. Inleiding</h2>
+                        <p>Verenigd Amsterdam Politieke Partij (hierna: "Verenigd Amsterdam", "wij", "ons") hecht groot belang aan de bescherming van uw privacy en de zorgvuldige omgang met uw persoonsgegevens. Dit privacybeleid legt uit hoe wij persoonsgegevens verzamelen, gebruiken, opslaan en beschermen wanneer u gebruik maakt van onze website https://verenigdamsterdam.nl en onze diensten.</p>
+                        
+                        <p>Dit privacybeleid is opgesteld in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG/GDPR) en de Nederlandse uitvoeringswetgeving.</p>
+
+                        <h2>2. Contactgegevens verwerkingsverantwoordelijke</h2>
+                        <div class="contact-info">
+                            <p><strong>Verenigd Amsterdam Politieke Partij</strong><br>
+                            Sint Olofsteeg 4<br>
+                            1012 AK Amsterdam<br>
+                            Nederland</p>
+                            
+                            <p><strong>Email:</strong> <a href="mailto:privacy@verenigdamsterdam.nl">privacy@verenigdamsterdam.nl</a><br>
+                            <strong>Telefoon:</strong> <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                        </div>
+
+                        <h2>3. Welke persoonsgegevens verzamelen wij?</h2>
+                        
+                        <h3>3.1 Gegevens die u zelf verstrekt</h3>
+                        <ul>
+                            <li><strong>Contactformulieren:</strong> Naam, e-mailadres, telefoonnummer, bericht</li>
+                            <li><strong>Nieuwsbrief:</strong> E-mailadres, voornaam</li>
+                            <li><strong>Evenementregistratie:</strong> Naam, e-mailadres, telefoonnummer</li>
+                            <li><strong>Lidmaatschap:</strong> Volledige naam, adres, e-mailadres, geboortedatum, telefoonnummer</li>
+                            <li><strong>Vrijwilligerswerk:</strong> Naam, e-mailadres, telefoonnummer, beschikbaarheid, vaardigheden</li>
+                            <li><strong>Forum account:</strong> Gebruikersnaam, e-mailadres, profielinformatie</li>
+                        </ul>
+                        
+                        <h3>3.2 Automatisch verzamelde gegevens</h3>
+                        <ul>
+                            <li><strong>Website analytics:</strong> IP-adres (geanonimiseerd), browser type, besturingssysteem, bezochte pagina's, tijd op site</li>
+                            <li><strong>Cookies:</strong> Voorkeuren, sessie-informatie, statistieken (zie cookiebeleid)</li>
+                            <li><strong>Logbestanden:</strong> IP-adres, timestamp, bezochte pagina's, referrer</li>
+                        </ul>
+
+                        <h2>4. Waarom verwerken wij uw gegevens?</h2>
+                        
+                        <h3>4.1 Doeleinden en rechtsgronden</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Doel</th>
+                                    <th>Rechtsgrond</th>
+                                    <th>Gegevens</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Contact afhandelen</td>
+                                    <td>Gerechtvaardigd belang</td>
+                                    <td>Naam, e-mail, telefoon, bericht</td>
+                                </tr>
+                                <tr>
+                                    <td>Nieuwsbrief versturen</td>
+                                    <td>Toestemming</td>
+                                    <td>E-mailadres, voornaam</td>
+                                </tr>
+                                <tr>
+                                    <td>Evenementen organiseren</td>
+                                    <td>Overeenkomst</td>
+                                    <td>Naam, e-mail, telefoon</td>
+                                </tr>
+                                <tr>
+                                    <td>Lidmaatschap beheren</td>
+                                    <td>Overeenkomst</td>
+                                    <td>Volledige persoonsgegevens</td>
+                                </tr>
+                                <tr>
+                                    <td>Website verbeteren</td>
+                                    <td>Gerechtvaardigd belang</td>
+                                    <td>Analytics data (geanonimiseerd)</td>
+                                </tr>
+                                <tr>
+                                    <td>Beveiliging</td>
+                                    <td>Gerechtvaardigd belang</td>
+                                    <td>IP-adres, logbestanden</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>5. Hoe lang bewaren wij uw gegevens?</h2>
+                        
+                        <h3>5.1 Bewaartermijnen</h3>
+                        <ul>
+                            <li><strong>Contactberichten:</strong> 2 jaar na laatste contact</li>
+                            <li><strong>Nieuwsbriefabonnees:</strong> Tot uitschrijving + 1 maand</li>
+                            <li><strong>Evenementdeelnemers:</strong> 1 jaar na evenement</li>
+                            <li><strong>Leden:</strong> 7 jaar na beëindiging lidmaatschap (wettelijke verplichting)</li>
+                            <li><strong>Vrijwilligers:</strong> 3 jaar na laatste activiteit</li>
+                            <li><strong>Website analytics:</strong> 26 maanden (geanonimiseerd)</li>
+                            <li><strong>Logbestanden:</strong> 1 jaar</li>
+                        </ul>
+
+                        <h2>6. Met wie delen wij uw gegevens?</h2>
+                        
+                        <h3>6.1 Interne toegang</h3>
+                        <p>Toegang tot persoonsgegevens is beperkt tot medewerkers en vrijwilligers die deze gegevens nodig hebben voor hun werkzaamheden.</p>
+                        
+                        <h3>6.2 Externe partijen</h3>
+                        <ul>
+                            <li><strong>Hosting provider:</strong> Voor website hosting (verwerkersovereenkomst)</li>
+                            <li><strong>E-mail service:</strong> Voor nieuwsbrief versturing (verwerkersovereenkomst)</li>
+                            <li><strong>Analytics service:</strong> Voor website statistieken (geanonimiseerd)</li>
+                            <li><strong>Wettelijke verplichtingen:</strong> Alleen indien wettelijk verplicht</li>
+                        </ul>
+                        
+                        <h3>6.3 Internationale overdrachten</h3>
+                        <p>Wij zorgen ervoor dat al onze dienstverleners adequaatbesluiten hebben of passende waarborgen bieden voor internationale gegevensoverdrachten.</p>
+
+                        <h2>7. Uw rechten</h2>
+                        
+                        <h3>7.1 Uw AVG rechten</h3>
+                        <ul>
+                            <li><strong>Recht op inzage:</strong> Opvragen welke gegevens wij van u hebben</li>
+                            <li><strong>Recht op rectificatie:</strong> Correctie van onjuiste gegevens</li>
+                            <li><strong>Recht op verwijdering:</strong> Verwijdering van uw gegevens ('recht om vergeten te worden')</li>
+                            <li><strong>Recht op beperking:</strong> Beperking van de verwerking</li>
+                            <li><strong>Recht op dataportabiliteit:</strong> Overdracht van uw gegevens</li>
+                            <li><strong>Recht van bezwaar:</strong> Bezwaar tegen verwerking</li>
+                            <li><strong>Recht om toestemming in te trekken:</strong> Intrekking van eerder gegeven toestemming</li>
+                        </ul>
+                        
+                        <h3>7.2 Hoe uw rechten uitoefenen?</h3>
+                        <p>U kunt uw rechten uitoefenen door een e-mail te sturen naar <a href="mailto:privacy@verenigdamsterdam.nl">privacy@verenigdamsterdam.nl</a>. Wij reageren binnen 30 dagen op uw verzoek.</p>
+                        
+                        <h3>7.3 Klacht indienen</h3>
+                        <p>Heeft u een klacht over hoe wij met uw persoonsgegevens omgaan? Dan kunt u contact opnemen met de Autoriteit Persoonsgegevens via <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a>.</p>
+
+                        <h2>8. Beveiliging van uw gegevens</h2>
+                        
+                        <h3>8.1 Technische maatregelen</h3>
+                        <ul>
+                            <li>SSL/TLS versleuteling voor alle datatransmissies</li>
+                            <li>Versleutelde opslag van gevoelige gegevens</li>
+                            <li>Regular security updates en patches</li>
+                            <li>Firewalls en intrusion detection systemen</li>
+                            <li>Regular security audits</li>
+                        </ul>
+                        
+                        <h3>8.2 Organisatorische maatregelen</h3>
+                        <ul>
+                            <li>Toegangscontrole op basis van 'need to know'</li>
+                            <li>Privacy training voor medewerkers</li>
+                            <li>Confidentialiteitsverklaringen</li>
+                            <li>Incident response procedures</li>
+                            <li>Regular privacy impact assessments</li>
+                        </ul>
+
+                        <h2>9. Cookies en tracking</h2>
+                        
+                        <h3>9.1 Soorten cookies</h3>
+                        <ul>
+                            <li><strong>Noodzakelijke cookies:</strong> Voor basisfunctionaliteit website</li>
+                            <li><strong>Functionele cookies:</strong> Voor uw voorkeuren (bijv. dark mode)</li>
+                            <li><strong>Analytische cookies:</strong> Voor website statistieken (geanonimiseerd)</li>
+                            <li><strong>Marketing cookies:</strong> Gebruiken wij niet</li>
+                        </ul>
+                        
+                        <h3>9.2 Cookie-instellingen</h3>
+                        <p>U kunt uw cookie-voorkeuren beheren via uw browserinstellingen. Let op: het uitschakelen van bepaalde cookies kan de functionaliteit van de website beperken.</p>
+
+                        <h2>10. Kinderen en privacy</h2>
+                        <p>Onze website is niet specifiek gericht op kinderen onder de 16 jaar. Indien wij ontdekken dat wij persoonsgegevens van kinderen onder de 16 jaar hebben verzameld zonder toestemming van ouders/voogden, zullen wij deze gegevens verwijderen.</p>
+
+                        <h2>11. Wijzigingen in dit privacybeleid</h2>
+                        <p>Wij kunnen dit privacybeleid van tijd tot tijd wijzigen. Belangrijke wijzigingen zullen wij duidelijk communiceren via onze website en/of per e-mail. De datum van de laatste wijziging staat vermeld onderaan dit document.</p>
+
+                        <h2>12. Contact en vragen</h2>
+                        <p>Heeft u vragen over dit privacybeleid of over hoe wij omgaan met uw persoonsgegevens? Neem dan contact met ons op:</p>
+                        
+                        <div class="contact-info">
+                            <p><strong>Data Protection Officer:</strong><br>
+                            <a href="mailto:privacy@verenigdamsterdam.nl">privacy@verenigdamsterdam.nl</a></p>
+                            
+                            <p><strong>Algemeen contact:</strong><br>
+                            <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a><br>
+                            <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                            
+                            <p><strong>Post:</strong><br>
+                            Verenigd Amsterdam<br>
+                            T.a.v. Privacy Officer<br>
+                            Sint Olofsteeg 4<br>
+                            1012 AK Amsterdam</p>
+                        </div>
+
+                        <h2>13. Datum en versie</h2>
+                        <p><strong>Laatste wijziging:</strong> 15 december 2024<br>
+                        <strong>Versie:</strong> 1.0</p>
+                        
+                        <p>Dit privacybeleid vervangt alle eerdere versies en is van toepassing vanaf de datum van publicatie.</p>
+                    </div>
+
+                    <aside class="sidebar">
+                        <div class="sidebar-widget">
+                            <h4>Privacy tools</h4>
+                            <ul>
+                                <li><a href="mailto:privacy@verenigdamsterdam.nl?subject=Inzageverzoek">Inzage aanvragen</a></li>
+                                <li><a href="mailto:privacy@verenigdamsterdam.nl?subject=Gegevens wijzigen">Gegevens wijzigen</a></li>
+                                <li><a href="mailto:privacy@verenigdamsterdam.nl?subject=Gegevens verwijderen">Gegevens verwijderen</a></li>
+                                <li><a href="mailto:nieuwsbrief-uit@verenigdamsterdam.nl">Nieuwsbrief uitschrijven</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Gerelateerde documenten</h4>
+                            <ul>
+                                <li><a href="/voorwaarden">Algemene Voorwaarden</a></li>
+                                <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Externe links</h4>
+                            <ul>
+                                <li><a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a></li>
+                                <li><a href="https://gdpr.eu/" target="_blank" rel="noopener">GDPR Info</a></li>
+                                <li><a href="https://www.privacy.nl/" target="_blank" rel="noopener">Privacy.nl</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Snel overzicht</h4>
+                            <ul>
+                                <li><a href="#welke-gegevens">Welke gegevens verzamelen wij?</a></li>
+                                <li><a href="#waarom-verwerken">Waarom verwerken wij gegevens?</a></li>
+                                <li><a href="#hoe-lang-bewaren">Hoe lang bewaren wij gegevens?</a></li>
+                                <li><a href="#uw-rechten">Uw rechten</a></li>
+                                <li><a href="#beveiliging">Beveiliging</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

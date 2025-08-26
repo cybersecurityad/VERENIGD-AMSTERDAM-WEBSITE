@@ -1,33 +1,304 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Not Found</title>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; }
-      #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>404 - Pagina Niet Gevonden | Verenigd Amsterdam</title>
+    <meta name="title" content="404 - Pagina Niet Gevonden | Verenigd Amsterdam">
+    <meta name="description" content="De pagina die u zoekt is niet gevonden. Ga terug naar de homepage van Verenigd Amsterdam of zoek naar de informatie die u nodig heeft.">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2024">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="websitegebruikers">
+    <meta name="coverage" content="Amsterdam">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="404 - Pagina Niet Gevonden">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Error 404, Pagina niet gevonden">
+    <meta name="DC.description" content="De opgevraagde pagina is niet gevonden op de Verenigd Amsterdam website.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2024-12-15">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2024 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/404.html">
+    <meta property="og:title" content="404 - Pagina Niet Gevonden | Verenigd Amsterdam">
+    <meta property="og:description" content="De pagina die u zoekt is niet gevonden. Ga terug naar de homepage van Verenigd Amsterdam.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/og-default.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/og-default.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verenigd Amsterdam - Pagina Niet Gevonden">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/404.html">
+    <meta name="twitter:title" content="404 - Pagina Niet Gevonden | Verenigd Amsterdam">
+    <meta name="twitter:description" content="De pagina die u zoekt is niet gevonden. Ga terug naar de homepage van Verenigd Amsterdam.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/og-default.jpg">
+    <meta name="twitter:site" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/404.html">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/404.html">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/404.html">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="noindex, follow">
+    <meta name="googlebot" content="noindex, follow">
+    <meta name="bingbot" content="noindex, follow">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data - Error Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://verenigdamsterdam.nl/404.html#page",
+      "name": "404 - Pagina Niet Gevonden",
+      "description": "Error 404 - De opgevraagde pagina is niet gevonden op de Verenigd Amsterdam website.",
+      "url": "https://verenigdamsterdam.nl/404.html",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Error 404",
+        "description": "Pagina niet gevonden fout"
       }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>404</h2>
-      <h1>Page Not Found</h1>
-      <p>The specified file was not found on this website. Please check the URL for mistakes and try again.</p>
-      <h3>Why am I seeing this?</h3>
-      <p>This page was generated by the Firebase Command-Line Interface. To modify it, edit the <code>404.html</code> file in your project's configured <code>public</code> directory.</p>
-    </div>
-  </body>
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="/images/verenigd-amsterdam-politiek-2025-logo_small.png" alt="Verenigd Amsterdam Logo" width="40" height="40">
+                    <span>Verenigd Amsterdam</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/standpunten/" class="nav-link">Standpunten</a>
+                <a href="/verkiezingsprogramma/" class="nav-link">Programma</a>
+                <a href="/nieuws/" class="nav-link">Nieuws</a>
+                <a href="/evenementen/" class="nav-link">Evenementen</a>
+                <a href="/doe-mee/" class="nav-link">Doe Mee</a>
+                <a href="/forum/" class="nav-link">Forum</a>
+                <div class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    🌙
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>404 - Pagina Niet Gevonden</h1>
+                <p class="hero-subtitle">Oeps! De pagina die u zoekt bestaat niet of is verplaatst</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="error-content">
+                    <div class="error-message">
+                        <div class="error-icon">🔍</div>
+                        <h2>Deze pagina is niet beschikbaar</h2>
+                        <p>De pagina die u probeert te bezoeken bestaat niet, is verplaatst of tijdelijk niet beschikbaar.</p>
+                        
+                        <div class="error-actions">
+                            <a href="/" class="cta-button primary">Ga naar Homepage</a>
+                            <a href="/standpunten/" class="cta-button secondary">Bekijk Standpunten</a>
+                        </div>
+                    </div>
+
+                    <div class="suggested-pages">
+                        <h3>Misschien zoekt u naar:</h3>
+                        <div class="suggestions-grid">
+                            <div class="suggestion-item">
+                                <h4><a href="/standpunten/">Standpunten</a></h4>
+                                <p>Ontdek onze politieke standpunten voor Amsterdam</p>
+                            </div>
+                            <div class="suggestion-item">
+                                <h4><a href="/verkiezingsprogramma/">Verkiezingsprogramma</a></h4>
+                                <p>Lees ons complete verkiezingsprogramma voor 2026</p>
+                            </div>
+                            <div class="suggestion-item">
+                                <h4><a href="/nieuws/">Nieuws</a></h4>
+                                <p>Blijf op de hoogte van het laatste nieuws</p>
+                            </div>
+                            <div class="suggestion-item">
+                                <h4><a href="/evenementen/">Evenementen</a></h4>
+                                <p>Ontdek onze aankomende evenementen en bijeenkomsten</p>
+                            </div>
+                            <div class="suggestion-item">
+                                <h4><a href="/doe-mee/">Doe Mee</a></h4>
+                                <p>Word actief en help Amsterdam vooruit</p>
+                            </div>
+                            <div class="suggestion-item">
+                                <h4><a href="/contact/">Contact</a></h4>
+                                <p>Neem contact met ons op voor vragen</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-section">
+                        <h3>Zoeken</h3>
+                        <p>Gebruik de zoekfunctie van uw browser (Ctrl+F / Cmd+F) om te zoeken op onze website, of ga naar onze <a href="/">homepage</a> om vanaf daar te navigeren.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
 </html>

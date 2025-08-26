@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Stadstour Amsterdam Noord - Verenigd Amsterdam Evenementen</title>
+    <meta name="title" content="Stadstour Amsterdam Noord - Verenigd Amsterdam Evenementen">
+    <meta name="description" content="Doe mee aan de Stadstour Amsterdam Noord met Verenigd Amsterdam. Ontdek de mooiste plekken van Noord met onze politieke vertegenwoordigers.">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2024">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="inwoners Amsterdam Noord, geïnteresseerden politiek">
+    <meta name="coverage" content="Amsterdam Noord">
+    <meta name="revisit-after" content="3 days">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam Noord">
+    <meta name="geo.position" content="52.3888;4.9034">
+    <meta name="ICBM" content="52.3888, 4.9034">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Stadstour Amsterdam Noord - Verenigd Amsterdam">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Stadstour, Amsterdam Noord, Evenement, Politiek">
+    <meta name="DC.description" content="Doe mee aan de Stadstour Amsterdam Noord met Verenigd Amsterdam. Ontdek de mooiste plekken van Noord met onze politieke vertegenwoordigers.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2024-12-15">
+    <meta name="DC.type" content="Event">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://verenigdamsterdam.nl/evenementen/stadstour-noord">
+    <meta name="DC.source" content="https://verenigdamsterdam.nl/evenementen/stadstour-noord">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam Noord, Netherlands">
+    <meta name="DC.rights" content="Copyright 2024 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="event">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/evenementen/stadstour-noord">
+    <meta property="og:title" content="Stadstour Amsterdam Noord - Verenigd Amsterdam">
+    <meta property="og:description" content="Doe mee aan de Stadstour Amsterdam Noord met Verenigd Amsterdam. Ontdek de mooiste plekken van Noord met onze politieke vertegenwoordigers.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/stadstour-noord-og.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/stadstour-noord-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Stadstour Amsterdam Noord - Verenigd Amsterdam Evenement">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/evenementen/stadstour-noord">
+    <meta name="twitter:title" content="Stadstour Amsterdam Noord - Verenigd Amsterdam">
+    <meta name="twitter:description" content="Doe mee aan de Stadstour Amsterdam Noord met Verenigd Amsterdam. Ontdek de mooiste plekken van Noord met onze politieke vertegenwoordigers.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/stadstour-noord-og.jpg">
+    <meta name="twitter:image:alt" content="Stadstour Amsterdam Noord - Verenigd Amsterdam Evenement">
+    <meta name="twitter:site" content="@VerenigdAdam">
+    <meta name="twitter:creator" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/evenementen/stadstour-noord">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/evenementen/stadstour-noord">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/evenementen/stadstour-noord">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- News Feeds -->
+    <link rel="alternate" type="application/rss+xml" title="Nieuws RSS" href="/nieuws/feed.xml">
+    <link rel="alternate" type="application/feed+json" title="Nieuws JSON Feed" href="/nieuws/feed.json">
+
+    <!-- Content Classification -->
+    <meta name="news_keywords" content="Amsterdam Noord, stadstour, evenement, politiek, verenigd amsterdam">
+    <meta name="article:section" content="Events">
+    <meta name="article:tag" content="Amsterdam Noord, Stadstour, Evenement">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1, notranslate">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data - Event -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "@id": "https://verenigdamsterdam.nl/evenementen/stadstour-noord#event",
+      "name": "Stadstour Amsterdam Noord",
+      "description": "Doe mee aan de Stadstour Amsterdam Noord met Verenigd Amsterdam. Ontdek de mooiste plekken van Noord met onze politieke vertegenwoordigers.",
+      "startDate": "2025-03-15T10:00:00+01:00",
+      "endDate": "2025-03-15T16:00:00+01:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Amsterdam Noord",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Verzamelpunt: NDSM Werf",
+          "addressLocality": "Amsterdam Noord",
+          "addressRegion": "Noord-Holland",
+          "postalCode": "1033 RG",
+          "addressCountry": "NL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "52.3888",
+          "longitude": "4.9034"
+        }
+      },
+      "image": "https://verenigdamsterdam.nl/images/stadstour-noord-og.jpg",
+      "organizer": {
+        "@type": "PoliticalParty",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl",
+        "telephone": "+31649319157",
+        "email": "info@verenigdamsterdam.nl"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://verenigdamsterdam.nl/evenementen/stadstour-noord"
+      },
+      "performer": {
+        "@type": "PoliticalParty",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      }
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="/images/verenigd-amsterdam-politiek-2025-logo_small.png" alt="Verenigd Amsterdam Logo" width="40" height="40">
+                    <span>Verenigd Amsterdam</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/standpunten/" class="nav-link">Standpunten</a>
+                <a href="/verkiezingsprogramma/" class="nav-link">Programma</a>
+                <a href="/nieuws/" class="nav-link">Nieuws</a>
+                <a href="/evenementen/" class="nav-link active">Evenementen</a>
+                <a href="/doe-mee/" class="nav-link">Doe Mee</a>
+                <a href="/forum/" class="nav-link">Forum</a>
+                <div class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    🌙
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Stadstour Amsterdam Noord</h1>
+                <p class="hero-subtitle">Ontdek Amsterdam Noord samen met Verenigd Amsterdam</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <h2>Over de Stadstour</h2>
+                        <p>Sluit je aan bij onze stadstour door Amsterdam Noord en ontdek samen met onze politieke vertegenwoordigers de unieke aspecten van dit dynamische stadsdeel.</p>
+                        
+                        <h3>Programma</h3>
+                        <ul>
+                            <li><strong>10:00</strong> - Verzameling NDSM Werf</li>
+                            <li><strong>10:30</strong> - Wandeling door de creatieve hotspots</li>
+                            <li><strong>12:00</strong> - Lunch in een lokaal restaurant</li>
+                            <li><strong>13:30</strong> - Bezoek aan duurzame projecten</li>
+                            <li><strong>15:00</strong> - Discussie over lokale politiek</li>
+                            <li><strong>16:00</strong> - Afsluiting</li>
+                        </ul>
+
+                        <h3>Praktische Informatie</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <strong>Datum:</strong> 15 maart 2025
+                            </div>
+                            <div class="info-item">
+                                <strong>Tijd:</strong> 10:00 - 16:00
+                            </div>
+                            <div class="info-item">
+                                <strong>Locatie:</strong> Start bij NDSM Werf
+                            </div>
+                            <div class="info-item">
+                                <strong>Kosten:</strong> Gratis deelname
+                            </div>
+                        </div>
+
+                        <div class="cta-section">
+                            <h3>Aanmelden</h3>
+                            <p>Interesse om mee te doen? Stuur een email naar <a href="mailto:evenementen@verenigdamsterdam.nl">evenementen@verenigdamsterdam.nl</a> of bel <a href="tel:+31649319157">06 49 31 91 57</a>.</p>
+                            <a href="mailto:evenementen@verenigdamsterdam.nl?subject=Aanmelding Stadstour Noord" class="cta-button">Aanmelden</a>
+                        </div>
+                    </div>
+
+                    <aside class="sidebar">
+                        <div class="sidebar-widget">
+                            <h4>Meer Evenementen</h4>
+                            <ul class="event-list">
+                                <li><a href="/evenementen/">Alle evenementen</a></li>
+                                <li><a href="/evenementen/informatieavond">Informatieavond</a></li>
+                                <li><a href="/evenementen/buurtbijeenkomst">Buurtbijeenkomsten</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Contact</h4>
+                            <p>Vragen over dit evenement?</p>
+                            <p><strong>Email:</strong> <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                            <p><strong>Telefoon:</strong> <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

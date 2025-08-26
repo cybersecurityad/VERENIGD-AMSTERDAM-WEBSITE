@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Algemene Voorwaarden - Verenigd Amsterdam</title>
+    <meta name="title" content="Algemene Voorwaarden - Verenigd Amsterdam">
+    <meta name="description" content="Algemene voorwaarden voor het gebruik van de Verenigd Amsterdam website en diensten. Lees hier onze gebruiksvoorwaarden en juridische bepalingen.">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2024">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="websitegebruikers, bezoekers">
+    <meta name="coverage" content="Nederland">
+    <meta name="revisit-after" content="30 days">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Algemene Voorwaarden - Verenigd Amsterdam">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Algemene voorwaarden, Gebruiksvoorwaarden, Juridisch">
+    <meta name="DC.description" content="Algemene voorwaarden voor het gebruik van de Verenigd Amsterdam website en diensten.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2024-12-15">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://verenigdamsterdam.nl/voorwaarden">
+    <meta name="DC.source" content="https://verenigdamsterdam.nl/voorwaarden">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2024 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/voorwaarden">
+    <meta property="og:title" content="Algemene Voorwaarden - Verenigd Amsterdam">
+    <meta property="og:description" content="Algemene voorwaarden voor het gebruik van de Verenigd Amsterdam website en diensten. Lees hier onze gebruiksvoorwaarden.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/og-default.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/og-default.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verenigd Amsterdam Algemene Voorwaarden">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/voorwaarden">
+    <meta name="twitter:title" content="Algemene Voorwaarden - Verenigd Amsterdam">
+    <meta name="twitter:description" content="Algemene voorwaarden voor het gebruik van de Verenigd Amsterdam website en diensten.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/og-default.jpg">
+    <meta name="twitter:site" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/voorwaarden">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/voorwaarden">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/voorwaarden">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1, notranslate">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data - Terms of Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://verenigdamsterdam.nl/voorwaarden#page",
+      "name": "Algemene Voorwaarden",
+      "description": "Algemene voorwaarden voor het gebruik van de Verenigd Amsterdam website en diensten.",
+      "url": "https://verenigdamsterdam.nl/voorwaarden",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Gebruiksvoorwaarden",
+        "description": "Juridische voorwaarden voor websitegebruik"
+      },
+      "datePublished": "2024-12-15",
+      "dateModified": "2024-12-15"
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="/images/verenigd-amsterdam-politiek-2025-logo_small.png" alt="Verenigd Amsterdam Logo" width="40" height="40">
+                    <span>Verenigd Amsterdam</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/standpunten/" class="nav-link">Standpunten</a>
+                <a href="/verkiezingsprogramma/" class="nav-link">Programma</a>
+                <a href="/nieuws/" class="nav-link">Nieuws</a>
+                <a href="/evenementen/" class="nav-link">Evenementen</a>
+                <a href="/doe-mee/" class="nav-link">Doe Mee</a>
+                <a href="/forum/" class="nav-link">Forum</a>
+                <div class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    🌙
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Algemene Voorwaarden</h1>
+                <p class="hero-subtitle">Gebruiksvoorwaarden voor de Verenigd Amsterdam website</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <h2>1. Algemene bepalingen</h2>
+                        
+                        <h3>1.1 Toepasselijkheid</h3>
+                        <p>Deze algemene voorwaarden zijn van toepassing op het gebruik van de website https://verenigdamsterdam.nl (hierna: "de Website") en alle daarop aangeboden diensten van Verenigd Amsterdam Politieke Partij (hierna: "Verenigd Amsterdam", "wij", "ons").</p>
+                        
+                        <h3>1.2 Definities</h3>
+                        <ul>
+                            <li><strong>Gebruiker:</strong> Iedere natuurlijke of rechtspersoon die gebruik maakt van de Website</li>
+                            <li><strong>Content:</strong> Alle informatie, teksten, afbeeldingen, video's en andere materialen op de Website</li>
+                            <li><strong>Diensten:</strong> Alle functionaliteiten en services die via de Website worden aangeboden</li>
+                        </ul>
+
+                        <h2>2. Gebruik van de website</h2>
+                        
+                        <h3>2.1 Toegestaan gebruik</h3>
+                        <p>De Website mag worden gebruikt voor:</p>
+                        <ul>
+                            <li>Het raadplegen van informatie over Verenigd Amsterdam</li>
+                            <li>Deelname aan democratische processen en discussies</li>
+                            <li>Het aanmelden voor evenementen en nieuwsbrieven</li>
+                            <li>Contact opnemen met onze vertegenwoordigers</li>
+                        </ul>
+                        
+                        <h3>2.2 Verboden gebruik</h3>
+                        <p>Het is verboden om de Website te gebruiken voor:</p>
+                        <ul>
+                            <li>Illegale activiteiten of het overtreden van wetten</li>
+                            <li>Het verspreiden van discriminerende, beledigende of haatdragende content</li>
+                            <li>Het versturen van spam of ongewenste berichten</li>
+                            <li>Het proberen in te breken in systemen of het verstoren van de werking</li>
+                            <li>Het schenden van intellectuele eigendomsrechten</li>
+                            <li>Het verspreiden van valse informatie</li>
+                        </ul>
+
+                        <h2>3. Intellectueel eigendom</h2>
+                        
+                        <h3>3.1 Auteursrechten</h3>
+                        <p>Alle content op de Website, inclusief maar niet beperkt tot teksten, afbeeldingen, logo's, video's en software, is eigendom van Verenigd Amsterdam of wordt gebruikt onder licentie. Deze content is beschermd door auteursrecht en andere intellectuele eigendomsrechten.</p>
+                        
+                        <h3>3.2 Gebruik van content</h3>
+                        <p>Het is toegestaan om content van de Website te gebruiken voor:</p>
+                        <ul>
+                            <li>Persoonlijk, niet-commercieel gebruik</li>
+                            <li>Journalistieke doeleinden met bronvermelding</li>
+                            <li>Academisch onderzoek met bronvermelding</li>
+                            <li>Delen op sociale media met bronvermelding</li>
+                        </ul>
+
+                        <h2>4. Privacy en gegevensbescherming</h2>
+                        
+                        <h3>4.1 Privacybeleid</h3>
+                        <p>Voor informatie over hoe wij omgaan met uw persoonsgegevens verwijzen wij naar ons <a href="/privacy">Privacybeleid</a>.</p>
+                        
+                        <h3>4.2 Cookies</h3>
+                        <p>De Website maakt gebruik van cookies voor het verbeteren van de gebruikerservaring en voor analytische doeleinden. Meer informatie vindt u in ons Privacybeleid.</p>
+
+                        <h2>5. Disclaimer en aansprakelijkheid</h2>
+                        
+                        <h3>5.1 Beschikbaarheid</h3>
+                        <p>Wij streven ernaar de Website 24/7 beschikbaar te houden, maar kunnen dit niet garanderen. Onderhoud, technische problemen of andere omstandigheden kunnen tijdelijke onbeschikbaarheid veroorzaken.</p>
+                        
+                        <h3>5.2 Juistheid van informatie</h3>
+                        <p>Wij streven naar juiste en actuele informatie, maar kunnen geen garantie geven voor de volledigheid, juistheid of actualiteit van alle content. Politieke standpunten kunnen wijzigen door nieuwe ontwikkelingen.</p>
+                        
+                        <h3>5.3 Beperkte aansprakelijkheid</h3>
+                        <p>Verenigd Amsterdam is niet aansprakelijk voor:</p>
+                        <ul>
+                            <li>Directe of indirecte schade door gebruik van de Website</li>
+                            <li>Schade door tijdelijke onbeschikbaarheid</li>
+                            <li>Schade door virussen of andere schadelijke software</li>
+                            <li>Content van derden of externe links</li>
+                        </ul>
+
+                        <h2>6. Externe links</h2>
+                        <p>De Website kan links bevatten naar externe websites. Wij zijn niet verantwoordelijk voor de content of het privacybeleid van deze externe websites. Het bezoeken van externe links is op eigen risico.</p>
+
+                        <h2>7. Gebruikersaccount en forum</h2>
+                        
+                        <h3>7.1 Accountverantwoordelijkheid</h3>
+                        <p>Gebruikers zijn verantwoordelijk voor:</p>
+                        <ul>
+                            <li>Het beveiligen van hun accountgegevens</li>
+                            <li>Alle activiteiten die plaatsvinden via hun account</li>
+                            <li>Het direct melden van ongeautoriseerd gebruik</li>
+                        </ul>
+                        
+                        <h3>7.2 Forumgedrag</h3>
+                        <p>In ons forum geldt:</p>
+                        <ul>
+                            <li>Respectvolle communicatie is verplicht</li>
+                            <li>Constructieve bijdragen worden aangemoedigd</li>
+                            <li>Moderatie kan plaatsvinden bij overtreding van regels</li>
+                            <li>Accounts kunnen worden opgeschort bij herhaalde overtredingen</li>
+                        </ul>
+
+                        <h2>8. Wijzigingen</h2>
+                        
+                        <h3>8.1 Voorwaarden</h3>
+                        <p>Wij behouden ons het recht voor deze voorwaarden te wijzigen. Wijzigingen worden aangekondigd op de Website en treden in werking na publicatie.</p>
+                        
+                        <h3>8.2 Website</h3>
+                        <p>Wij kunnen de Website te allen tijde wijzigen, uitbreiden of beëindigen zonder voorafgaande kennisgeving.</p>
+
+                        <h2>9. Toepasselijk recht en geschillen</h2>
+                        
+                        <h3>9.1 Nederlands recht</h3>
+                        <p>Op deze voorwaarden is Nederlands recht van toepassing.</p>
+                        
+                        <h3>9.2 Geschillenbeslechting</h3>
+                        <p>Geschillen worden bij voorkeur in onderling overleg opgelost. Indien dit niet mogelijk is, zijn de rechtbanken in Amsterdam bevoegd.</p>
+
+                        <h2>10. Contact</h2>
+                        <p>Voor vragen over deze algemene voorwaarden kunt u contact opnemen via:</p>
+                        
+                        <div class="contact-info">
+                            <p><strong>Email:</strong> <a href="mailto:juridisch@verenigdamsterdam.nl">juridisch@verenigdamsterdam.nl</a></p>
+                            <p><strong>Telefoon:</strong> <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                            <p><strong>Post:</strong><br>
+                            Verenigd Amsterdam<br>
+                            T.a.v. Juridische Zaken<br>
+                            Sint Olofsteeg 4<br>
+                            1012 AK Amsterdam</p>
+                        </div>
+
+                        <h2>11. Slotbepalingen</h2>
+                        <p><strong>Laatste wijziging:</strong> 15 december 2024</p>
+                        <p><strong>Versie:</strong> 1.0</p>
+                        <p>Deze algemene voorwaarden vervangen alle eerdere versies en overeenkomsten betreffende het gebruik van de Website.</p>
+                    </div>
+
+                    <aside class="sidebar">
+                        <div class="sidebar-widget">
+                            <h4>Gerelateerde documenten</h4>
+                            <ul>
+                                <li><a href="/privacy">Privacybeleid</a></li>
+                                <li><a href="/toegankelijkheid">Toegankelijkheid</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Snel overzicht</h4>
+                            <ul>
+                                <li><a href="#gebruik">Toegestaan gebruik</a></li>
+                                <li><a href="#eigendom">Intellectueel eigendom</a></li>
+                                <li><a href="#privacy">Privacy</a></li>
+                                <li><a href="#aansprakelijkheid">Aansprakelijkheid</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Rechtsbijstand</h4>
+                            <p>Voor complexe juridische vragen adviseren wij contact op te nemen met een advocaat.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

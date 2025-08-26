@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_aZA3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_c5H3gnD_g.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Doe Mee - Verenigd Amsterdam | Word Actief in de Lokale Politiek</title>
+    <meta name="title" content="Doe Mee - Verenigd Amsterdam | Word Actief in de Lokale Politiek">
+    <meta name="description" content="Doe mee met Verenigd Amsterdam! Ontdek hoe je kunt bijdragen aan een solidair, sociaal en sterk Amsterdam. Van vrijwilligerswerk tot kandidaat worden - jouw inzet telt.">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2024">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="inwoners Amsterdam, vrijwilligers, politiek geïnteresseerden">
+    <meta name="coverage" content="Amsterdam">
+    <meta name="revisit-after" content="3 days">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Doe Mee - Verenigd Amsterdam">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Vrijwilligerswerk, Politieke participatie, Meedoen, Amsterdam">
+    <meta name="DC.description" content="Doe mee met Verenigd Amsterdam! Ontdek hoe je kunt bijdragen aan een solidair, sociaal en sterk Amsterdam.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2024-12-15">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://verenigdamsterdam.nl/doe-mee/">
+    <meta name="DC.source" content="https://verenigdamsterdam.nl/doe-mee/">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2024 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/doe-mee/">
+    <meta property="og:title" content="Doe Mee - Verenigd Amsterdam">
+    <meta property="og:description" content="Doe mee met Verenigd Amsterdam! Ontdek hoe je kunt bijdragen aan een solidair, sociaal en sterk Amsterdam. Van vrijwilligerswerk tot kandidaat worden.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/doe-mee-og.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/doe-mee-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Doe Mee met Verenigd Amsterdam - Word Actief">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/doe-mee/">
+    <meta name="twitter:title" content="Doe Mee - Verenigd Amsterdam">
+    <meta name="twitter:description" content="Doe mee met Verenigd Amsterdam! Ontdek hoe je kunt bijdragen aan een solidair, sociaal en sterk Amsterdam.">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/doe-mee-og.jpg">
+    <meta name="twitter:image:alt" content="Doe Mee met Verenigd Amsterdam - Word Actief">
+    <meta name="twitter:site" content="@VerenigdAdam">
+    <meta name="twitter:creator" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/doe-mee/">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/doe-mee/">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/doe-mee/">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- News Feeds -->
+    <link rel="alternate" type="application/rss+xml" title="Nieuws RSS" href="/nieuws/feed.xml">
+    <link rel="alternate" type="application/feed+json" title="Nieuws JSON Feed" href="/nieuws/feed.json">
+
+    <!-- Content Classification -->
+    <meta name="news_keywords" content="vrijwilligerswerk, politieke participatie, Amsterdam, meedoen, betrokkenheid">
+    <meta name="article:section" content="Participation">
+    <meta name="article:tag" content="Vrijwilligerswerk, Politiek, Participatie">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1, notranslate">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data - Volunteer Opportunities -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://verenigdamsterdam.nl/doe-mee/#page",
+      "name": "Doe Mee - Vrijwilligerswerk en Politieke Participatie",
+      "description": "Ontdek hoe je kunt bijdragen aan Verenigd Amsterdam en een solidair, sociaal en sterk Amsterdam kunt helpen bouwen.",
+      "url": "https://verenigdamsterdam.nl/doe-mee/",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "about": [
+        {
+          "@type": "VolunteerAction",
+          "name": "Campagne Vrijwilligerswerk",
+          "description": "Help mee met campagne activiteiten voor de gemeenteraadsverkiezingen 2026"
+        },
+        {
+          "@type": "VolunteerAction", 
+          "name": "Evenementen Organisatie",
+          "description": "Organiseer mee aan politieke evenementen en buurtbijeenkomsten"
+        },
+        {
+          "@type": "VolunteerAction",
+          "name": "Digitale Ondersteuning",
+          "description": "Help met website, sociale media en digitale communicatie"
+        }
+      ],
+      "provider": {
+        "@type": "PoliticalParty",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl",
+        "telephone": "+31649319157",
+        "email": "vrijwilligers@verenigdamsterdam.nl"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hoofdnavigatie">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <a href="/" title="Verenigd Amsterdam - Solidair, Sociaal, Sterk">
+              <img
+                src="/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+                alt="Verenigd Amsterdam logo - Politieke partij Amsterdam - Sociaal Veilig Groen"
+                title="Verenigd Amsterdam - Gemeenteraadsverkiezingen 2026"
+                class="logo-img"
+                width="200" height="60"
+                decoding="async" fetchpriority="high">
+            </a>
+          </div>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <!-- Main political pages -->
+            <li><a href="/verkiezingsprogramma/">Politiek</a></li>
+            <li><a href="/standpunten/">Standpunten</a></li>
+            
+            <!-- 2026 Elections Section -->
+            <li class="nav-dropdown">
+              <a href="/gemeenteraadsverkiezingen/" class="nav-dropdown-toggle">Verkiezingen 2026 ▼</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="/gemeenteraadsverkiezingen/">Verkiezingen 2026</a></li>
+                <li><a href="/gemeenteraadsverkiezingen/forum/">Forum</a></li>
+              </ul>
+            </li>
+
+            <!-- Community & Engagement -->
+            <li><a href="/nieuws/">Nieuws</a></li>
+            <li><a href="/forum/">Forum</a></li>
+            <li><a href="/network/">Veiligheids Netwerk</a></li>
+            
+            <!-- App & Digital Platform -->
+            <li><a href="/app/">Actie App</a></li>
+            
+            <!-- About & Contact -->
+            <li><a href="/over-ons/">Over Ons</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            
+            <!-- CTA Button -->
+            <li><a href="/doe-mee/" class="btn-lid active">Word Lid</a></li>
+            
+            <!-- Theme Toggle Button -->
+            <li>
+              <button class="theme-toggle nav-theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-icon">🌙</span>
+                <span class="theme-toggle-text">Dark</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Doe Mee!</h1>
+                <p class="hero-subtitle">Samen bouwen we aan een solidair, sociaal en sterk Amsterdam</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <h2>Jouw Bijdrage Telt</h2>
+                        <p>Amsterdam heeft jou nodig! Bij Verenigd Amsterdam geloven we dat verandering begint bij betrokken burgers zoals jij. Of je nu een paar uur per week hebt of je volledig wilt inzetten voor de politiek - er zijn talloze manieren om bij te dragen aan een beter Amsterdam.</p>
+                        
+                        <h3>Manieren om Mee te Doen</h3>
+                        
+                        <div class="participation-grid">
+                            <div class="participation-item">
+                                <h4>🗳️ Vrijwilliger worden</h4>
+                                <p>Help mee met campagne-activiteiten, evenementen organiseren en het verspreiden van onze boodschap in de wijken.</p>
+                                <ul>
+                                    <li>Flyeren en campagne voeren</li>
+                                    <li>Evenementen organiseren</li>
+                                    <li>Administratieve ondersteuning</li>
+                                    <li>Social media beheer</li>
+                                </ul>
+                                <a href="mailto:vrijwilligers@verenigdamsterdam.nl?subject=Vrijwilliger worden" class="cta-button">Word Vrijwilliger</a>
+                            </div>
+
+                            <div class="participation-item">
+                                <h4>💰 Doneren</h4>
+                                <p>Steun onze missie financieel. Elke bijdrage, groot of klein, helpt ons onze boodschap te verspreiden.</p>
+                                <ul>
+                                    <li>Campagne financiering</li>
+                                    <li>Evenementen en materialen</li>
+                                    <li>Digitale platforms</li>
+                                    <li>Onderzoek en beleidsontwikkeling</li>
+                                </ul>
+                                <a href="mailto:donaties@verenigdamsterdam.nl?subject=Donatie" class="cta-button">Doneer Nu</a>
+                            </div>
+
+                            <div class="participation-item">
+                                <h4>🏛️ Kandidaat worden</h4>
+                                <p>Wil je zelf de politiek in? Word kandidaat voor de gemeenteraad en vertegenwoordig jouw buurt en ideeën.</p>
+                                <ul>
+                                    <li>Gemeenteraadslid worden</li>
+                                    <li>Commissielid worden</li>
+                                    <li>Woordvoerder op thema's</li>
+                                    <li>Fractieondersteuning</li>
+                                </ul>
+                                <a href="mailto:kandidaten@verenigdamsterdam.nl?subject=Kandidaat worden" class="cta-button">Word Kandidaat</a>
+                            </div>
+
+                            <div class="participation-item">
+                                <h4>🤝 Lid worden</h4>
+                                <p>Word officieel lid van Verenigd Amsterdam en krijg stemrecht bij belangrijke partijbeslissingen.</p>
+                                <ul>
+                                    <li>Stemrecht bij verkiezingen</li>
+                                    <li>Deelname aan ledenvergaderingen</li>
+                                    <li>Exclusieve nieuwsbrief</li>
+                                    <li>Korting op evenementen</li>
+                                </ul>
+                                <a href="mailto:leden@verenigdamsterdam.nl?subject=Lidmaatschap" class="cta-button">Word Lid</a>
+                            </div>
+
+                            <div class="participation-item">
+                                <h4>💡 Ideeën inbrengen</h4>
+                                <p>Deel je ideeën voor een beter Amsterdam. Jouw lokale kennis en ervaring zijn waardevol voor ons beleid.</p>
+                                <ul>
+                                    <li>Beleidsvoorstellen indienen</li>
+                                    <li>Deelname aan werkgroepen</li>
+                                    <li>Buurtproblemen melden</li>
+                                    <li>Expertise delen</li>
+                                </ul>
+                                <a href="mailto:ideeen@verenigdamsterdam.nl?subject=Idee voor Amsterdam" class="cta-button">Deel je Idee</a>
+                            </div>
+
+                            <div class="participation-item">
+                                <h4>📢 Ambassadeur worden</h4>
+                                <p>Verspreid onze boodschap in jouw netwerk en help ons meer Amsterdammers te bereiken.</p>
+                                <ul>
+                                    <li>Social media activisme</li>
+                                    <li>Mond-tot-mond reclame</li>
+                                    <li>Netwerk uitbreiden</li>
+                                    <li>Community building</li>
+                                </ul>
+                                <a href="mailto:ambassadeurs@verenigdamsterdam.nl?subject=Ambassadeur worden" class="cta-button">Word Ambassadeur</a>
+                            </div>
+                        </div>
+
+                        <h3>Waarom Meedoen?</h3>
+                        <div class="why-participate">
+                            <div class="benefit-item">
+                                <h4>🌍 Impact maken</h4>
+                                <p>Draag direct bij aan positieve verandering in Amsterdam. Jouw inzet heeft concrete gevolgen voor de stad en haar inwoners.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <h4>🤝 Mensen ontmoeten</h4>
+                                <p>Ontmoet gelijkgestemde Amsterdammers die net als jij willen bijdragen aan een betere stad. Bouw betekenisvolle contacten op.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <h4>📚 Kennis opdoen</h4>
+                                <p>Leer hoe lokale politiek werkt, ontwikkel nieuwe vaardigheden en vergroot je kennis over maatschappelijke vraagstukken.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <h4>🎯 Persoonlijke groei</h4>
+                                <p>Ontwikkel leadership skills, leer spreken in het openbaar en wordt een betere versie van jezelf door actief betrokken te zijn.</p>
+                            </div>
+                        </div>
+
+                        <h3>Volgende stappen</h3>
+                        <ol class="next-steps">
+                            <li><strong>Kies je manier van participatie</strong> - Bekijk de mogelijkheden hierboven en kies wat bij jou past</li>
+                            <li><strong>Neem contact op</strong> - Stuur een email naar het juiste adres of bel ons</li>
+                            <li><strong>Kennismakingsgesprek</strong> - We plannen een vrijblijvend gesprek om je beter te leren kennen</li>
+                            <li><strong>Start je betrokkenheid</strong> - Begin met activiteiten die passen bij jouw tijd en interesses</li>
+                            <li><strong>Groei mee</strong> - Ontwikkel jezelf verder binnen onze organisatie</li>
+                        </ol>
+
+                        <div class="contact-section">
+                            <h3>Vragen?</h3>
+                            <p>Heb je vragen over meedoen of wil je meer informatie? Neem gerust contact met ons op!</p>
+                            <div class="contact-options">
+                                <div class="contact-option">
+                                    <strong>Algemene vragen:</strong><br>
+                                    <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a><br>
+                                    <a href="tel:+31649319157">06 49 31 91 57</a>
+                                </div>
+                                <div class="contact-option">
+                                    <strong>Vrijwilligerswerk:</strong><br>
+                                    <a href="mailto:vrijwilligers@verenigdamsterdam.nl">vrijwilligers@verenigdamsterdam.nl</a>
+                                </div>
+                                <div class="contact-option">
+                                    <strong>Lidmaatschap:</strong><br>
+                                    <a href="mailto:leden@verenigdamsterdam.nl">leden@verenigdamsterdam.nl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="sidebar">
+                        <div class="sidebar-widget">
+                            <h4>Acuele acties</h4>
+                            <div class="action-item">
+                                <h5>Campagne 2025</h5>
+                                <p>Help mee met de voorbereiding van onze verkiezingscampagne voor 2026.</p>
+                                <a href="mailto:campagne@verenigdamsterdam.nl">Meld je aan</a>
+                            </div>
+                            <div class="action-item">
+                                <h5>Buurtbijeenkomsten</h5>
+                                <p>Organiseer een bijeenkomst in jouw buurt om lokale problemen te bespreken.</p>
+                                <a href="mailto:buurt@verenigdamsterdam.nl">Organiseer mee</a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Tijdsinvestering</h4>
+                            <ul>
+                                <li><strong>2-4 uur/week:</strong> Vrijwilliger</li>
+                                <li><strong>4-8 uur/week:</strong> Actief lid</li>
+                                <li><strong>8+ uur/week:</strong> Bestuurslid</li>
+                                <li><strong>Parttime:</strong> Kandidaat</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Onze Waarden</h4>
+                            <ul>
+                                <li>🤝 Solidariteit</li>
+                                <li>👥 Sociale rechtvaardigheid</li>
+                                <li>💪 Kracht door eenheid</li>
+                                <li>🌱 Duurzaamheid</li>
+                                <li>🏠 Inclusiviteit</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h4>Testimonials</h4>
+                            <blockquote>
+                                <p>"Door mee te doen bij Verenigd Amsterdam heb ik echt het gevoel dat ik verschil kan maken in mijn buurt."</p>
+                                <cite>- Maria, vrijwilliger</cite>
+                            </blockquote>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

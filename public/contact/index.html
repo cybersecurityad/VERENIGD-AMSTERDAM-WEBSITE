@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <!-- DNS & Preconnects FIRST -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.clarity.ms">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//api.indexnow.org">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="preload" href="/script.js" as="script">
+    <link rel="preload" as="image" href="/images/verenigd-amsterdam-politiek-2025-logo_small.png" fetchpriority="high" type="image/png">
+    
+    <!-- Font Preloads -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+   
+    
+    <!-- Fallback for no JavaScript -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#005a3c">
+
+    <!-- PWA & Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>Contact | Verenigd Amsterdam</title>
+    <meta name="title" content="Contact | Verenigd Amsterdam">
+    <meta name="description" content="Neem contact op met Verenigd Amsterdam. Vragen, suggesties of wilt u meedoen? We horen graag van u. Bereikbaar via telefoon, email en bezoekadres.">
+    <meta name="keywords" content="contact, Verenigd Amsterdam, politiek, Amsterdam, vragen, meedoen, bereikbaarheid">
+    <meta name="author" content="Verenigd Amsterdam">
+    <meta name="publisher" content="Verenigd Amsterdam">
+    <meta name="copyright" content="Verenigd Amsterdam 2025">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="expires" content="never">
+    <meta name="theme-color" content="#005a3c">
+    <meta name="language" content="nl">
+    <meta name="content-language" content="nl-NL">
+    <meta name="audience" content="burgers, inwoners">
+    <meta name="coverage" content="Amsterdam">
+
+    <!-- Microsoft/Bing Meta Tags -->
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#005a3c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-navbutton-color" content="#005a3c">
+    <meta name="application-name" content="Verenigd Amsterdam">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="NL-NH">
+    <meta name="geo.placename" content="Amsterdam">
+    <meta name="geo.position" content="52.3676;4.9041">
+    <meta name="ICBM" content="52.3676, 4.9041">
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="DC.title" content="Contact">
+    <meta name="DC.creator" content="Verenigd Amsterdam">
+    <meta name="DC.subject" content="Contact, Bereikbaarheid">
+    <meta name="DC.description" content="Contactinformatie van Verenigd Amsterdam voor vragen en samenwerking.">
+    <meta name="DC.publisher" content="Verenigd Amsterdam">
+    <meta name="DC.contributor" content="Verenigd Amsterdam Team">
+    <meta name="DC.date" content="2025-08-26">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.language" content="nl-NL">
+    <meta name="DC.coverage" content="Amsterdam, Netherlands">
+    <meta name="DC.rights" content="Copyright 2025 Verenigd Amsterdam. All rights reserved.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://verenigdamsterdam.nl/contact/">
+    <meta property="og:title" content="Contact | Verenigd Amsterdam">
+    <meta property="og:description" content="Neem contact op met Verenigd Amsterdam. Vragen, suggesties of wilt u meedoen? We horen graag van u.">
+    <meta property="og:image" content="https://verenigdamsterdam.nl/images/og-contact.jpg">
+    <meta property="og:image:secure_url" content="https://verenigdamsterdam.nl/images/og-contact.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Verenigd Amsterdam - Contact">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Verenigd Amsterdam">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://verenigdamsterdam.nl/contact/">
+    <meta name="twitter:title" content="Contact | Verenigd Amsterdam">
+    <meta name="twitter:description" content="Neem contact op met Verenigd Amsterdam. Vragen, suggesties of wilt u meedoen?">
+    <meta name="twitter:image" content="https://verenigdamsterdam.nl/images/og-contact.jpg">
+    <meta name="twitter:site" content="@VerenigdAdam">
+
+    <!-- Canonical URL & Language -->
+    <link rel="canonical" href="https://verenigdamsterdam.nl/contact/">
+    <link rel="alternate" hreflang="nl" href="https://verenigdamsterdam.nl/contact/">
+    <link rel="alternate" hreflang="x-default" href="https://verenigdamsterdam.nl/contact/">
+
+    <!-- PWA Configuration -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verenigd Amsterdam">
+
+    <!-- Verification & Search -->
+    <meta name="msvalidate.01" content="543824EE0D23E1E34C00EFCB1C398AE7">
+
+    <!-- IndexNow & Search Integration -->
+    <link rel="indexnow" href="/indexnow-0fe3f6a176a940219f91397a031e2da2.txt">
+    <link rel="search" type="application/opensearchdescription+xml" title="Verenigd Amsterdam" href="/opensearch.xml">
+
+    <!-- Enhanced Robots Meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Clarity tracking code for https://verenigdamsterdam.nl/ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0fg6dtttp");
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "@id": "https://verenigdamsterdam.nl/contact/#page",
+      "name": "Contact",
+      "description": "Contactinformatie van Verenigd Amsterdam voor vragen en samenwerking.",
+      "url": "https://verenigdamsterdam.nl/contact/",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Verenigd Amsterdam",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Verenigd Amsterdam",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sint Olofsteeg 4",
+          "postalCode": "1012 AK",
+          "addressLocality": "Amsterdam",
+          "addressCountry": "NL"
+        },
+        "telephone": "+31649319157",
+        "email": "info@verenigdamsterdam.nl",
+        "url": "https://verenigdamsterdam.nl"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://verenigdamsterdam.nl"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://verenigdamsterdam.nl/contact/"
+        }]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Hoofdnavigatie">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo">
+            <a href="/" title="Verenigd Amsterdam - Solidair, Sociaal, Sterk">
+              <img
+                src="/images/verenigd-amsterdam-politiek-2025-logo_small.png"
+                alt="Verenigd Amsterdam logo - Politieke partij Amsterdam - Sociaal Veilig Groen"
+                title="Verenigd Amsterdam - Gemeenteraadsverkiezingen 2026"
+                class="logo-img"
+                width="200" height="60"
+                decoding="async" fetchpriority="high">
+            </a>
+          </div>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <!-- Main political pages -->
+            <li><a href="/verkiezingsprogramma/">Politiek</a></li>
+            <li><a href="/standpunten/">Standpunten</a></li>
+            
+            <!-- 2026 Elections Section -->
+            <li class="nav-dropdown">
+              <a href="/gemeenteraadsverkiezingen/" class="nav-dropdown-toggle">Verkiezingen 2026 ▼</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="/gemeenteraadsverkiezingen/">Verkiezingen 2026</a></li>
+                <li><a href="/gemeenteraadsverkiezingen/forum/">Forum</a></li>
+              </ul>
+            </li>
+
+            <!-- Community & Engagement -->
+            <li><a href="/nieuws/">Nieuws</a></li>
+            <li><a href="/forum/">Forum</a></li>
+            <li><a href="/network/">Veiligheids Netwerk</a></li>
+            
+            <!-- App & Digital Platform -->
+            <li><a href="/app/">Actie App</a></li>
+            
+            <!-- About & Contact -->
+            <li><a href="/over-ons/">Over Ons</a></li>
+            <li><a href="/contact/" class="active">Contact</a></li>
+            
+            <!-- CTA Button -->
+            <li><a href="/doe-mee/" class="btn-lid">Word Lid</a></li>
+            
+            <!-- Theme Toggle Button -->
+            <li>
+              <button class="theme-toggle nav-theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle-icon">🌙</span>
+                <span class="theme-toggle-text">Dark</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Contact</h1>
+                <p class="hero-subtitle">Neem contact op met Verenigd Amsterdam</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Bereikbaarheid</h2>
+                        <p>Heeft u vragen, suggesties of wilt u meedoen? We horen graag van u!</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h3>E-mail</h3>
+                                    <p><a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                                    <p class="contact-note">Voor algemene vragen en informatie</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-details">
+                                    <h3>Telefoon</h3>
+                                    <p><a href="tel:+31649319157">06 49 31 91 57</a></p>
+                                    <p class="contact-note">Maandag t/m vrijdag, 9:00 - 17:00</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h3>Bezoekadres</h3>
+                                    <address>
+                                        Sint Olofsteeg 4<br>
+                                        1012 AK Amsterdam<br>
+                                        Nederland
+                                    </address>
+                                    <p class="contact-note">Op afspraak</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">💬</div>
+                                <div class="contact-details">
+                                    <h3>Sociale Media</h3>
+                                    <div class="social-contact">
+                                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-specialties">
+                            <h3>Specifieke Onderwerpen</h3>
+                            <ul>
+                                <li><strong>Lidmaatschap:</strong> <a href="mailto:lidmaatschap@verenigdamsterdam.nl">lidmaatschap@verenigdamsterdam.nl</a></li>
+                                <li><strong>Pers & Media:</strong> <a href="mailto:pers@verenigdamsterdam.nl">pers@verenigdamsterdam.nl</a></li>
+                                <li><strong>Privacy:</strong> <a href="mailto:privacy@verenigdamsterdam.nl">privacy@verenigdamsterdam.nl</a></li>
+                                <li><strong>Evenementen:</strong> <a href="mailto:evenementen@verenigdamsterdam.nl">evenementen@verenigdamsterdam.nl</a></li>
+                                <li><strong>Donaties:</strong> <a href="mailto:donaties@verenigdamsterdam.nl">donaties@verenigdamsterdam.nl</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-section">
+                        <h2>Stuur ons een bericht</h2>
+                        <form class="contact-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Naam *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mailadres *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefoonnummer</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Onderwerp *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Kies een onderwerp</option>
+                                    <option value="general">Algemene vraag</option>
+                                    <option value="membership">Lidmaatschap</option>
+                                    <option value="volunteer">Vrijwilligerswerk</option>
+                                    <option value="press">Pers & Media</option>
+                                    <option value="event">Evenement</option>
+                                    <option value="donation">Donatie</option>
+                                    <option value="complaint">Klacht</option>
+                                    <option value="other">Anders</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Bericht *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Typ hier uw bericht..."></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" id="newsletter">
+                                    <span class="checkmark"></span>
+                                    Ik wil graag de nieuwsbrief ontvangen
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="privacy" id="privacy" required>
+                                    <span class="checkmark"></span>
+                                    Ik ga akkoord met de <a href="/privacy/" target="_blank">privacyverklaring</a> *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="cta-button primary">Verstuur Bericht</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <h2>Veelgestelde Vragen</h2>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h3>Hoe word ik lid?</h3>
+                            <p>U kunt lid worden door ons <a href="/doe-mee/">lidmaatschapsformulier</a> in te vullen of contact met ons op te nemen via <a href="mailto:lidmaatschap@verenigdamsterdam.nl">lidmaatschap@verenigdamsterdam.nl</a>.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Hoe kan ik meehelpen?</h3>
+                            <p>Er zijn vele manieren om bij te dragen! Bekijk onze <a href="/doe-mee/">doe mee pagina</a> voor vrijwilligerswerk, campagne-activiteiten en andere vormen van betrokkenheid.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Wanneer zijn jullie bereikbaar?</h3>
+                            <p>Onze kantooruren zijn maandag t/m vrijdag van 9:00 tot 17:00. Voor spoedgevallen kunt u altijd een e-mail sturen.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Kan ik langskomen?</h3>
+                            <p>Bezoek op afspraak is mogelijk. Neem vooraf contact met ons op om een afspraak in te plannen op ons adres in de Sint Olofsteeg.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Verenigd Amsterdam</h4>
+                    <p>Solidair, Sociaal, Sterk en Groen!</p>
+                    <p>Gemeenteraadsverkiezingen 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/standpunten/">Standpunten</a></li>
+                        <li><a href="/verkiezingsprogramma/">Programma</a></li>
+                        <li><a href="/nieuws/">Nieuws</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@verenigdamsterdam.nl">info@verenigdamsterdam.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31649319157">06 49 31 91 57</a></p>
+                    <p>Adres: Sint Olofsteeg 4, 1012 AK Amsterdam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Volg Ons</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/verenigdamsterdam" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://twitter.com/VerenigdAdam" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://www.instagram.com/verenigdamsterdam" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Verenigd Amsterdam. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/voorwaarden">Voorwaarden</a>
+                    <a href="/toegankelijkheid">Toegankelijkheid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
